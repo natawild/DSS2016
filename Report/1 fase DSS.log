@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  8 NOV 2016 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  8 NOV 2016 12:09
 entering extended mode
 **"1 fase DSS.tex"
 ("1 fase DSS.tex"
@@ -1362,19 +1362,19 @@ Cap\'{\i }tulo 3.
 <modelodominio.png, id=31, 896.59969pt x 386.94562pt>
 File: modelodominio.png Graphic file (type png)
  <use modelodominio.png>
-Package pdftex.def Info: modelodominio.png used on input line 13.
+Package pdftex.def Info: modelodominio.png used on input line 37.
 (pdftex.def)             Requested size: 507.46904pt x 219.00845pt.
 
-Overfull \hbox (52.22493pt too wide) in paragraph at lines 13--14
+Overfull \hbox (52.22493pt too wide) in paragraph at lines 37--38
 [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 <usecase1.png, id=32, 507.39563pt x 408.02437pt>
 File: usecase1.png Graphic file (type png)
  <use usecase1.png>
-Package pdftex.def Info: usecase1.png used on input line 23.
+Package pdftex.def Info: usecase1.png used on input line 47.
 (pdftex.def)             Requested size: 355.17451pt x 285.61511pt.
  [5
 
@@ -1384,10 +1384,10 @@ Cap\'{\i }tulo 4.
 
 ] ("1 fase DSS.aux") ) 
 Here is how much of TeX's memory you used:
- 31368 strings out of 493698
- 736294 string characters out of 3144375
+ 31374 strings out of 493698
+ 736394 string characters out of 3144375
  866202 words of memory out of 3000000
- 34187 multiletter control sequences out of 15000+200000
+ 34193 multiletter control sequences out of 15000+200000
  30825 words of font info for 61 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,7n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1395,7 +1395,7 @@ Here is how much of TeX's memory you used:
 enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/times/utmr8a.pfb>
-Output written on "1 fase DSS.pdf" (8 pages, 534012 bytes).
+Output written on "1 fase DSS.pdf" (8 pages, 536802 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

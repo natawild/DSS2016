@@ -2,6 +2,10 @@
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}
 \contentsline {section}{\numberline {1.1}Apresenta\IeC {\c c}\IeC {\~a}o do Caso de Estudo}{1}
 \contentsline {chapter}{\numberline {2}Requisitos do Sistema}{4}
+\contentsline {section}{\numberline {2.1}An\IeC {\'a}lise e Levantamento dos Requisitos}{4}
+\contentsline {subsection}{\numberline {2.1.1}Cria\IeC {\c c}\IeC {\~a}o do grupo com os elementos da casa/apartamento}{4}
+\contentsline {subsection}{\numberline {2.1.2}Gest\IeC {\~a}o das contas}{4}
+\contentsline {section}{\numberline {2.2}Base de dados }{4}
 \contentsline {chapter}{\numberline {3}Arquitetura da Aplica\IeC {\c c}\IeC {\~a}o}{5}
 \contentsline {section}{\numberline {3.1}Modelo de Dominio }{5}
 \contentsline {section}{\numberline {3.2}Diagramas de Use Case}{5}
