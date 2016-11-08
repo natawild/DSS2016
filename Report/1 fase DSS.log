@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  8 NOV 2016 09:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  8 NOV 2016 10:44
 entering extended mode
 **"1 fase DSS.tex"
 ("1 fase DSS.tex"
@@ -1346,7 +1346,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
  <./gil.jpg> <./marcia.jpg> <./daniel.jpg> <./ricardo.jpg>]) (intro.tex
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 [1
 
 ]) [2] ("1 fase DSS.toc")
@@ -1359,28 +1359,45 @@ Cap\'{\i }tulo 2.
 
 ]
 Cap\'{\i }tulo 3.
-) (conclusao.tex [5
+<modelodominio.png, id=31, 896.59969pt x 386.94562pt>
+File: modelodominio.png Graphic file (type png)
+ <use modelodominio.png>
+Package pdftex.def Info: modelodominio.png used on input line 13.
+(pdftex.def)             Requested size: 507.46904pt x 219.00845pt.
 
-]
+Overfull \hbox (52.22493pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+<usecase1.png, id=32, 507.39563pt x 408.02437pt>
+File: usecase1.png Graphic file (type png)
+ <use usecase1.png>
+Package pdftex.def Info: usecase1.png used on input line 23.
+(pdftex.def)             Requested size: 355.17451pt x 285.61511pt.
+ [5
+
+ <./modelodominio.png>]) (conclusao.tex [6 <./usecase1.png>]
 Cap\'{\i }tulo 4.
-) [6
+) [7
 
 ] ("1 fase DSS.aux") ) 
 Here is how much of TeX's memory you used:
- 31350 strings out of 493698
- 736000 string characters out of 3144375
- 865202 words of memory out of 3000000
- 34172 multiletter control sequences out of 15000+200000
- 29199 words of font info for 59 fonts, out of 3000000 for 9000
+ 31368 strings out of 493698
+ 736294 string characters out of 3144375
+ 866202 words of memory out of 3000000
+ 34187 multiletter control sequences out of 15000+200000
+ 30825 words of font info for 61 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,7n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/times/utmr8a.pfb>
-Output written on "1 fase DSS.pdf" (7 pages, 449549 bytes).
+Output written on "1 fase DSS.pdf" (8 pages, 534012 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
