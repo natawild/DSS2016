@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  8 NOV 2016 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  9 NOV 2016 09:57
 entering extended mode
 **"1 fase DSS.tex"
 ("1 fase DSS.tex"
@@ -1343,61 +1343,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo.png> <./celia.jpg>
- <./gil.jpg> <./marcia.jpg> <./daniel.jpg> <./ricardo.jpg>]) (intro.tex
+ <./gil.jpg> <./marcia.jpg> <./daniel.jpg> <./ricardo.jpg>]) ("1 fase DSS.toc")
+\tf@toc=\write6
+ (intro.tex [1
+
+]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
-[1
+[2
 
-]) [2] ("1 fase DSS.toc")
-\tf@toc=\write6
- (desenvolvimento.tex [3
-
-]
+]) (desenvolvimento.tex [3]
 Cap\'{\i }tulo 2.
 [4
 
 ]
 Cap\'{\i }tulo 3.
-<modelodominio.png, id=31, 896.59969pt x 386.94562pt>
-File: modelodominio.png Graphic file (type png)
- <use modelodominio.png>
-Package pdftex.def Info: modelodominio.png used on input line 37.
+<ModeloDominio.png, id=31, 896.59969pt x 386.94562pt>
+File: ModeloDominio.png Graphic file (type png)
+ <use ModeloDominio.png>
+Package pdftex.def Info: ModeloDominio.png used on input line 40.
 (pdftex.def)             Requested size: 507.46904pt x 219.00845pt.
 
-Overfull \hbox (52.22493pt too wide) in paragraph at lines 37--38
+Overfull \hbox (52.22493pt too wide) in paragraph at lines 40--41
 [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
-<usecase1.png, id=32, 507.39563pt x 408.02437pt>
-File: usecase1.png Graphic file (type png)
- <use usecase1.png>
-Package pdftex.def Info: usecase1.png used on input line 47.
-(pdftex.def)             Requested size: 355.17451pt x 285.61511pt.
- [5
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+[5
 
- <./modelodominio.png>]) (conclusao.tex [6 <./usecase1.png>]
+ <./ModeloDominio.png>] <UseCase.jpg, id=35, 623.32875pt x 527.9725pt>
+File: UseCase.jpg Graphic file (type jpg)
+
+<use UseCase.jpg>
+Package pdftex.def Info: UseCase.jpg used on input line 65.
+(pdftex.def)             Requested size: 311.6636pt x 263.9856pt.
+
+<InteracaoComOsUtilizadores.jpg, id=36, 480.79625pt x 347.2975pt>
+File: InteracaoComOsUtilizadores.jpg Graphic file (type jpg)
+
+<use InteracaoComOsUtilizadores.jpg>
+Package pdftex.def Info: InteracaoComOsUtilizadores.jpg used on input line 73.
+(pdftex.def)             Requested size: 240.39752pt x 173.64832pt.
+
+<despesasMorador.jpg, id=37, 402.50375pt x 368.37625pt>
+File: despesasMorador.jpg Graphic file (type jpg)
+
+<use despesasMorador.jpg>
+Package pdftex.def Info: despesasMorador.jpg used on input line 80.
+(pdftex.def)             Requested size: 201.25137pt x 184.18767pt.
+ <GerirDespesas.jpg, id=38, 481.8pt x 287.0725pt>
+File: GerirDespesas.jpg Graphic file (type jpg)
+
+<use GerirDespesas.jpg>
+Package pdftex.def Info: GerirDespesas.jpg used on input line 87.
+(pdftex.def)             Requested size: 240.8994pt x 143.53589pt.
+ [6 <./UseCase.jpg>]
+<Login.jpg, id=43, 676.5275pt x 119.44624pt>
+File: Login.jpg Graphic file (type jpg)
+ <use Login.jpg>
+Package pdftex.def Info: Login.jpg used on input line 96.
+(pdftex.def)             Requested size: 270.6062pt x 47.77763pt.
+
+<CriarConta.png, id=44, 1027.84pt x 770.88pt>
+File: CriarConta.png Graphic file (type png)
+ <use CriarConta.png>
+Package pdftex.def Info: CriarConta.png used on input line 102.
+(pdftex.def)             Requested size: 411.12872pt x 308.34654pt.
+
+<UtilizadorNormal.png, id=45, 1027.84pt x 770.88pt>
+File: UtilizadorNormal.png Graphic file (type png)
+ <use UtilizadorNormal.png>
+Package pdftex.def Info: UtilizadorNormal.png used on input line 108.
+(pdftex.def)             Requested size: 411.12872pt x 308.34654pt.
+
+<Admin.png, id=46, 1027.84pt x 770.88pt>
+File: Admin.png Graphic file (type png)
+ <use Admin.png>
+Package pdftex.def Info: Admin.png used on input line 114.
+(pdftex.def)             Requested size: 411.12872pt x 308.34654pt.
+) (conclusao.tex
+[7 <./InteracaoComOsUtilizadores.jpg> <./despesasMorador.jpg> <./GerirDespesas.
+jpg>] [8 <./Login.jpg> <./CriarConta.png>] [9 <./UtilizadorNormal.png> <./Admin
+.png>]
 Cap\'{\i }tulo 4.
-) [7
+) [10
 
 ] ("1 fase DSS.aux") ) 
 Here is how much of TeX's memory you used:
- 31374 strings out of 493698
- 736394 string characters out of 3144375
+ 31409 strings out of 493698
+ 737112 string characters out of 3144375
  866202 words of memory out of 3000000
- 34193 multiletter control sequences out of 15000+200000
+ 34221 multiletter control sequences out of 15000+200000
  30825 words of font info for 61 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,7n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/times/utmr8a.pfb>
-Output written on "1 fase DSS.pdf" (8 pages, 536802 bytes).
+Output written on "1 fase DSS.pdf" (11 pages, 628898 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
