@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  8 NOV 2016 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  9 NOV 2016 17:20
 entering extended mode
 **"1 fase DSS.tex"
 ("1 fase DSS.tex"
@@ -1343,61 +1343,354 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo.png> <./celia.jpg>
- <./gil.jpg> <./marcia.jpg> <./daniel.jpg> <./ricardo.jpg>]) (intro.tex
+ <./gil.jpg> <./marcia.jpg> <./daniel.jpg> <./ricardo.jpg>]) ("1 fase DSS.toc")
+\tf@toc=\write6
+ (intro.tex [1
+
+]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
-[1
+[2
 
-]) [2] ("1 fase DSS.toc")
-\tf@toc=\write6
- (desenvolvimento.tex [3
-
-]
+]) (desenvolvimento.tex [3]
 Cap\'{\i }tulo 2.
-[4
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 11.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+ [4
 
-]
+] [5]
 Cap\'{\i }tulo 3.
-<modelodominio.png, id=31, 896.59969pt x 386.94562pt>
-File: modelodominio.png Graphic file (type png)
- <use modelodominio.png>
-Package pdftex.def Info: modelodominio.png used on input line 37.
-(pdftex.def)             Requested size: 507.46904pt x 219.00845pt.
+<imagens/mD/"ModeloDominio".jpg, id=36, 1197.47375pt x 501.875pt>
+File: imagens/mD/"ModeloDominio".jpg Graphic file (type jpg)
 
-Overfull \hbox (52.22493pt too wide) in paragraph at lines 37--38
+<use imagens/mD/"ModeloDominio".jpg>
+Package pdftex.def Info: imagens/mD/"ModeloDominio".jpg used on input line 59.
+(pdftex.def)             Requested size: 478.98102pt x 200.74643pt.
+
+Overfull \hbox (23.73691pt too wide) in paragraph at lines 59--60
 [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
-<usecase1.png, id=32, 507.39563pt x 408.02437pt>
-File: usecase1.png Graphic file (type png)
- <use usecase1.png>
-Package pdftex.def Info: usecase1.png used on input line 47.
-(pdftex.def)             Requested size: 355.17451pt x 285.61511pt.
- [5
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+[6
 
- <./modelodominio.png>]) (conclusao.tex [6 <./usecase1.png>]
+ <./imagens/mD/ModeloDominio.jpg>]
+<UseCase.jpg, id=41, 623.32875pt x 527.9725pt>
+File: UseCase.jpg Graphic file (type jpg)
+ <use UseCase.jpg>
+Package pdftex.def Info: UseCase.jpg used on input line 86.
+(pdftex.def)             Requested size: 311.6636pt x 263.9856pt.
+ [7 <./UseCase.jpg>]
+<imagens/Especificacoes/geresaldoglobal.png, id=45, 484.81125pt x 274.02374pt>
+File: imagens/Especificacoes/geresaldoglobal.png Graphic file (type png)
+
+<use imagens/Especificacoes/geresaldoglobal.png>
+Package pdftex.def Info: imagens/Especificacoes/geresaldoglobal.png used on inp
+ut line 95.
+(pdftex.def)             Requested size: 290.88899pt x 164.41551pt.
+
+<imagens/Especificacoes/efetualogin.png, id=46, 515.67656pt x 319.1925pt>
+File: imagens/Especificacoes/efetualogin.png Graphic file (type png)
+
+<use imagens/Especificacoes/efetualogin.png>
+Package pdftex.def Info: imagens/Especificacoes/efetualogin.png used on input l
+ine 104.
+(pdftex.def)             Requested size: 309.40831pt x 191.51697pt.
+ [8 <./imagens/Especificacoes/geresaldoglobal.png> <./imagens/Especificacoes/ef
+etualogin.png>]
+<imagens/Especificacoes/criarconta.png, id=50, 462.22687pt x 400.49625pt>
+File: imagens/Especificacoes/criarconta.png Graphic file (type png)
+
+<use imagens/Especificacoes/criarconta.png>
+Package pdftex.def Info: imagens/Especificacoes/criarconta.png used on input li
+ne 113.
+(pdftex.def)             Requested size: 277.33826pt x 240.29959pt.
+
+<imagens/Especificacoes/consultasaldodentrodecasa.png, id=51, 495.35063pt x 267
+.24844pt>
+File: imagens/Especificacoes/consultasaldodentrodecasa.png Graphic file (type p
+ng)
+ <use imagens/Especificacoes/consultasaldodentrodecasa.png>
+Package pdftex.def Info: imagens/Especificacoes/consultasaldodentrodecasa.png u
+sed on input line 120.
+(pdftex.def)             Requested size: 297.21268pt x 160.3503pt.
+ [9 <./imagens/Especificacoes/criarconta.png> <./imagens/Especificacoes/consult
+asaldodentrodecasa.png>]
+<imagens/Especificacoes/depositadinheiro.png, id=55, 457.71pt x 158.09062pt>
+File: imagens/Especificacoes/depositadinheiro.png Graphic file (type png)
+
+<use imagens/Especificacoes/depositadinheiro.png>
+Package pdftex.def Info: imagens/Especificacoes/depositadinheiro.png used on in
+put line 129.
+(pdftex.def)             Requested size: 274.62813pt x 94.85509pt.
+
+<imagens/Especificacoes/consultasmsadmin.png, id=56, 454.69875pt x 264.99pt>
+File: imagens/Especificacoes/consultasmsadmin.png Graphic file (type png)
+
+<use imagens/Especificacoes/consultasmsadmin.png>
+Package pdftex.def Info: imagens/Especificacoes/consultasmsadmin.png used on in
+put line 136.
+(pdftex.def)             Requested size: 272.82135pt x 158.99522pt.
+ [10 <./imagens/Especificacoes/depositadinheiro.png> <./imagens/Especificacoes/
+consultasmsadmin.png>]
+<imagens/UseCase/GerirDespesas.jpg, id=60, 481.8pt x 287.0725pt>
+File: imagens/UseCase/GerirDespesas.jpg Graphic file (type jpg)
+
+<use imagens/UseCase/GerirDespesas.jpg>
+Package pdftex.def Info: imagens/UseCase/GerirDespesas.jpg used on input line 1
+45.
+(pdftex.def)             Requested size: 240.8994pt x 143.53589pt.
+
+<imagens/Especificacoes/efetuapagdespesa.png, id=61, 462.97969pt x 298.86656pt>
+File: imagens/Especificacoes/efetuapagdespesa.png Graphic file (type png)
+<use imagens/Especificacoes/efetuapagdespesa.png>
+Package pdftex.def Info: imagens/Especificacoes/efetuapagdespesa.png used on in
+put line 153.
+(pdftex.def)             Requested size: 277.78995pt x 179.3213pt.
+ [11 <./imagens/UseCase/GerirDespesas.jpg> <./imagens/Especificacoes/efetuapagd
+espesa.png>]
+<imagens/Especificacoes/inserirdespesas.png, id=65, 602.25pt x 736.25063pt>
+File: imagens/Especificacoes/inserirdespesas.png Graphic file (type png)
+
+<use imagens/Especificacoes/inserirdespesas.png>
+Package pdftex.def Info: imagens/Especificacoes/inserirdespesas.png used on inp
+ut line 162.
+(pdftex.def)             Requested size: 481.80064pt x 589.0013pt.
+
+Overfull \hbox (26.55653pt too wide) in paragraph at lines 162--163
+ [][] 
+ []
+
+[12 <./imagens/Especificacoes/inserirdespesas.png>]
+<imagens/Especificacoes/apagardespesa.png, id=70, 475.7775pt x 238.64156pt>
+File: imagens/Especificacoes/apagardespesa.png Graphic file (type png)
+
+<use imagens/Especificacoes/apagardespesa.png>
+Package pdftex.def Info: imagens/Especificacoes/apagardespesa.png used on input
+ line 172.
+(pdftex.def)             Requested size: 285.46869pt x 143.18602pt.
+
+<imagens/UseCase/despesasMorador.jpg, id=71, 402.50375pt x 368.37625pt>
+File: imagens/UseCase/despesasMorador.jpg Graphic file (type jpg)
+
+<use imagens/UseCase/despesasMorador.jpg>
+Package pdftex.def Info: imagens/UseCase/despesasMorador.jpg used on input line
+ 180.
+(pdftex.def)             Requested size: 241.5041pt x 221.02744pt.
+ [13 <./imagens/Especificacoes/apagardespesa.png> <./imagens/UseCase/despesasMo
+rador.jpg>]
+<imagens/Especificacoes/consultardespesaspagas.png, id=75, 458.46281pt x 232.61
+906pt>
+File: imagens/Especificacoes/consultardespesaspagas.png Graphic file (type png)
+
+ <use imagens/Especificacoes/consultardespesaspagas.png>
+Package pdftex.def Info: imagens/Especificacoes/consultardespesaspagas.png used
+ on input line 190.
+(pdftex.def)             Requested size: 275.0798pt x 139.57251pt.
+
+<imagens/Especificacoes/pagardespesas.png, id=76, 664.73344pt x 469.00218pt>
+File: imagens/Especificacoes/pagardespesas.png Graphic file (type png)
+
+<use imagens/Especificacoes/pagardespesas.png>
+Package pdftex.def Info: imagens/Especificacoes/pagardespesas.png used on input
+ line 198.
+(pdftex.def)             Requested size: 398.84314pt x 281.40347pt.
+ [14 <./imagens/Especificacoes/consultardespesaspagas.png> <./imagens/Especific
+acoes/pagardespesas.png>]
+<imagens/Especificacoes/consultarlistadedividas.png, id=80, 462.97969pt x 389.2
+0406pt>
+File: imagens/Especificacoes/consultarlistadedividas.png Graphic file (type png
+)
+ <use imagens/Especificacoes/consultarlistadedividas.png>
+Package pdftex.def Info: imagens/Especificacoes/consultarlistadedividas.png use
+d on input line 207.
+(pdftex.def)             Requested size: 324.08356pt x 272.44098pt.
+
+<imagens/Especificacoes/consultaremprestimos.png, id=81, 459.96844pt x 216.81pt
+>
+File: imagens/Especificacoes/consultaremprestimos.png Graphic file (type png)
+ <use imagens/Especificacoes/consultaremprestimos.png>
+Package pdftex.def Info: imagens/Especificacoes/consultaremprestimos.png used o
+n input line 215.
+(pdftex.def)             Requested size: 321.97571pt x 151.76596pt.
+ [15 <./imagens/Especificacoes/consultarlistadedividas.png> <./imagens/Especifi
+cacoes/consultaremprestimos.png>]
+<imagens/UseCase/InteracaoComOsUtilizadores.jpg, id=85, 436.63126pt x 347.2975p
+t>
+File: imagens/UseCase/InteracaoComOsUtilizadores.jpg Graphic file (type jpg)
+ <use imagens/UseCase/InteracaoComOsUtilizadores.jpg>
+Package pdftex.def Info: imagens/UseCase/InteracaoComOsUtilizadores.jpg used on
+ input line 224.
+(pdftex.def)             Requested size: 261.98077pt x 208.3801pt.
+
+<imagens/Especificacoes/convidautilizadores.png, id=86, 462.97969pt x 217.5628p
+t>
+File: imagens/Especificacoes/convidautilizadores.png Graphic file (type png)
+ <use imagens/Especificacoes/convidautilizadores.png>
+Package pdftex.def Info: imagens/Especificacoes/convidautilizadores.png used on
+ input line 232.
+(pdftex.def)             Requested size: 324.08356pt x 152.29292pt.
+ [16 <./imagens/UseCase/InteracaoComOsUtilizadores.jpg> <./imagens/Especificaco
+es/convidautilizadores.png>]
+<imagens/Especificacoes/enviasmsutilizadores.png, id=90, 456.20438pt x 196.4840
+7pt>
+File: imagens/Especificacoes/enviasmsutilizadores.png Graphic file (type png)
+ <use imagens/Especificacoes/enviasmsutilizadores.png>
+Package pdftex.def Info: imagens/Especificacoes/enviasmsutilizadores.png used o
+n input line 242.
+(pdftex.def)             Requested size: 319.34087pt x 137.5379pt.
+
+<imagens/Especificacoes/retirardogrupo.png, id=91, 461.47406pt x 245.41687pt>
+File: imagens/Especificacoes/retirardogrupo.png Graphic file (type png)
+
+<use imagens/Especificacoes/retirardogrupo.png>
+Package pdftex.def Info: imagens/Especificacoes/retirardogrupo.png used on inpu
+t line 252.
+(pdftex.def)             Requested size: 323.02963pt x 171.79062pt.
+
+<imagens/maqEstados/Login.jpg, id=92, 676.5275pt x 119.44624pt>
+File: imagens/maqEstados/Login.jpg Graphic file (type jpg)
+
+<use imagens/maqEstados/Login.jpg>
+Package pdftex.def Info: imagens/maqEstados/Login.jpg used on input line 261.
+(pdftex.def)             Requested size: 473.56601pt x 83.61179pt.
+
+Overfull \hbox (18.3219pt too wide) in paragraph at lines 261--262
+ [][] 
+ []
+
+<imagens/maqEstados/"Criar Conta".jpg, id=93, 889.3225pt x 319.1925pt>
+File: imagens/maqEstados/"Criar Conta".jpg Graphic file (type jpg)
+
+<use imagens/maqEstados/"Criar Conta".jpg>
+Package pdftex.def Info: imagens/maqEstados/"Criar Conta".jpg used on input lin
+e 269.
+(pdftex.def)             Requested size: 489.12888pt x 175.55641pt.
+
+Overfull \hbox (33.88477pt too wide) in paragraph at lines 269--270
+ [][] 
+ []
+
+[17 <./imagens/Especificacoes/enviasmsutilizadores.png> <./imagens/Especificaco
+es/retirardogrupo.png> <./imagens/maqEstados/Login.jpg>]
+<imagens/maqEstados/"Convidar Utilizadores".jpg, id=97, 1090.0725pt x 471.7625p
+t>
+File: imagens/maqEstados/"Convidar Utilizadores".jpg Graphic file (type jpg)
+ <use imagens/maqEstados/"Convidar Utilizadores".jpg>
+Package pdftex.def Info: imagens/maqEstados/"Convidar Utilizadores".jpg used on
+ input line 276.
+(pdftex.def)             Requested size: 490.52809pt x 212.29115pt.
+
+Overfull \hbox (35.28398pt too wide) in paragraph at lines 276--277
+ [][] 
+ []
+
+[18 <./imagens/maqEstados/Criar Conta.jpg> <./imagens/maqEstados/Convidar Utili
+zadores.jpg>]
+<imagens/maqEstados/"Remover Utilizadores".jpg, id=102, 824.07875pt x 250.9375p
+t>
+File: imagens/maqEstados/"Remover Utilizadores".jpg Graphic file (type jpg)
+ <use imagens/maqEstados/"Remover Utilizadores".jpg>
+Package pdftex.def Info: imagens/maqEstados/"Remover Utilizadores".jpg used on 
+input line 285.
+(pdftex.def)             Requested size: 370.83202pt x 112.92082pt.
+
+<imagens/maqEstados/"InserFactura".jpg, id=103, 1090.0725pt x 512.91624pt>
+File: imagens/maqEstados/"InserFactura".jpg Graphic file (type jpg)
+
+<use imagens/maqEstados/"InserFactura".jpg>
+Package pdftex.def Info: imagens/maqEstados/"InserFactura".jpg used on input li
+ne 292.
+(pdftex.def)             Requested size: 490.52809pt x 230.81018pt.
+
+Overfull \hbox (35.28398pt too wide) in paragraph at lines 292--293
+ [][] 
+ []
+
+<imagens/maqEstados/"Deposita Dinheiro".jpg, id=104, 617.30624pt x 98.3675pt>
+File: imagens/maqEstados/"Deposita Dinheiro".jpg Graphic file (type jpg)
+
+<use imagens/maqEstados/"Deposita Dinheiro".jpg>
+Package pdftex.def Info: imagens/maqEstados/"Deposita Dinheiro".jpg used on inp
+ut line 299.
+(pdftex.def)             Requested size: 277.78523pt x 44.26495pt.
+ [19 <./imagens/maqEstados/Remover Utilizadores.jpg> <./imagens/maqEstados/Inse
+rFactura.jpg> <./imagens/maqEstados/Deposita Dinheiro.jpg>]
+<imagens/mockups/CriarConta.png, id=108, 559.33969pt x 371.88937pt>
+File: imagens/mockups/CriarConta.png Graphic file (type png)
+
+<use imagens/mockups/CriarConta.png>
+Package pdftex.def Info: imagens/mockups/CriarConta.png used on input line 311.
+
+(pdftex.def)             Requested size: 279.66916pt x 185.94423pt.
+
+<imagens/mockups/MLogin.png, id=109, 562.35094pt x 320.69812pt>
+File: imagens/mockups/MLogin.png Graphic file (type png)
+
+<use imagens/mockups/MLogin.png>
+Package pdftex.def Info: imagens/mockups/MLogin.png used on input line 317.
+(pdftex.def)             Requested size: 281.17477pt x 160.34866pt.
+ [20 <./imagens/mockups/CriarConta.png> <./imagens/mockups/MLogin.png>]
+<imagens/mockups/loginsemgrupos.png, id=115, 703.87968pt x 469.00218pt>
+File: imagens/mockups/loginsemgrupos.png Graphic file (type png)
+
+<use imagens/mockups/loginsemgrupos.png>
+Package pdftex.def Info: imagens/mockups/loginsemgrupos.png used on input line 
+325.
+(pdftex.def)             Requested size: 351.93898pt x 234.50052pt.
+
+<imagens/mockups/consultardados.png, id=116, 949.29657pt x 572.89032pt>
+File: imagens/mockups/consultardados.png Graphic file (type png)
+
+<use imagens/mockups/consultardados.png>
+Package pdftex.def Info: imagens/mockups/consultardados.png used on input line 
+335.
+(pdftex.def)             Requested size: 427.1795pt x 257.79826pt.
+
+<imagens/mockups/logUtilizador.png, id=117, 577.40718pt x 459.96844pt>
+File: imagens/mockups/logUtilizador.png Graphic file (type png)
+
+<use imagens/mockups/logUtilizador.png>
+Package pdftex.def Info: imagens/mockups/logUtilizador.png used on input line 3
+44.
+(pdftex.def)             Requested size: 259.83083pt x 206.98389pt.
+ [21 <./imagens/mockups/loginsemgrupos.png> <./imagens/mockups/consultardados.p
+ng>] [22 <./imagens/mockups/logUtilizador.png>] <imagens/mockups/loginadmin.png
+, id=127, 660.21657pt x 355.3275pt>
+File: imagens/mockups/loginadmin.png Graphic file (type png)
+
+<use imagens/mockups/loginadmin.png>
+Package pdftex.def Info: imagens/mockups/loginadmin.png used on input line 353.
+
+(pdftex.def)             Requested size: 330.10747pt x 177.6633pt.
+) (conclusao.tex [23 <./imagens/mockups/loginadmin.png>]
 Cap\'{\i }tulo 4.
-) [7
+) [24
 
 ] ("1 fase DSS.aux") ) 
 Here is how much of TeX's memory you used:
- 31374 strings out of 493698
- 736394 string characters out of 3144375
+ 31574 strings out of 493698
+ 743309 string characters out of 3144375
  866202 words of memory out of 3000000
- 34193 multiletter control sequences out of 15000+200000
- 30825 words of font info for 61 fonts, out of 3000000 for 9000
+ 34352 multiletter control sequences out of 15000+200000
+ 32509 words of font info for 63 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,7n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
-enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/urw/times/utmr8a.pfb>
-Output written on "1 fase DSS.pdf" (8 pages, 536802 bytes).
+enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on "1 fase DSS.pdf" (25 pages, 1097786 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 154 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 
