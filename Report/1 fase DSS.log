@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  11 NOV 2016 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  12 NOV 2016 21:28
 entering extended mode
 **"1 fase DSS.tex"
 ("1 fase DSS.tex"
@@ -1634,7 +1634,7 @@ Package pdftex.def Info: imagens/mockups/CriarConta.png used on input line 311.
 File: imagens/mockups/MLogin.png Graphic file (type png)
 
 <use imagens/mockups/MLogin.png>
-Package pdftex.def Info: imagens/mockups/MLogin.png used on input line 317.
+Package pdftex.def Info: imagens/mockups/MLogin.png used on input line 318.
 (pdftex.def)             Requested size: 281.17477pt x 160.34866pt.
  [20 <./imagens/mockups/CriarConta.png> <./imagens/mockups/MLogin.png>]
 <imagens/mockups/loginsemgrupos.png, id=115, 703.87968pt x 469.00218pt>
@@ -1642,7 +1642,7 @@ File: imagens/mockups/loginsemgrupos.png Graphic file (type png)
 
 <use imagens/mockups/loginsemgrupos.png>
 Package pdftex.def Info: imagens/mockups/loginsemgrupos.png used on input line 
-325.
+326.
 (pdftex.def)             Requested size: 351.93898pt x 234.50052pt.
 
 <imagens/mockups/consultardados.png, id=116, 949.29657pt x 572.89032pt>
@@ -1650,16 +1650,16 @@ File: imagens/mockups/consultardados.png Graphic file (type png)
 
 <use imagens/mockups/consultardados.png>
 Package pdftex.def Info: imagens/mockups/consultardados.png used on input line 
-335.
+336.
 (pdftex.def)             Requested size: 427.1795pt x 257.79826pt.
 
-<imagens/mockups/logUtilizador.png, id=117, 577.40718pt x 459.96844pt>
+<imagens/mockups/logUtilizador.png, id=117, 612.03656pt x 466.74374pt>
 File: imagens/mockups/logUtilizador.png Graphic file (type png)
 
 <use imagens/mockups/logUtilizador.png>
 Package pdftex.def Info: imagens/mockups/logUtilizador.png used on input line 3
-44.
-(pdftex.def)             Requested size: 288.70288pt x 229.98366pt.
+45.
+(pdftex.def)             Requested size: 306.01753pt x 233.37129pt.
  [21 <./imagens/mockups/loginsemgrupos.png> <./imagens/mockups/consultardados.p
 ng>]
 <imagens/mockups/tarefasutilizador.png, id=123, 617.30624pt x 469.00218pt>
@@ -1667,7 +1667,7 @@ File: imagens/mockups/tarefasutilizador.png Graphic file (type png)
 
 <use imagens/mockups/tarefasutilizador.png>
 Package pdftex.def Info: imagens/mockups/tarefasutilizador.png used on input li
-ne 350.
+ne 351.
 (pdftex.def)             Requested size: 308.65236pt x 234.50052pt.
  [22 <./imagens/mockups/logUtilizador.png> <./imagens/mockups/tarefasutilizador
 .png>]
@@ -1675,19 +1675,34 @@ ne 350.
 File: imagens/mockups/loginadmin.png Graphic file (type png)
 
 <use imagens/mockups/loginadmin.png>
-Package pdftex.def Info: imagens/mockups/loginadmin.png used on input line 359.
+Package pdftex.def Info: imagens/mockups/loginadmin.png used on input line 360.
 
 (pdftex.def)             Requested size: 330.10747pt x 177.6633pt.
-) (conclusao.tex [23 <./imagens/mockups/loginadmin.png>]
+
+<imagens/mockups/AdminpagarContas.png, id=130, 621.82312pt x 443.40656pt>
+File: imagens/mockups/AdminpagarContas.png Graphic file (type png)
+
+<use imagens/mockups/AdminpagarContas.png>
+Package pdftex.def Info: imagens/mockups/AdminpagarContas.png used on input lin
+e 367.
+(pdftex.def)             Requested size: 373.09674pt x 266.04597pt.
+) (conclusao.tex [23 <./imagens/mockups/loginadmin.png> <./imagens/mockups/Admi
+npagarContas.png>]
 Cap\'{\i }tulo 4.
+
+Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
+[]\OT1/ptm/m/n/12 Depois de to-dos es-tes ele-men-tos pro-ce-de-mos []a fase de
+ pen-sar de como se-ria a nossa aplica[][]ao
+ []
+
 ) [24
 
 ] ("1 fase DSS.aux") ) 
 Here is how much of TeX's memory you used:
- 31579 strings out of 493698
- 743497 string characters out of 3144375
+ 31584 strings out of 493698
+ 743680 string characters out of 3144375
  866202 words of memory out of 3000000
- 34356 multiletter control sequences out of 15000+200000
+ 34360 multiletter control sequences out of 15000+200000
  32509 words of font info for 63 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,8n,83p,10418b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1697,9 +1712,9 @@ Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on "1 fase DSS.pdf" (25 pages, 1146218 bytes).
+Output written on "1 fase DSS.pdf" (25 pages, 1177781 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
