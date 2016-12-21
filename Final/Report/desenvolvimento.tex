@@ -27,6 +27,8 @@ A aplicação a desenvolver deverá suportar o registo das despesas e a gestão 
 \item{O morador deverá efetuar um pagamento.}
  
 \item{Cada pagamento será creditado na conta corrente do morador.}
+
+\item{Cada pagamento efetuado não pode ultrapassar o valor da fatura}
  
  \item{O pagamento pode ser igual ou superior à quantia necessária para pagar as despesas em causa.}
  
@@ -111,6 +113,12 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Gere Saldo Global  }  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/GereSaldoGlobal}  
+	\caption{Diagrama de Sequência: Gere Saldo Global}  
+\end{figure}
+
 
 \subsubsection{Especificação: Efetua Login }
 
@@ -119,6 +127,15 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\includegraphics[scale=0.6]{imagens/Especificacoes/efetualogin}  
 	\caption{Especificação do Use Case: Efetua Login  }  
 \end{figure}
+
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/Login}  
+	\caption{Diagrama de Sequência: Efetua Login }  
+\end{figure}
+
+
 
 \newpage
 
@@ -129,12 +146,26 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Criar Conta   }  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.55]{imagens/diagramaSeq/CriarConta}  
+	\caption{Diagrama de Sequência: Criar Conta}  
+\end{figure}
+
+\newpage
 \subsubsection{Especificação: Consulta Saldo dentro de casa }
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/Especificacoes/consultasaldodentrodecasa}  
 	\caption{Especificação do Use Case: Consulta Saldo dentro de Casa   }  
 \end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/ConsultaSaldodeCasa}  
+	\caption{Diagrama de Sequência: Consulta saldo de casa  }  
+\end{figure}
+
 
 \newpage
 
@@ -145,6 +176,14 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Deposita Dinheiro para a sua conta  }  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/DepositaDinheiroConta}  
+	\caption{Diagrama de Sequência: Deposita Dinheiro na Conta}  
+\end{figure}
+
+\newpage
+
 \subsubsection{Especificação: Consulta Mensagens enviadas pelo Administrador }
 \begin{figure}[htb!]
 	\centering
@@ -152,7 +191,12 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Consulta Mensagens enviadas pelo Administrador}  
 \end{figure}
 
-\newpage
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/ConsultarMensagensdoAdmin}  
+	\caption{Diagrama de Sequência: Consulta Mensagens}  
+\end{figure}
+
 \subsection{Subdiagrama Gerir Despesas}
 
 \begin{figure}[htb!]
@@ -183,15 +227,15 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \end{figure}
 
 
-
 \newpage
-
 \subsubsection{Especificação: Inserir Despesa}
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.8]{imagens/Especificacoes/inserirdespesas}  
 	\caption{Especificação do Use Case: Inserir Despesas}  
 \end{figure}
+
+\newpage
 
 \begin{figure}[htb!]
 	\centering
@@ -209,13 +253,20 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Apagar Despesa}  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/ApagarDespesa}  
+	\caption{Diagrama de Sequência: Apagar Despesa}  
+\end{figure}
 
+\newpage
 \subsection{Subdiagrama Administrar Contas}
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/UseCase/despesasMorador}  
 	\caption{Subdiagrama: Administrar Contas }  
 \end{figure}
+
 
 \newpage
 
@@ -234,7 +285,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \end{figure}
 
 
-
+\newpage
 \subsubsection{Especificação: Pagar Despesas }
 
 \begin{figure}[htb!]
@@ -266,6 +317,16 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Consultar lista de dividas}  
 \end{figure}
 
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.6]{imagens/diagramaSeq/ConsultaListaDividas}  
+	\caption{Diagrama de Sequência: Consulta lista de dividas}  
+\end{figure}
+
+\newpage
+
+
 \subsubsection{Especificação: Consultar Empréstimos }
 
 \begin{figure}[htb!]
@@ -276,7 +337,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.5]{imagens/DiagramaSeq/ConsultarListaEmprestimos}  
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/ConsultarListaEmprestimos}  
 	\caption{Diagrama de Sequência: Consulta lista de empréstimos}  
 \end{figure}
 
@@ -301,11 +362,15 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 \begin{figure}[htb!]
 	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/ConvidaUtilizadores}  
+	\caption{Diagrama de Sequência: Convida Utilizadores }  
+\end{figure}
+
+\begin{figure}[htb!]
+	\centering
 	\includegraphics[scale=0.46]{imagens/diagramaIt/AdicionarUtilizadorGrupo}  
 	\caption{Diagrama de Iteração: Convida Utilizadores }  
 \end{figure}
-
-
 
 
 
@@ -341,9 +406,26 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Iteração: Administrador Remove do Grupo}  
 \end{figure}
 
+\newpage
+\chapter{Implementação e Instalação do Sistema}
 
+\section{Diagrama de Instalação}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.4]{imagens/DiagramInstalacao/DeploymentDiagram}  
+	\caption{Diagrama de Instalação ou Deployment Diagram}  
+\end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.4]{imagens/DiagramInstalacao/PackageDiagram}  
+	\caption{Diagrama de Pacotes}  
+\end{figure}
+
+\newpage
+
+\chapter{Interface do Sistema Gestão de Despesas - SGD}
 \section{Máquinas de Estado}
 \subsection{Efetuar Login}
 
@@ -367,8 +449,6 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\includegraphics[scale=0.45]{imagens/maqEstados/"Convidar Utilizadores"}  
 	\caption{Máquina de Estados: Convidar Utilizadores}  
 \end{figure}
-
-\newpage
 
 \subsection{Remover Utilizadores}
 \begin{figure}[htb!]
