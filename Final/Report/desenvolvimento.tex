@@ -70,12 +70,27 @@ O administrador administra o saldo global da casa/apartamento.
 
 \newpage
 
+\section{Diagrama de Classes}
+A metodologia de implementação das boas práticas do UML no desenvolvimento de qualquer
+projecto, especialmente em projectos de media e pequena escala, para possíveis implementações de ideias da camada de negócio e de esquemas conceptuais, que podem ser validados e discutidos pelo grupo de desenvolvimento e analisados sem que seja necessário perder tempo com testes e builds.
+No caso especifico do diagrama de classes aquilo que concluímos é que permite de uma forma simples e transparente partilhar e discutir como irá ser, ou pelos menos como se pretende que seja, os esquemas
+conceptuais do modelo de domínio e esqueleto do nossa implementação, ou seja, das estrutura básica das classes. O modelo abaixo apresentado é portanto uma tradução daquilo que pretendíamos com o
+modelo de domínio, mas nesse caso, com maior detalhe técnico relativos à linguagem de programação escolhida, i.e. o Java. Temos portanto o seguinte diagrama de classes:
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.47]{imagens/diagramaClasses/DiagramaClasse}  
+	\caption{Diagrama de Classes }  
+\end{figure}
+
+
+\newpage
+
 \section{Modelo de Use Case}
 A segunda parte da análise de requisitos corresponde à definição dos use cases, com o objetivo de os aplicar nesta primeira fase deste trabalho prático. Nos use cases, queremos primeiramente, identificar os atores, que serão quem interagirá com o sistema.
 Posterior à identificação dos atores, passamos então à identificação dos use cases, isto é, o que se pretende do sistema. No último ponto da visão orientada aos use cases, procedemos à identificação das classes de suporte à realização dos mesmo, que corresponde à especificação da funcionalidade a ser implementada.
 Neste sentido, quando definimos um use case, para além de ser uma espécie de documentação, temos de ter em conta que se trata de uma unidade coerente de funcionalidade, um serviço. Define também um comportamento do sistema, sem revelar a estrutura interna, divulgando desta forma, a comunicação entre os atores e o sistema.
 O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcionalidade do sistema que decorre na sua essência, do diálogo entre o sistema e os atores, e a responsabilidade de resposta funcional do sistema.
-
 
 
 \subsection{Diagrama de Use Case}
@@ -154,6 +169,21 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case:Efetua Pagamento da despesa  }  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/EfetuaPagamentoDespesa}  
+	\caption{Diagrama de Sequência: Administrador efetua pagamento da despesa }  
+\end{figure}
+
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.345]{imagens/diagramaIt/AdminPagaFactura}  
+	\caption{Diagrama de Iteração: Administrador efetua pagamento }  
+\end{figure}
+
+
+
 \newpage
 
 \subsubsection{Especificação: Inserir Despesa}
@@ -161,6 +191,12 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\centering
 	\includegraphics[scale=0.8]{imagens/Especificacoes/inserirdespesas}  
 	\caption{Especificação do Use Case: Inserir Despesas}  
+\end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/DiagramaSeq/InserirDespesa}  
+	\caption{Diagrama de Sequência: Inserir Despesa}  
 \end{figure}
 
 \newpage
@@ -191,12 +227,34 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Consultar Despesas Pagas}  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.6]{imagens/DiagramaSeq/ConsultarDespesasPagas}  
+	\caption{Diagrama de Sequência: Consultar Despesas pagas }  
+\end{figure}
+
+
+
 \subsubsection{Especificação: Pagar Despesas }
 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/Especificacoes/pagardespesas}  
 	\caption{Especificação do Use Case: Pagar Despesas}  
+\end{figure}
+
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/DiagramaSeq/PagarDespesa}  
+	\caption{Diagrama de Sequência: Utilizador paga despesa}  
+\end{figure}
+
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.18]{imagens/DiagramaIt/UtilizadorPagaFactura}  
+	\caption{Diagrama de Iteração: Utilizador Paga Despesas}  
 \end{figure}
 
 \newpage
@@ -216,6 +274,14 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Especificação do Use Case: Consultar Empréstimos}  
 \end{figure}
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/DiagramaSeq/ConsultarListaEmprestimos}  
+	\caption{Diagrama de Sequência: Consulta lista de empréstimos}  
+\end{figure}
+
+
+
 \newpage
 
 \subsection{Subdiagrama Interação com os Utilizadores}
@@ -232,6 +298,16 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\includegraphics[scale=0.7]{imagens/Especificacoes/convidautilizadores}  
 	\caption{Especificação do Use Case: Convida Utilizadores}  
 \end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.46]{imagens/diagramaIt/AdicionarUtilizadorGrupo}  
+	\caption{Diagrama de Iteração: Convida Utilizadores }  
+\end{figure}
+
+
+
+
 
 \newpage
 
@@ -252,6 +328,21 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\includegraphics[scale=0.7]{imagens/Especificacoes/retirardogrupo}  
 	\caption{Especificação do Use Case: Retirar do grupo}  
 \end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/DiagramaSeq/RetirarDoGrupo}  
+	\caption{Diagrama de Sequência: Administrador Remove do Grupo}  
+\end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.27]{imagens/DiagramaIt/AdminRemoveDoGrupo}  
+	\caption{Diagrama de Iteração: Administrador Remove do Grupo}  
+\end{figure}
+
+
+
 
 \section{Máquinas de Estado}
 \subsection{Efetuar Login}

@@ -1,0 +1,41 @@
+\select@language {portuges}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {1.1}Apresenta\IeC {\c c}\IeC {\~a}o do Caso de Estudo}{2}
+\contentsline {chapter}{\numberline {2}Requisitos do Sistema}{4}
+\contentsline {section}{\numberline {2.1}An\IeC {\'a}lise e Levantamento dos Requisitos}{4}
+\contentsline {subsection}{\numberline {2.1.1}Cria\IeC {\c c}\IeC {\~a}o do grupo com os elementos da casa/apartamento}{4}
+\contentsline {subsection}{\numberline {2.1.2}Gest\IeC {\~a}o das contas}{4}
+\contentsline {section}{\numberline {2.2}Base de dados }{5}
+\contentsline {chapter}{\numberline {3}Arquitetura da Aplica\IeC {\c c}\IeC {\~a}o}{6}
+\contentsline {section}{\numberline {3.1}Modelo de Dominio }{6}
+\contentsline {section}{\numberline {3.2}Diagrama de Classes}{7}
+\contentsline {section}{\numberline {3.3}Modelo de Use Case}{8}
+\contentsline {subsection}{\numberline {3.3.1}Diagrama de Use Case}{8}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Gere Saldo Global }{9}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Efetua Login }{9}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Criar Conta }{10}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consulta Saldo dentro de casa }{10}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Deposita Dinheiro para a sua Conta }{11}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consulta Mensagens enviadas pelo Administrador }{11}
+\contentsline {subsection}{\numberline {3.3.2}Subdiagrama Gerir Despesas}{12}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Efetua pagamento da despesa}{12}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Inserir Despesa}{13}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Apagar Despesa}{14}
+\contentsline {subsection}{\numberline {3.3.3}Subdiagrama Administrar Contas}{14}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consultar despesas pagas }{15}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Pagar Despesas }{15}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consultar Lista de D\IeC {\'\i }vidas }{16}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consultar Empr\IeC {\'e}stimos }{16}
+\contentsline {subsection}{\numberline {3.3.4}Subdiagrama Intera\IeC {\c c}\IeC {\~a}o com os Utilizadores}{17}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Convida Utilizadores }{17}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Envia Mensagens aos Utilizadores }{18}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Retirar do grupo }{18}
+\contentsline {section}{\numberline {3.4}M\IeC {\'a}quinas de Estado}{18}
+\contentsline {subsection}{\numberline {3.4.1}Efetuar Login}{18}
+\contentsline {subsection}{\numberline {3.4.2}Criar Conta}{18}
+\contentsline {subsection}{\numberline {3.4.3}Convidar Utilizadores}{18}
+\contentsline {subsection}{\numberline {3.4.4}Remover Utilizadores}{20}
+\contentsline {subsection}{\numberline {3.4.5}Inserir Fatura}{20}
+\contentsline {subsection}{\numberline {3.4.6}Deposita Dinheiro}{20}
+\contentsline {section}{\numberline {3.5}Mockups}{21}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~a}o}{30}
