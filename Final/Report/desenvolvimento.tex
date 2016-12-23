@@ -60,6 +60,16 @@ A aplicação necessitará de uma implementação de uma base de dados para geri
 	\caption{Modelo Lógico}  
 \end{figure}
 
+Para a realização deste projeto, construímos uma base de dados relacional em \textit{MySQL} para armazenar toda a informação necessária para colocar o SGD \footnote{Sistema de Gestão de Despesas} a correr. Para o programa aceder a essa informação, foram classes \textit{DAO}, que fornecem métodos de acesso à base de dados. Cada método visível para o exterior
+destas classe solicita sempre uma conecção à base de Dados, este pedido é feito à classe Connector, podendo este conetor estar configurado com Auto-Commit ou não dependendo do tipo de operações pretendidas.
+São também definidos métodos auxiliares alguns \textit{Private} e outros \textit{Protected} que executam as queries à base de dados, contêm \textit{PreparedStatements} por questões de segurança contra SQL \textit{injection}. A criação destes métodos deve-se à tentativa de minimizar as conecções simultâneas à Base de Dados.
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.47]{imagens/diagramaClasses/DiagramaClasseDAO}  
+	\caption{Diagrama de Classes }  
+\end{figure}
+
 
 \chapter{Arquitetura da Aplicação}
 
@@ -74,7 +84,9 @@ No que diz respeito à aplicação, como é dito na introdução, queremos desen
 	\caption{Modelo Dominio}  
 \end{figure}
 
-O morador necessita de fornecer o nome, e-mail, número de telemovel e data de nascimento, para efetuar o login. 
+O morador necessita de fornecer o nome, e-mail, número de telemovel e data de nascimento, para se registar. 
+
+Para efetuar login será necessário inserir o e-mail e a palavra passe. 
 
 Como se pode observar na figura o morador efetua pagamento relativo a despesa recorrente ou extra, assim como paga uma fração da despesa, essa fração é relativa a um tipo de despesa. 
 
@@ -112,7 +124,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.5]{UseCase}  
+	\includegraphics[scale=0.5]{imagens/useCase/UseCase}  
 	\caption{Modelo Use Case}  
 \end{figure}
 
@@ -423,15 +435,25 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 \section{Diagrama de Instalação}
 
+Os dois grandes subsistemas da aplicação desenvolvida são o computador do utilizador e o servidor de base de dados. A comunicação é estabelecida por TCP/IP. O programa é uma aplicação Java, e para a apresentação gráfica ao utilizador, é usado JavaSwing. Para ser possível a comunicação entre a aplicação em Java e a base de dados MySQL, recorre-se à interface JDBC \footnote{Java Database Connectivity} . 
+
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.4]{imagens/DiagramInstalacao/DeploymentDiagram}  
 	\caption{Diagrama de Instalação ou Deployment Diagram}  
 \end{figure}
 
+\newpage
+
+Os três principais pacotes definidos são \textit{Presentation}, que trata da apresentação gráfica, em \textit{Java Swing}; \textit{Business}, que contém toda a lógica de negócio; e \textit{Data}, responsável pela ligação à base de dados. A camada de apresentação comunica com a camada de lógica de negócio a partir da classe
+SGD (Sistema de Gestão de Despesas), que desempenha a função de facade.
+Não existe qualquer tipo de comunicação feita diretamente entre a camada de
+apresentação e a camada de dados. A comunicação entre o package \textit{Business}
+e a persistência de Dados é feita recorrendo às várias classes \textit{DAO} implementadas no \textit{Package Data}, que comunicam com a base de dados \textit{MySQL}.
+
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.4]{imagens/DiagramInstalacao/PackageDiagram}  
+	\includegraphics[scale=0.35]{imagens/DiagramInstalacao/PackageDiagram}  
 	\caption{Diagrama de Pacotes}  
 \end{figure}
 
