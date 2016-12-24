@@ -140,13 +140,13 @@ CREATE TABLE IF NOT EXISTS `dss`.`Pagamento` (
   CONSTRAINT `fk_Conta_has_Morador_Conta1`
     FOREIGN KEY (`idConta`)
     REFERENCES `dss`.`Conta` (`idConta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE cascade
+    ON UPDATE cascade,
   CONSTRAINT `fk_Conta_has_Morador_Morador1`
     FOREIGN KEY (`idUtilizador`)
     REFERENCES `dss`.`Morador` (`idUtilizador`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE cascade
+    ON UPDATE cascade)
 ENGINE = InnoDB;
 
 
