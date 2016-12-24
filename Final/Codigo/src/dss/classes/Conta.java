@@ -5,40 +5,79 @@
  */
 package dss.classes;
 
-import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
  *
  * @author gil
+ * utilizadoresPagaram nr utilizadores que pagaram
+ * utilizadoresPagam nr utilizadores que tem de pagar
  */
 public class Conta {
     private float totalFactura;
     private GregorianCalendar dataLimite;
     private GregorianCalendar dataPagamento;
     private String nome;
-    private int tipo;
+    private String tipo;
     private float totalPago;
-    private List<Pagamento> pagam;
+    private Map<String,Pagamento> pagam;
     private int utilizadoresPagaram;
     private int utilizadoresPagam;
+    private int identificador;
 
     
-    public Conta(String nome,int tipo,float totalFactura,List<Pagamento>pag,GregorianCalendar data
-    ,int utiPagaram, int utiliPagam){
+    public Conta(String nome,String tipo,float totalFactura,GregorianCalendar data
+    ,int utiPagaram, int utiliPagam,int identificador){
     
         this.nome=nome;
         this.tipo=tipo;
         this.totalFactura=totalFactura;
-        this.pagam=pag;
+        this.pagam=new HashMap<>();
         this.dataLimite=data;
         this.totalPago=0;
         this.dataPagamento= new GregorianCalendar();
-        this.utilizadoresPagam=utiPagaram;
+        this.utilizadoresPagaram=utiPagaram;
         this.utilizadoresPagam = utiliPagam;
+        this.identificador=identificador;
     }
+    
+    
+     public Conta(String nome,String tipo,float totalFactura,GregorianCalendar data
+    ,int utiPagaram, int utiliPagam,int identificador,float totalFacturaPago){
+        
+        this.nome=nome;
+        this.tipo=tipo;
+        this.totalFactura=totalFactura;
+        this.pagam=new HashMap<>();
+        this.dataLimite=data;
+        this.totalPago=totalFacturaPago;
+        this.dataPagamento= new GregorianCalendar();
+        this.utilizadoresPagaram=utiPagaram;
+        this.utilizadoresPagam = utiliPagam;
+        this.identificador=identificador;
+    }
+    
+    
+    
+    
+    public Conta (String nome, String tipo, int nrPessoasPagaram,float totalConta,
+            GregorianCalendar dataPagamento, GregorianCalendar dataLimite,int id) {
+    
+        this.nome=nome;
+        this.tipo=tipo;
+        this.utilizadoresPagam=nrPessoasPagaram;
+        this.totalFactura=totalConta;
+        this.dataPagamento=dataPagamento;
+        this.dataLimite=dataLimite;
+        this.identificador=id;
+        this.pagam=new HashMap<>();
+    
+    }
+    
     
     
     
@@ -48,15 +87,17 @@ public class Conta {
         this.dataLimite=new GregorianCalendar();
         this.dataPagamento=new GregorianCalendar();
         this.nome="";
-        this.tipo=-1;
+        this.tipo="";
         this.totalPago=-1;
-        this.pagam= new ArrayList<>();
-        this.utilizadoresPagam=-1;
+        this.pagam= new HashMap<>();
+        this.utilizadoresPagaram=-1;
         this.utilizadoresPagam = -1;
+        this.identificador=-1;
     }
     
     public Conta(float totalFactura, GregorianCalendar dataLimite, GregorianCalendar dataPagamento, 
-            String nome, int tipo, float totalPago, List<Pagamento> pagam,int utiPagaram, int utiliPagam ) {
+            String nome, String tipo, float totalPago, Map<String,Pagamento> pagam,int utiPagaram, 
+            int utiliPagam,int identificador ) {
         this.totalFactura = totalFactura;
         this.dataLimite = dataLimite;
         this.dataPagamento = dataPagamento;
@@ -64,8 +105,9 @@ public class Conta {
         this.tipo = tipo;
         this.totalPago = totalPago;
         this.pagam=pagam;
-         this.utilizadoresPagam=utiPagaram;
+         this.utilizadoresPagaram=utiPagaram;
         this.utilizadoresPagam = utiliPagam;
+        this.identificador= identificador;
     }
 
   
@@ -75,22 +117,23 @@ public class Conta {
         this.nome=c.getNome();
         this.tipo=c.getTipo();
         this.pagam=c.getPagam();
-         this.utilizadoresPagam=c.getUtilizadoresPagaram();
+        this.utilizadoresPagaram=c.getUtilizadoresPagaram();
         this.utilizadoresPagam = c.getUtilizadoresPagam();
+        this.identificador=c.getIdentificador();
     }
     
     
     
     public void addUtilizador(Pagamento a) {
     
-        this.pagam.add(a);
+        this.pagam.put(a.getEmail(),a);
     }
     
     
     public void addPagamento (String e,String nome,float p) {
         this.totalPago+=p;
         Pagamento s = new Pagamento(e,nome,p);
-        this.pagam.add(s.clone());
+        this.pagam.put(e,s.clone());
     }
    
     
@@ -102,21 +145,21 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Conta:" + 
+        return "\nConta:" + 
+                "\n identificador = "+
+                 identificador+
                 "\n totalFactura=" + 
                 totalFactura + 
-                "\n dataLimite=" + 
-                dataLimite + 
-                "\n dataPagamento=" + 
-                dataPagamento + 
+                "\n ano limite do pagamento : " +dataLimite.get(Calendar.YEAR) +
+                "\n mes limite do pagamento : " +(dataLimite.get(Calendar.MONTH)+1) +
+                "\n dia limite do pagamento : " +dataLimite.get(Calendar.DAY_OF_MONTH)+
+                
+               
                 "\n nome da factura=" + nome 
-                + "\n tipo da fatura=" 
-                + imprimeTipo() 
-                + "\n o que deviam ter pago "+ 
-                 imprimeUtilizadores() +
-                "\n totalPago=" + 
-                totalPago ;
-        
+                + "\n tipo da fatura= " 
+                + tipo +
+                "\n totalPago= " + 
+                totalPago;
     }
     
    
@@ -124,7 +167,7 @@ public class Conta {
     public String imprimeUtilizadores(){
     
          StringBuilder s = new StringBuilder();
-        for (Pagamento a : this.pagam) {
+        for (Pagamento a : this.pagam.values()) {
         s.append(a.toString()).append("\n");
         }
         
@@ -136,16 +179,7 @@ public class Conta {
     
     
     
-    public String imprimeTipo() {
     
-        if(this.tipo==0) {
-        
-            return "Recorrente";
-        
-        }
-        else return "Extraordinaria";
-    
-    }
     
     
     
@@ -165,7 +199,10 @@ public class Conta {
         if (Float.floatToIntBits(this.totalFactura) != Float.floatToIntBits(other.totalFactura)) {
             return false;
         }
-        if (this.tipo != other.tipo) {
+        if (!Objects.equals(this.tipo,other.tipo)) {
+            return false;
+        }
+        if (this.identificador!= other.identificador) {
             return false;
         }
         if (Float.floatToIntBits(this.totalPago) != Float.floatToIntBits(other.totalPago)) {
@@ -230,11 +267,11 @@ public class Conta {
         this.nome = nome;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
@@ -253,11 +290,11 @@ public class Conta {
        return new Conta(this);
    }
 
-    public List<Pagamento> getPagam() {
+    public Map<String,Pagamento> getPagam() {
         return pagam;
     }
 
-    public void setPagam(List<Pagamento> pagam) {
+    public void setPagam(Map<String,Pagamento> pagam) {
         this.pagam = pagam;
     }
 
@@ -284,6 +321,14 @@ public class Conta {
     public boolean vertificaUtili() {
     
         return this.utilizadoresPagam==this.utilizadoresPagaram;
+    }
+
+    public int getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
     }
     
     

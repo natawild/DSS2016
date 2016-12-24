@@ -5,6 +5,7 @@
  */
 package dss.classes;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public class Divida {
     private String nome;
     private float valor;
     private GregorianCalendar data;
-    
+    private int identificador;
     
     
     public Divida() {
@@ -30,6 +31,7 @@ public class Divida {
         this.nome="";
         this.valor=-1;
         this.data=new GregorianCalendar();
+        this.identificador=-1;
         
     }
     
@@ -39,14 +41,16 @@ public class Divida {
         this.nome=e.getNome();
         this.valor=e.getValor();
         this.data=e.getData();
+        this.identificador=e.getIdentificador();
     
     }
     
-    public Divida(String email, String nome, float valor, GregorianCalendar data) {
+    public Divida(String email, String nome, float valor, GregorianCalendar data, int identificador) {
         this.email = email;
         this.nome = nome;
         this.valor = valor;
         this.data = data;
+        this.identificador=identificador;
     }
 
     public String getEmail() {
@@ -87,7 +91,10 @@ public class Divida {
                 "\n email : " + email +
                 "\n nome : " + nome + 
                 "\n valor : " + valor + 
-                "\n data : " + data + '}';
+                "\n ano da mensagme : " +data.get(Calendar.YEAR) +
+                "\n mes da mensagme : " +(data.get(Calendar.MONTH)+1) +
+                "\n dia da mensagme : " +data.get(Calendar.DAY_OF_MONTH)+
+                "\n identificado : " + identificador +'}';
     }
 
   
@@ -116,6 +123,10 @@ public class Divida {
         if (!Objects.equals(this.data, other.data)) {
             return false;
         }
+        
+        if (!Objects.equals(this.identificador, other.identificador)) {
+            return false;
+        }
         return true;
     }
     
@@ -124,6 +135,14 @@ public class Divida {
     
         return new Divida(this);
         
+    }
+
+    public int getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
     }
     
     

@@ -5,6 +5,7 @@
  */
 package dss.classes;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
@@ -87,7 +88,9 @@ public class Emprestimo {
                 "\n email : " + email +
                 "\n nome : " + nome + 
                 "\n valor : " + valor + 
-                "\n data : " + data + '}';
+                "\n ano da mensagme : " +data.get(Calendar.YEAR) +
+                "\n mes da mensagme : " +(data.get(Calendar.MONTH)+1) +
+                "\n dia da mensagme : " +data.get(Calendar.DAY_OF_MONTH);
     }
 
   

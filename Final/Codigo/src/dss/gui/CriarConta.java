@@ -5,20 +5,32 @@
  */
 package dss.gui;
 
-import java.util.Calendar;
+import dao.UtilizadorDAO;
+import dss.classes.Normal;
+import java.sql.SQLException;
 import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author gil
  */
-public class CriarConta extends javax.swing.JFrame {
+public class CriarConta extends javax.swing.JDialog {
 
     /**
      * Creates new form CriarConta
      */
+    
     public CriarConta() {
+    
+        initComponents();
+    
+    }
+    
+    public CriarConta(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 
@@ -31,37 +43,54 @@ public class CriarConta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        ok = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        correio = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         nomeCompleto = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        dia = new javax.swing.JComboBox<>();
+        mes = new javax.swing.JComboBox<>();
+        ano = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        correio = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         palavraPasse = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
         palavraPasse1 = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         numero = new javax.swing.JTextField();
+        ok = new javax.swing.JButton();
         cancelar = new javax.swing.JButton();
-        dia = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        mes = new javax.swing.JComboBox<>();
-        jLabel9 = new javax.swing.JLabel();
-        ano = new javax.swing.JComboBox<>();
 
-        jFormattedTextField2.setText("jFormattedTextField2");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel3.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel3.setText("Nome Completo");
 
-        ok.setText("criar conta");
-        ok.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                okMouseClicked(evt);
+        nomeCompleto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeCompletoActionPerformed(evt);
             }
         });
+
+        jLabel4.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel4.setText("Data de Nascimento");
+
+        jLabel7.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel7.setText("Dia");
+
+        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel8.setText("Mes");
+
+        jLabel9.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel9.setText("Ano");
+
+        dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
+        mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+
+        ano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900", "1899", "1898", "1897", "1896", "1895", "1894", "1893", "1892", "1891 ", "1890", "1889", "1888", "1887", "1886", "1885", "1884", "1883", "1882", "1881 ", "1880", "1879", "1878", "1877", "1876", "1875", "1874", "1873", "1872", "1871 ", "1870", "1869", "1868", "1867", "1866", "1865", "1864", "1863", "1862", "1861 ", "1860", "1859", "1858", "1857", "1856", "1855", "1854", "1853", "1852", "1851 ", "1850", "1849", "1848", "1847", "1846", "1845", "1844", "1843", "1842", "1841 ", "1840", "1839", "1838", "1837", "1836", "1835", "1834", "1833", "1832", "1831 ", "1830", "1829", "1828", "1827", "1826", "1825", "1824", "1823", "1822", "1821 ", "1820", "1819", "1818", "1817", "1816" }));
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setText("Introduza o endereço do correio electrónico");
@@ -76,40 +105,25 @@ public class CriarConta extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Introduza a palava passe ");
 
-        jLabel3.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel3.setText("Nome Completo");
-
-        nomeCompleto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeCompletoActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel4.setText("Data de Nascimento");
-
         jLabel5.setForeground(new java.awt.Color(0, 0, 255));
         jLabel5.setText("Repetir palavra passe");
 
         jLabel6.setForeground(new java.awt.Color(0, 0, 255));
         jLabel6.setText("Número de telemóvel ");
 
+        ok.setText("criar conta");
+        ok.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                okMouseClicked(evt);
+            }
+        });
+
         cancelar.setText("cancelar");
-
-        dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-
-        jLabel7.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel7.setText("Dia");
-
-        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel8.setText("Mes");
-
-        mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
-
-        jLabel9.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel9.setText("Ano");
-
-        ano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900", "1899", "1898", "1897", "1896", "1895", "1894", "1893", "1892", "1891 ", "1890", "1889", "1888", "1887", "1886", "1885", "1884", "1883", "1882", "1881 ", "1880", "1879", "1878", "1877", "1876", "1875", "1874", "1873", "1872", "1871 ", "1870", "1869", "1868", "1867", "1866", "1865", "1864", "1863", "1862", "1861 ", "1860", "1859", "1858", "1857", "1856", "1855", "1854", "1853", "1852", "1851 ", "1850", "1849", "1848", "1847", "1846", "1845", "1844", "1843", "1842", "1841 ", "1840", "1839", "1838", "1837", "1836", "1835", "1834", "1833", "1832", "1831 ", "1830", "1829", "1828", "1827", "1826", "1825", "1824", "1823", "1822", "1821 ", "1820", "1819", "1818", "1817", "1816" }));
+        cancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,108 +131,154 @@ public class CriarConta extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nomeCompleto)
+                    .addComponent(correio)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(palavraPasse)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(palavraPasse1)
+                    .addComponent(numero)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(ok)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cancelar))
-                        .addComponent(numero, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(palavraPasse1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(palavraPasse, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(correio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE))
-                    .addComponent(nomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dia, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(224, Short.MAX_VALUE))
+                                .addComponent(ano, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ok)
+                        .addGap(18, 18, 18)
+                        .addComponent(cancelar)))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9))
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(4, 4, 4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(correio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(palavraPasse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(palavraPasse1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(palavraPasse1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ok)
                     .addComponent(cancelar))
-                .addGap(25, 25, 25))
+                .addGap(26, 26, 26))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void correioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_correioActionPerformed
-
     private void nomeCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCompletoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeCompletoActionPerformed
 
+    private void correioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_correioActionPerformed
+
     private void okMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_okMouseClicked
         // TODO add your handling code here:
-    
-        
-        if(validarData() && validaPass() && validaIdade() && validaNome() && validaNumero() 
-                && validaEmail()){
-             JOptionPane.showMessageDialog(null, "Conta criada com sucesso");
+
+        if(validarData() && validaPass() && validaNome() && validaNumero()
+            && validaEmail()){
+            try {
+                if(validaUser()) {
+                    
+                    JOptionPane.showMessageDialog(null, "Conta criada com sucesso");
+                    new Login().setVisible(true);
+                    this.dispose();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Não foi possivel criar a conta","Dados invalidos",JOptionPane.ERROR_MESSAGE);
+                    
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(CriarConta.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         else {
-        JOptionPane.showMessageDialog(null, "Não foi possivel criar a conta","Dados invalidos",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Não foi possivel criar a conta","Dados invalidos",JOptionPane.ERROR_MESSAGE);
+            
         }
-       
-        
+
     }//GEN-LAST:event_okMouseClicked
 
-    private boolean validaEmail() {
+    private void cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelarMouseClicked
+        // TODO add your handling code here:
+        new Login().setVisible(true);
+        this.dispose();
+        
+        
+        
+    }//GEN-LAST:event_cancelarMouseClicked
+
+    private boolean validaUser() throws SQLException{
+       int anos = Integer.parseInt(this.ano.getSelectedItem().toString());
+       int dias = Integer.parseInt(this.dia.getSelectedItem().toString());
+       int meses = Integer.parseInt(this.mes.getSelectedItem().toString());
+       boolean certo=false;
+       
+       GregorianCalendar agora = new GregorianCalendar(anos,meses-1,dias);
+       String nome = this.nomeCompleto.getText();
+       String email = this.correio.getText();
+       String numeroTelemovel = this.numero.getText();
+       String pw = String.valueOf(this.palavraPasse.getPassword());
+       Normal u = new Normal(nome, email, pw, 0, numeroTelemovel, agora);
+       try {
+           
+       certo =(UtilizadorDAO.putUtilizador(u)==0);
+       
+       } catch(SQLException e) {
+         
+       }
+       return certo;
+       
+    }
+    
+    
+     private boolean validaEmail() {
     
         return !this.correio.getText().equals("");
     }
@@ -238,7 +298,7 @@ public class CriarConta extends javax.swing.JFrame {
     
     private boolean validaPass() {
     
-        return this.palavraPasse.getText().equals(this.palavraPasse1.getText()) && !this.palavraPasse.getText().equals("");
+        return String.valueOf(this.palavraPasse.getPassword()).equals(String.valueOf(this.palavraPasse1.getPassword())) && !this.palavraPasse.getText().equals("");
     
     }
     
@@ -252,21 +312,14 @@ public class CriarConta extends javax.swing.JFrame {
          
             if(meses ==2) {
             
-                if(dias>=1 && dias <=29) {
-                    
-                
-                    return true;
-                }
-                else return false;
+                return dias>=1 && dias <=29;
             }
             
             else {
             
                 if(meses ==4 || meses ==6 || meses == 9 || meses ==11) {
                     
-                    if (dias >=1 && dias <=30) return true;
-                    
-                    else return false;
+                    return dias >=1 && dias <=30;
                     
                     
                 
@@ -281,21 +334,14 @@ public class CriarConta extends javax.swing.JFrame {
        
            if(meses ==2) {
             
-                if(dias>=1 && dias <=28) {
-                    
-                
-                    return true;
-                }
-                else return false;
+               return dias>=1 && dias <=28;
             }
             
             else {
             
                 if(meses ==4 || meses ==6 || meses == 9 || meses ==11) {
                     
-                    if (dias >=1 && dias <=30) return true;
-                    
-                    else return false;
+                    return dias >=1 && dias <=30;
                     
                 }
        
@@ -305,39 +351,15 @@ public class CriarConta extends javax.swing.JFrame {
     }
     return true;
    }
-    private boolean validaIdade() {
-       GregorianCalendar agora = new GregorianCalendar();
-       int anos = Integer.parseInt(this.ano.getSelectedItem().toString());
-       int dias = Integer.parseInt(this.dia.getSelectedItem().toString());
-       int meses = Integer.parseInt(this.mes.getSelectedItem().toString());
-       
-       int mesAtual = agora.get(Calendar.MONTH) + 1;
-       int diaAtual = agora.get(Calendar.DAY_OF_MONTH);
-       int anoAtual = agora.get(Calendar.YEAR); 
-       int idade = anoAtual - anos - 1;
-          
-         if (meses == mesAtual){
-            if (dias >= diaAtual) idade++;
-        }
-        else if (meses < mesAtual) idade++;
-       
-         return idade>=17;
-       
-    }
     
     
-    /**
-     * @param args the command line arguments
-     */
     
     
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ano;
     private javax.swing.JButton cancelar;
     private javax.swing.JTextField correio;
     private javax.swing.JComboBox<String> dia;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

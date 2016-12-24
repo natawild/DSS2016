@@ -5,6 +5,7 @@
  */
 package dss.classes;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
@@ -43,9 +44,12 @@ public class Mensagem {
     
     @Override
     public String toString() {
-        return "Mensagem \n " + "Assunto da mensagem : " + assunto 
+        return "\n Mensagem \n " + "Assunto da mensagem : " + assunto 
                 + "\n  mensagem : " + mensagem + 
-                "\n data da mensagme : " + data ;
+                "\n ano da mensagem : " +data.get(Calendar.YEAR) +
+                "\n mes da mensagem : " +(data.get(Calendar.MONTH)+1) +
+                "\n dia da mensagem : " +data.get(Calendar.DAY_OF_MONTH) ;
+        
     }
 
     @Override
