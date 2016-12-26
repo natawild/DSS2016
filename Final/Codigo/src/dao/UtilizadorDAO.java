@@ -689,9 +689,9 @@ return nome;
 
 }
 
-public static int getDinheiro(String email) throws SQLException {
+public static float getDinheiro(String email) throws SQLException {
 
-    int dinheiro=0;
+    float dinheiro=0;
 
     Connection c = Connect.connect();
    try {
@@ -700,7 +700,7 @@ public static int getDinheiro(String email) throws SQLException {
                 .executeQuery(que);     
             
      rs.next();
-     dinheiro=rs.getInt(1);
+     dinheiro=rs.getFloat(1);
    
 } 
         catch(SQLException e) {

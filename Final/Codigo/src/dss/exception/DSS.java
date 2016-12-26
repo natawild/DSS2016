@@ -77,7 +77,7 @@ public class DSS {
          //System.out.println(MensagemDAO.put(m, ola));
          double valorDividaE=0.000000476843;
          
-         
+         EmprestimoDAO.dropEmprestimo(7);
          
           
                         

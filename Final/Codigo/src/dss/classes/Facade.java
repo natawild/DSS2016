@@ -328,6 +328,44 @@ public class Facade {
     
     }
     
+    public List<Conta> contasTotais() throws SQLException {
+    
+        return ContaDAO.todasContas ();
+    
+    }
+    
+    public void apagarConta(int idConta) throws SQLException {
+      
+        ContaDAO.apagarConta(idConta);
+        
+    }
+    
+    public List<Divida> getDividasAdmin() throws SQLException {
+    
+    
+        return DividaDAO.apresentarDividaAdmin();
+    }
+    
+    public List<Emprestimo> getEmprestimosAdmin() throws SQLException {
+    
+    
+        return EmprestimoDAO.darEmprestimosAdmin ();
+    }
+    
+    public int getIdEmprestimo(int id) throws SQLException {
+    
+        return EmprestimoDAO.getIdEmprestimo(id);
+    
+    }
+    
+    public void dropEmprestimo(int id) throws SQLException {
+    
+        EmprestimoDAO.dropEmprestimo(id);
+    
+    }
+    
+    
+    
      public  double round(double value, int places) {
     if (places < 0) throw new IllegalArgumentException();
 

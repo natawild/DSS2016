@@ -181,6 +181,27 @@ public class ContaDAO implements List<Conta>{
     return 0;
     }
     
+     public static int apagarConta(int idConta) throws SQLException {
+    
+      Connection c = Connect.connect(); 
+      PreparedStatement preparedStmt = null;
+      
+    try {
+      String query = "delete from conta  where idConta='"+idConta+"'";
+        
+        preparedStmt = c.prepareStatement(query); 
+         preparedStmt.execute();
+        
+    } catch(SQLException e) {
+      System.err.println(e.getMessage());
+    
+    }
+        finally
+        { c.close();}
+    return 0;
+    }
+    
+    
     
     public static List<Conta> contasPagas () throws SQLException {
     
@@ -333,6 +354,60 @@ public class ContaDAO implements List<Conta>{
     return contasPagas;
      
  } 
+ 
+ 
+  public static List<Conta> todasContas () throws SQLException {
+ 
+     List<Conta> contasPagas = new ArrayList<>();
+        Connection c = Connect.connect();
+        
+        String query = "select C.idConta,C.nome,C.nrPessoasPagaram,C.dataLimite,C.totalConta,"
+                + "C.tipo,C.nrPessoasApagar,C.totalContaPago from conta AS C "
+                + " order by C.dataLimite ASC";
+        try { 
+       ResultSet rs = c.createStatement()
+                .executeQuery(query); 
+        
+       
+       String nomeConta,tipo;
+       int nrPessoasPagaram,idConta,nrPessoasApagar;
+       GregorianCalendar dataLimite;
+       float totalConta,totalContaPago;
+      
+     
+       
+       while(rs.next()) {
+           
+      dataLimite = new GregorianCalendar();
+         
+           nomeConta = rs.getString("C.nome");
+           tipo = rs.getString("C.tipo");
+           nrPessoasPagaram=rs.getInt("C.nrPessoasPagaram");
+           idConta=rs.getInt("C.idConta");
+           totalConta=rs.getFloat("C.totalConta");
+           java.sql.Date dbSqlDate = rs.getDate("C.dataLimite");
+           dataLimite.setTime(dbSqlDate);
+           totalContaPago=rs.getFloat("C.totalContaPago");
+           nrPessoasApagar=rs.getInt("C.nrPessoasApagar");
+           
+       Conta conta = new Conta(nomeConta, tipo,totalConta,dataLimite,nrPessoasApagar,nrPessoasPagaram,idConta,totalContaPago);
+       
+       contasPagas.add(conta);
+       
+       
+       }
+       
+      } catch(SQLException e)
+       { System.err.println(e.getMessage());
+      
+      }finally
+        { c.close();}
+      
+    return contasPagas;
+     
+ }
+ 
+ 
  
 public static List<Conta> contasPorPagarUser (String user) throws SQLException {
  

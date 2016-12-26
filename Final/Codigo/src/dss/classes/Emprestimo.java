@@ -23,6 +23,7 @@ public class Emprestimo {
     private String nome;
     private float valor;
     private GregorianCalendar data;
+    private int idEmprestimo;
 
     
     public Emprestimo() {
@@ -31,7 +32,7 @@ public class Emprestimo {
         this.nome="";
         this.valor=-1;
         this.data=new GregorianCalendar();
-        
+        this.idEmprestimo=-1;
     }
     
     public Emprestimo (Emprestimo e) {
@@ -40,6 +41,7 @@ public class Emprestimo {
         this.nome=e.getNome();
         this.valor=e.getValor();
         this.data=e.getData();
+        this.idEmprestimo=e.getIdEmprestimo();
     
     }
     
@@ -50,6 +52,14 @@ public class Emprestimo {
         this.data = data;
     }
 
+    public Emprestimo(int idEmprestimo,String email, String nome, float valor, GregorianCalendar data) {
+        this.email = email;
+        this.nome = nome;
+        this.valor = valor;
+        this.data = data;
+        this.idEmprestimo=idEmprestimo;
+    }
+    
     public String getEmail() {
         return email;
     }
@@ -92,6 +102,18 @@ public class Emprestimo {
                 " - " +(data.get(Calendar.MONTH)+1) +
                 " - " +data.get(Calendar.DAY_OF_MONTH);
     }
+    
+     public String imprimeEmprestimo() {
+        return "Emprestimo : " +
+                "\n identificador emprestimo : " + this.idEmprestimo+
+                "\n email : " + email +
+                "\n nome : " + nome + 
+                "\n valor : " + valor + 
+                "\n Data  do emprestimo : " +data.get(Calendar.YEAR) +
+                " - " +(data.get(Calendar.MONTH)+1) +
+                " - " +data.get(Calendar.DAY_OF_MONTH);
+               
+    }
 
   
 
@@ -108,6 +130,9 @@ public class Emprestimo {
         }
         final Emprestimo other = (Emprestimo) obj;
         if (Float.floatToIntBits(this.valor) != Float.floatToIntBits(other.valor)) {
+            return false;
+        }
+        if (!Objects.equals(this.idEmprestimo, other.idEmprestimo)) {
             return false;
         }
         if (!Objects.equals(this.email, other.email)) {
@@ -127,6 +152,14 @@ public class Emprestimo {
     
         return new Emprestimo(this);
         
+    }
+
+    public int getIdEmprestimo() {
+        return idEmprestimo;
+    }
+
+    public void setIdEmprestimo(int idEmprestimo) {
+        this.idEmprestimo = idEmprestimo;
     }
     
     

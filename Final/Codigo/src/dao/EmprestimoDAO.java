@@ -139,6 +139,60 @@ public class EmprestimoDAO implements Map<String,List<Emprestimo>> {
    return resultado;
    }
    
+   public static int getIdEmprestimo(int idEmprestimo) throws SQLException {
+    
+         Connection c = Connect.connect();
+         int valor=0;
+       try {  
+        String query = "select count(*) from emprestimo where idEmprestimo ='"+idEmprestimo+"'";
+        
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);
+        
+        rs.next();
+        valor=rs.getInt(1);
+      } catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     finally
+        { c.close();}
+    return valor;
+    }
+   
+    public static int dropEmprestimo(int idEmprestimo) throws SQLException {
+      Connection c = Connect.connect();
+       try {
+        String dinheiro = "select valor,idUtilizador from Emprestimo where idEmprestimo='"+idEmprestimo+"'";
+        int idUtilizador;
+        float valor;
+        ResultSet rs = c.createStatement()
+                .executeQuery(dinheiro);
+        rs.next();
+        valor=rs.getFloat("valor");
+        idUtilizador=rs.getInt("idUtilizador");
+        
+        
+        
+        String query = "delete from Emprestimo where idEmprestimo ='"+idEmprestimo+"'";
+        String query2 = "update morador set valorConta=valorConta + '"+valor+"' where idUtilizador='"+idUtilizador+"'";
+        PreparedStatement preparedStmt = c.prepareStatement(query);
+        
+        preparedStmt.execute();
+        
+        preparedStmt = c.prepareStatement(query2);
+        
+        preparedStmt.execute();
+        
+      } catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     finally
+        { c.close();}
+    return 0;
+     }
+   
+   
+   
+   
+   
    public static List<Emprestimo> darEmprestimosUser (String email,String nome) throws SQLException {
    
       
@@ -185,7 +239,7 @@ public static List<Emprestimo> darEmprestimosAdmin () throws SQLException {
        
        Connection c = Connect.connect();
        try {
-       String query = "select nome,email, valor , dataEmprestimo "
+       String query = "select idEmprestimo,nome,email, valor , dataEmprestimo "
                + "from emprestimo as E inner join  morador as M on E.idUtilizador=M.idUtilizador"
                + " order by dataEmprestimo ASC";
        
@@ -196,6 +250,7 @@ public static List<Emprestimo> darEmprestimosAdmin () throws SQLException {
         float valor ;
         String email;
         String nome;
+        int idEmprestimo;
         
         while(rs.next()) {
             
@@ -203,11 +258,11 @@ public static List<Emprestimo> darEmprestimosAdmin () throws SQLException {
             valor = rs.getFloat("valor");
             email=rs.getString("email");
             nome = rs.getString("nome");
-            
+            idEmprestimo=rs.getInt("idEmprestimo");
             GregorianCalendar cal = new GregorianCalendar();
             cal.setTime(dbSqlDate);
         
-            Emprestimo a = new Emprestimo(email, nome, valor, cal);
+            Emprestimo a = new Emprestimo(idEmprestimo,email, nome, valor, cal);
             
            emprestimos.add(a);
         }

@@ -25,31 +25,32 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="utilizadores" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="utilizadores" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="saldoGlobal" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="jButton5" alignment="0" max="32767" attributes="0"/>
                               <Component id="jButton2" alignment="0" pref="284" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton1" max="32767" attributes="0"/>
-                              <Component id="jButton3" max="32767" attributes="0"/>
-                              <Component id="jButton6" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jButton7" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Component id="saldoGlobal" pref="126" max="32767" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jButton1" max="32767" attributes="0"/>
+                          <Component id="jButton3" max="32767" attributes="0"/>
+                          <Component id="jButton6" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButton8" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jButton7" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="88" max="32767" attributes="0"/>
           </Group>
@@ -74,7 +75,10 @@
                   <Component id="jButton6" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-              <Component id="jButton7" min="-2" pref="36" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jButton7" pref="36" max="32767" attributes="0"/>
+                  <Component id="jButton8" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace pref="41" max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="24" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -167,6 +171,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver Dividas /Emprestimos"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton7MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Apagar Contas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton8MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
