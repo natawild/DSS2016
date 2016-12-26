@@ -5,11 +5,9 @@
  */
 package dss.gui;
 
-import dss.classes.Conta;
 import dss.classes.Divida;
 import dss.classes.Emprestimo;
 import dss.classes.Facade;
-import dss.classes.Pagamento;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

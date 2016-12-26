@@ -182,11 +182,13 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" pref="23" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="editarEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="emailAlterado" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="confirmarEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="emailCampo" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="editarEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="emailAlterado" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="confirmarEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
               <Component id="voltar" min="-2" max="-2" attributes="0"/>

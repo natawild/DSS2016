@@ -335,11 +335,12 @@ public class EditarDados extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editarEmail)
-                    .addComponent(emailAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(confirmarEmail)
-                    .addComponent(emailCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(emailCampo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(editarEmail)
+                        .addComponent(emailAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(confirmarEmail)))
                 .addGap(63, 63, 63)
                 .addComponent(voltar)
                 .addContainerGap())
@@ -482,8 +483,14 @@ public class EditarDados extends javax.swing.JDialog {
     private void voltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_voltarMouseClicked
        try {
            // TODO add your handling code here:
+           if(f.getCasa(emailUser)==0) {
+             new InicioComCasa(emailUser).setVisible(true);
+             this.dispose();
+           }
+           else {
            new Inicio(this.emailUser).setVisible(true);
            this.dispose();
+           }
        } catch (SQLException ex) {
            Logger.getLogger(EditarDados.class.getName()).log(Level.SEVERE, null, ex);
        }

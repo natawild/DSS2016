@@ -130,6 +130,8 @@ public class Inicio extends javax.swing.JDialog {
             // TODO add your handling code here:
            f.putAdmin(emailUser);
             JOptionPane.showMessageDialog(null, "É agora admin");
+            new Administrar(emailUser).setVisible(true);
+            this.dispose();
             
             
         } catch (SQLException ex) {
