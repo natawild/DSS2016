@@ -46,9 +46,9 @@ public class Mensagem {
     public String toString() {
         return "\n Mensagem \n " + "Assunto da mensagem : " + assunto 
                 + "\n  mensagem : " + mensagem + 
-                "\n ano da mensagem : " +data.get(Calendar.YEAR) +
-                "\n mes da mensagem : " +(data.get(Calendar.MONTH)+1) +
-                "\n dia da mensagem : " +data.get(Calendar.DAY_OF_MONTH) ;
+                "\n Data da mensagem : " +data.get(Calendar.YEAR) +
+                " - " +(data.get(Calendar.MONTH)+1) +
+                " - " +data.get(Calendar.DAY_OF_MONTH) ;
         
     }
 

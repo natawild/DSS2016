@@ -146,23 +146,52 @@ public class Conta {
     @Override
     public String toString() {
         return "\nConta:" + 
-                "\n identificador = "+
+                "\n identificador : "+
                  identificador+
-                "\n totalFactura=" + 
-                totalFactura + 
-                "\n ano limite do pagamento : " +dataLimite.get(Calendar.YEAR) +
-                "\n mes limite do pagamento : " +(dataLimite.get(Calendar.MONTH)+1) +
-                "\n dia limite do pagamento : " +dataLimite.get(Calendar.DAY_OF_MONTH)+
-                
+                "\n totalFactura : " + 
+                totalFactura +
+                "\n Data do limite do pagamento : " +dataLimite.get(Calendar.YEAR) +
+                " - " +(dataLimite.get(Calendar.MONTH)+1) +
+                " - " +dataLimite.get(Calendar.DAY_OF_MONTH)+
                
-                "\n nome da factura=" + nome 
-                + "\n tipo da fatura= " 
+                "\n nome da factura :" + nome 
+                + "\n tipo da fatura : " 
                 + tipo +
-                "\n totalPago= " + 
-                totalPago;
+                "\n totalPago : " + 
+                totalPago + 
+                "\n numero de pessoas a pagar : "+ this.utilizadoresPagam+
+                "\n numero de pessoas que pagaram  : " +this.utilizadoresPagaram
+                +"\n"+imprimeUtilizadores();
     }
     
+    public String imprimeContasPagas() {
+    
+        return "\n\n Conta:" + 
+                "\n identificador da factura = "+
+                 identificador+
+                "\n total da Factura = " + 
+                totalFactura  + "\n \n"+
+                "\n Data do limite do pagamento  : " +dataLimite.get(Calendar.YEAR) +
+                " - " +(dataLimite.get(Calendar.MONTH)+1) +
+                " - : " +dataLimite.get(Calendar.DAY_OF_MONTH)+
+                "\n Data  do pagamento : " +dataPagamento.get(Calendar.YEAR) +
+                " - " +(dataPagamento.get(Calendar.MONTH)+1) +
+                " - " +dataPagamento.get(Calendar.DAY_OF_MONTH)+
+                
+                "\n número de pessoas que pagaram :"+ this.utilizadoresPagaram +
+                "\n nome da factura : " + nome 
+                + "\n tipo da fatura : " 
+                + tipo +
+                "\n totalPago : " + 
+                totalPago
+                +" \n\n" + imprimeUtilizadores();
+                
+        
+    }
    
+    
+    
+    
     
     public String imprimeUtilizadores(){
     

@@ -87,14 +87,14 @@ public class Divida {
 
     @Override
     public String toString() {
-        return "Emprestimo : " +
+        return "\n Emprestimo : " +
                 "\n email : " + email +
                 "\n nome : " + nome + 
                 "\n valor : " + valor + 
-                "\n ano da mensagme : " +data.get(Calendar.YEAR) +
-                "\n mes da mensagme : " +(data.get(Calendar.MONTH)+1) +
-                "\n dia da mensagme : " +data.get(Calendar.DAY_OF_MONTH)+
-                "\n identificado : " + identificador +'}';
+                "\n Data  da mensagme : " +data.get(Calendar.YEAR) +
+                " - " +(data.get(Calendar.MONTH)+1) +
+                " - " +data.get(Calendar.DAY_OF_MONTH)+
+                "\n identificadar da divida : " + identificador ;
     }
 
   

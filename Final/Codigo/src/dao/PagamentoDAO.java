@@ -10,9 +10,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -22,9 +21,9 @@ import java.util.Set;
  */
 public class PagamentoDAO implements Map<String,Pagamento>{
     
-    public static List<Pagamento> getPagamentosConta(int idConta) throws SQLException {
+    public static Map<String,Pagamento> getPagamentosConta(int idConta) throws SQLException {
     
-     List<Pagamento> pagamentos = new ArrayList<>();
+     Map<String,Pagamento> pagamentos = new HashMap<>();
      Connection c = Connect.connect();
      try{
      String query = "select M.nome, M.email,P.valorPago,P.valorApagar from "
@@ -46,11 +45,13 @@ public class PagamentoDAO implements Map<String,Pagamento>{
          Pagamento p = new Pagamento(email, nome, valorPago,valorApagar);
          
          
-         pagamentos.add(p);
+         pagamentos.put(email,p);
          
      }
      } catch(SQLException e)
-       {     }
+       {     
+          System.err.println(e.getMessage());
+       }
      finally
         { c.close();}
     return pagamentos;
@@ -80,7 +81,9 @@ public class PagamentoDAO implements Map<String,Pagamento>{
         
         
         } catch(SQLException e)
-       {     }
+       {
+           System.err.println(e.getMessage());
+       }
      
        finally
         { c.close();
@@ -107,7 +110,9 @@ public class PagamentoDAO implements Map<String,Pagamento>{
          valorApagar=rs.getFloat("P.valorApagar");
          } 
       catch(SQLException e)
-       {     }
+       {
+           System.err.println(e.getMessage());
+       }
      
        finally
         { c.close();
@@ -115,6 +120,37 @@ public class PagamentoDAO implements Map<String,Pagamento>{
       
     return valorApagar; 
     }
+    
+    public static int verificaIdConta(String email,int idConta) throws SQLException {
+    
+        Connection c = Connect.connect();
+       int valorApagar=0;
+      try {
+       String query = "select count(*) from morador as M inner join "
+               + " pagamento as P on P.idUtilizador = M.idUtilizador "
+               + " where idConta='"+idConta+"' and email='"+email+"'"
+               + " and P.valorPago <0";
+        
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);
+        rs.next();
+        
+   
+     
+         valorApagar=rs.getInt(1);
+         } 
+      catch(SQLException e)
+       {  System.err.println(e.getMessage());  }
+     
+       finally
+        { c.close();
+        }
+      
+    return valorApagar; 
+        
+        
+    }
+    
     
     
     public static int pagarConta(int idConta, String email,float valor) throws SQLException {
@@ -155,7 +191,7 @@ public class PagamentoDAO implements Map<String,Pagamento>{
         catch (SQLException e) {
         
         //System.err.println("Got an exception!");
-        //System.err.println(e.getMessage());
+        System.err.println(e.getMessage());
         if (c != null) {
             try {
                 //System.err.println("Transaction is being rolled back");

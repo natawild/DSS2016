@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `dss`.`Morador` (
   `dataNascimento` DATE NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL unique,
-  `valorConta` DECIMAL(10,5)  unsigned NOT NULL,
+  `valorConta` DECIMAL(21,11)  unsigned NOT NULL,
   `nrTelemovel` VARCHAR(45) NOT NULL  unique,
   `admin` INT NULL,
   PRIMARY KEY (`idUtilizador`),
@@ -43,7 +43,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dss`.`Divida` (
   `idDivida` INT NOT NULL  auto_increment,
-  `valorDivida` DECIMAL(10,5) unsigned NOT NULL,
+  `valorDivida` DECIMAL(21,11) unsigned NOT NULL,
   `dataDivida` DATE NOT NULL,
   `idUtilizador` INT NOT NULL,
   PRIMARY KEY (`idDivida`),
@@ -61,7 +61,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dss`.`Emprestimo` (
   `idEmprestimo` INT NOT NULL  auto_increment,
-  `valor` DECIMAL(10,5) unsigned NOT NULL,
+  `valor` DECIMAL(21,11) unsigned NOT NULL,
   `dataEmprestimo` DATE NOT NULL,
   `idUtilizador` INT NOT NULL,
   PRIMARY KEY (`idEmprestimo`),
@@ -118,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `dss`.`Conta` (
   `nrPessoasApagar` INT unsigned NOT NULL,
   `dataLimite` DATE NOT NULL,
   `dataPagamento` DATE NULL,
-  `totalConta` DECIMAL(10,5) unsigned NOT NULL,
-  `totalContaPago` DECIMAL(10,5) unsigned NOT NULL,
+  `totalConta` DECIMAL(21,11) unsigned NOT NULL,
+  `totalContaPago` DECIMAL(21,11) unsigned NOT NULL,
   `pago` TINYINT(1) NOT NULL DEFAULT FALSE,
   `tipo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idConta`))
@@ -132,8 +132,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `dss`.`Pagamento` (
   `idConta` INT NOT NULL,
   `idUtilizador` INT NOT NULL,
-  `valorPago` DECIMAL(10,5) NOT NULL,
-  `valorApagar` DECIMAL(10,5) unsigned NOT NULL,
+  `valorPago` DECIMAL(21,11) NOT NULL,
+  `valorApagar` DECIMAL(21,11) unsigned NOT NULL,
   PRIMARY KEY (`idConta`, `idUtilizador`),
   INDEX `fk_Conta_has_Morador_Morador1_idx` (`idUtilizador` ASC),
   INDEX `fk_Conta_has_Morador_Conta1_idx` (`idConta` ASC),

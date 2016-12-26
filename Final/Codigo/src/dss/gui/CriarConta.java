@@ -5,12 +5,10 @@
  */
 package dss.gui;
 
-import dao.UtilizadorDAO;
+import dss.classes.Facade;
 import dss.classes.Normal;
 import java.sql.SQLException;
 import java.util.GregorianCalendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,7 +16,7 @@ import javax.swing.JOptionPane;
  * @author gil
  */
 public class CriarConta extends javax.swing.JDialog {
-
+   private Facade f ;
     /**
      * Creates new form CriarConta
      */
@@ -26,6 +24,7 @@ public class CriarConta extends javax.swing.JDialog {
     public CriarConta() {
     
         initComponents();
+        f=new Facade();
     
     }
     
@@ -163,7 +162,7 @@ public class CriarConta extends javax.swing.JDialog {
                         .addComponent(ok)
                         .addGap(18, 18, 18)
                         .addComponent(cancelar)))
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,7 +199,7 @@ public class CriarConta extends javax.swing.JDialog {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ok)
                     .addComponent(cancelar))
@@ -224,6 +223,7 @@ public class CriarConta extends javax.swing.JDialog {
         if(validarData() && validaPass() && validaNome() && validaNumero()
             && validaEmail()){
             try {
+                Integer.parseInt(this.numero.getText());
                 if(validaUser()) {
                     
                     JOptionPane.showMessageDialog(null, "Conta criada com sucesso");
@@ -234,8 +234,8 @@ public class CriarConta extends javax.swing.JDialog {
                     JOptionPane.showMessageDialog(null, "Não foi possivel criar a conta","Dados invalidos",JOptionPane.ERROR_MESSAGE);
                     
                 }
-            } catch (SQLException ex) {
-                Logger.getLogger(CriarConta.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Não foi possivel criar a conta","Dados invalidos",JOptionPane.ERROR_MESSAGE);
             }
         }
         else {
@@ -268,7 +268,7 @@ public class CriarConta extends javax.swing.JDialog {
        Normal u = new Normal(nome, email, pw, 0, numeroTelemovel, agora);
        try {
            
-       certo =(UtilizadorDAO.putUtilizador(u)==0);
+       certo =(f.inserUtilizador(u)==0);
        
        } catch(SQLException e) {
          

@@ -98,7 +98,7 @@ public class ContaDAO implements List<Conta>{
     catch (SQLException e) {
         
         //System.err.println("Got an exception!");
-        //System.err.println(e.getMessage());
+        System.err.println(e.getMessage());
         if (c != null) {
             try {
                 //System.err.println("Transaction is being rolled back");
@@ -128,6 +128,57 @@ public class ContaDAO implements List<Conta>{
     }    
     return resultado;
     
+    }
+    
+    public static int verificaIdContaAdmin(int idConta) throws SQLException {
+    
+        Connection c = Connect.connect();
+       int valorApagar=0;
+      try {
+       String query = "select count(*) from conta where idConta='"+idConta+"'";
+        
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);
+        rs.next();
+        
+   
+     
+         valorApagar=rs.getInt(1);
+         } 
+      catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     
+       finally
+        { c.close();
+        }
+      
+    return valorApagar; 
+        
+        
+    }
+    
+    
+    
+    
+    
+    public static int pagarConta(int idConta) throws SQLException {
+    
+      Connection c = Connect.connect(); 
+      PreparedStatement preparedStmt = null;
+      
+    try {
+      String query = "update conta set pago = true where idConta='"+idConta+"'";
+        
+        preparedStmt = c.prepareStatement(query); 
+         preparedStmt.execute();
+        
+    } catch(SQLException e) {
+      System.err.println(e.getMessage());
+    
+    }
+        finally
+        { c.close();}
+    return 0;
     }
     
     
@@ -175,12 +226,12 @@ public class ContaDAO implements List<Conta>{
        }
        
      } catch(SQLException e)
-       {     }
+       { System.err.println(e.getMessage());    }
      finally
         { c.close();}
           
     
-    c.close();
+    
     return contasPagas;
     }
     
@@ -223,7 +274,7 @@ public class ContaDAO implements List<Conta>{
        contasPagas.add(conta);
      }
     } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();}
         
@@ -274,7 +325,7 @@ public class ContaDAO implements List<Conta>{
        }
        
       } catch(SQLException e)
-       { //System.out.println(e.getMessage());
+       { System.err.println(e.getMessage());
       
       }finally
         { c.close();}
@@ -292,7 +343,7 @@ public static List<Conta> contasPorPagarUser (String user) throws SQLException {
                 + "C.tipo,C.nrPessoasApagar,C.totalContaPago from conta AS C "
                 + "inner join Pagamento as P on P.idConta =C.idConta "
                 + " inner join morador as M on M.idUtilizador = P.idUtilizador "
-                + " where pago=false and M.email ='"+user+"'"
+                + " where pago=false and P.valorPago<0 and M.email ='"+user+"'"
                 + " order by C.dataLimite ASC";
        try {
            
@@ -329,7 +380,7 @@ public static List<Conta> contasPorPagarUser (String user) throws SQLException {
        }
        
       } catch(SQLException e)
-       { //System.out.println(e.getMessage());
+       { System.err.println(e.getMessage());
       
       }
     finally
@@ -367,7 +418,7 @@ public static List<Conta> contasPorPagarUser (String user) throws SQLException {
       }
      
  } catch(SQLException e)
-       { //System.out.println(e.getMessage());
+       { System.err.println(e.getMessage());
       
       }
     finally
@@ -392,13 +443,13 @@ public static List<Conta> contasPorPagarUser (String user) throws SQLException {
                 .executeQuery(query); 
       rs.next();
       
-      totalApagar = rs.getFloat("totalConta");
-      
+      totalApagar = rs.getFloat(1);
+    
       
       
      
  } catch(SQLException e)
-       { //System.out.println(e.getMessage());
+       { System.err.println(e.getMessage());
       
       }
     finally
@@ -408,6 +459,107 @@ public static List<Conta> contasPorPagarUser (String user) throws SQLException {
  
  
  }
+ 
+ public static float valorContaPago(int idConta) throws SQLException {
+ 
+      Connection c = Connect.connect();
+       String query = "select totalContaPago from conta "
+               + " where idConta='"+idConta+"'";
+       
+       float totalApagar=0;
+       
+       
+  try {
+      ResultSet rs = c.createStatement()
+                .executeQuery(query); 
+      rs.next();
+      
+      totalApagar = rs.getFloat("totalContaPago");
+      
+      
+      
+     
+ } catch(SQLException e)
+       { System.err.println(e.getMessage());
+      
+      }
+    finally
+        { c.close();}
+  
+  return totalApagar;
+ 
+ 
+ }
+ 
+ public static int pessoasPagaran(int idConta) throws SQLException {
+ 
+      Connection c = Connect.connect();
+       String query = "select nrPessoasPagaram from conta "
+               + " where idConta='"+idConta+"'";
+       
+       int totalApagar=0;
+       
+       
+  try {
+      ResultSet rs = c.createStatement()
+                .executeQuery(query); 
+      rs.next();
+      
+      totalApagar = rs.getInt(1);
+      
+      
+      
+     
+ } catch(SQLException e)
+       { System.err.println(e.getMessage());
+      
+      }
+    finally
+        { c.close();}
+  
+  return totalApagar;
+ 
+ 
+ }
+ 
+ 
+ public static int pessoasAPagar(int idConta) throws SQLException {
+ 
+      Connection c = Connect.connect();
+       String query = "select nrPessoasAPagar from conta "
+               + " where idConta='"+idConta+"'";
+       
+       int totalApagar=0;
+       
+       
+  try {
+      ResultSet rs = c.createStatement()
+                .executeQuery(query); 
+      rs.next();
+      
+      totalApagar = rs.getInt(1);
+      
+      
+      
+     
+ } catch(SQLException e)
+       { System.err.println(e.getMessage());
+      
+      }
+    finally
+        { c.close();}
+  
+  return totalApagar;
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
     @Override
     public int size() {

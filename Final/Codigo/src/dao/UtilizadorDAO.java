@@ -6,7 +6,9 @@
 package dao;
 
 
+import dss.classes.Admin;
 import dss.classes.Morador;
+import dss.classes.Normal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -99,7 +101,7 @@ public class UtilizadorDAO implements Map<String,Morador>{
          }
          catch(SQLException e) {
           //System.err.println("Got an exception!");
-        //System.err.println(e.getMessage());
+        System.err.println(e.getMessage());
              
          
          } 
@@ -170,7 +172,7 @@ public class UtilizadorDAO implements Map<String,Morador>{
          
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
              
          
          }
@@ -179,6 +181,67 @@ public class UtilizadorDAO implements Map<String,Morador>{
         }
          
      return resultado;
+     }
+     public static int nrAdmin () throws SQLException {
+     
+         Connection c = Connect.connect();
+         
+         int resultado=0;
+         
+         try{
+             String que = "select count(*) from morador where admin is not null;";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);
+              rs.next();
+             resultado=rs.getInt(1);
+             
+             
+             }
+         catch(SQLException e) {
+         
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+             
+         
+         }
+         finally
+        { c.close();
+        }
+         
+     return resultado;
+         }
+     
+     
+     
+     
+     public static int verAdmin() throws SQLException {
+     
+          Connection c = Connect.connect();
+         
+         int resultado=0;
+         
+         try{
+             String que = "select count(*) from morador where admin is not null;";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);
+              rs.next();
+             resultado=rs.getInt(1);
+         
+         
+         }
+         catch(SQLException e) {
+         
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+             
+         
+         }
+         finally
+        { c.close();
+        }
+      return resultado;
      }
      
   
@@ -219,7 +282,7 @@ public class UtilizadorDAO implements Map<String,Morador>{
          
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
            
            
          }
@@ -266,8 +329,8 @@ public class UtilizadorDAO implements Map<String,Morador>{
                     
                       dividas = "select count(*) from pagamento AS P INNER JOIN morador AS M "
                     + " on P.idUtilizador = M.idUtilizador inner join conta as C "
-                              + "on C.idConta = P.idConta " 
-                              + "where M.email ='"+a+"'" + "and pago=false";
+                              + " on C.idConta = P.idConta " 
+                              + " where M.email ='"+a+"'" + " and pago=false";
                   
                   rs = c.createStatement()
                         .executeQuery(dividas);
@@ -277,7 +340,7 @@ public class UtilizadorDAO implements Map<String,Morador>{
                   
                   if(nr==0) {
                       
-                      dividas = "delete from morador where email = '" +a+"'";
+                      dividas = "update morador set admin =null where email = '" +a+"'";
                       
                     preparedStmt=c.prepareStatement(dividas);
                     preparedStmt.execute();
@@ -298,7 +361,7 @@ public class UtilizadorDAO implements Map<String,Morador>{
          
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
             
              
          
@@ -315,27 +378,35 @@ public static int updateTelemovel(String email, String telemovel) throws SQLExce
 
     Connection c = Connect.connect();
         PreparedStatement preparedStmt; 
-        
+         int resultado =0;
         
         try{
-            String update = "update morador set nrTelemovel = '"+telemovel+" '" 
+            String verEmail = "select count(*) from morador where nrTelemovel='"+telemovel+"'";
+             ResultSet rs = c.createStatement()
+                .executeQuery(verEmail);
+             rs.next();
+             int nrEmail=rs.getInt(1);
+            
+            if(nrEmail==0) {
+            String update = "update morador set nrTelemovel = '"+telemovel+"'" 
                              +" where email = '" + email+ "'";
             
             preparedStmt=c.prepareStatement(update);
                     preparedStmt.execute();
-            
+            }
+            else resultado =-1;
         } 
         catch(SQLException e) {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
         { c.close();
         }
-    return 0;
+    return resultado;
 }
 
 public static int updateNome(String nome, String email) throws SQLException {
@@ -345,7 +416,7 @@ public static int updateNome(String nome, String email) throws SQLException {
         
         
         try{
-            String update = "update morador set nome = '"+nome+" '" 
+            String update = "update morador set nome = '"+nome+"'" 
                              +" where email = '" + email+ "'";
             
             preparedStmt=c.prepareStatement(update);
@@ -356,7 +427,7 @@ public static int updateNome(String nome, String email) throws SQLException {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
@@ -378,7 +449,7 @@ public static int updateDataNascimento(String email,GregorianCalendar dataNascim
                
                java.sql.Date startDate = new java.sql.Date(dataNascimento.getTime().getTime());
             
-            String update = "update morador set dataNascimento = '"+startDate+" '" 
+            String update = "update morador set dataNascimento = '"+startDate+"'" 
                              +" where email = '" + email+ "'";
             
             preparedStmt=c.prepareStatement(update);
@@ -389,7 +460,7 @@ public static int updateDataNascimento(String email,GregorianCalendar dataNascim
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
@@ -405,7 +476,7 @@ public static int updatePass(String pass, String email) throws SQLException {
         
         
         try{
-            String update = "update morador set password= '"+pass+" '" 
+            String update = "update morador set password= '"+pass+"'" 
                              +" where email = '" + email+ "'";
             
             preparedStmt=c.prepareStatement(update);
@@ -416,7 +487,7 @@ public static int updatePass(String pass, String email) throws SQLException {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
@@ -431,28 +502,38 @@ public static int updateEmail(String emailNovo, String email) throws SQLExceptio
 
     Connection c = Connect.connect();
         PreparedStatement preparedStmt; 
-        
+        int resultado =0;
         
         try{
-            String update = "update morador set email= '"+emailNovo+" '" 
+            String verEmail = "select count(*) from morador where email='"+emailNovo+"'";
+             ResultSet rs = c.createStatement()
+                .executeQuery(verEmail);
+             rs.next();
+             int nrEmail=rs.getInt(1);
+            
+            if(nrEmail==0) {
+             
+            String update = "update morador set email= '"+emailNovo+"'" 
                              +" where email = '" + email+ "'";
             
             preparedStmt=c.prepareStatement(update);
                     preparedStmt.execute();
+            }
             
+            else resultado =-1;
         } 
         catch(SQLException e) {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
         { c.close();
         }
         
-    return 0;
+    return resultado;
 }
 
 
@@ -463,7 +544,7 @@ public static int updateConta(float dinheiro, String email) throws SQLException 
         
         
         try{
-            String update = "update morador set valorConta= valorConta + '"+dinheiro+" '" 
+            String update = "update morador set valorConta= valorConta + '"+dinheiro+"'" 
                              +" where email = '" + email+ "'";
             
             preparedStmt=c.prepareStatement(update);
@@ -474,7 +555,7 @@ public static int updateConta(float dinheiro, String email) throws SQLException 
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
@@ -488,7 +569,38 @@ public static List<String> emailsUser() throws SQLException {
    List<String> emails = new ArrayList<>();
    Connection c = Connect.connect();
    try{
-   String que = "select email from morador";
+   String que = "select email from morador where admin is null" ;
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);
+   
+    while(rs.next()) {
+    
+        String email = rs.getString(1);
+        
+        emails.add(email);
+        
+    }          
+   } 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+    finally
+        { c.close();
+        }
+   return emails;
+}  
+
+
+public static List<String> emailsUserCasa() throws SQLException {
+ 
+   List<String> emails = new ArrayList<>();
+   Connection c = Connect.connect();
+   try{
+   String que = "select email from morador where admin is not null";
               ResultSet rs = c.createStatement()
                 .executeQuery(que);
    
@@ -504,14 +616,50 @@ public static List<String> emailsUser() throws SQLException {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
     finally
         { c.close();
         }
    return emails;
-}  
+} 
+
+
+public static List<String> emailsMensagem(String emailAdmin) throws SQLException {
+ 
+   List<String> emails = new ArrayList<>();
+   Connection c = Connect.connect();
+   try{
+   String que = "select email from morador where admin is not null and email!='"+emailAdmin+"'";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);
+   
+    while(rs.next()) {
+    
+        String email = rs.getString("email");
+        
+        emails.add(email);
+        
+    }          
+   } 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+    finally
+        { c.close();
+        }
+   return emails;
+} 
+
+
+
+
+
 
 public static String getNome(String email) throws SQLException {
 
@@ -531,7 +679,7 @@ public static String getNome(String email) throws SQLException {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
@@ -559,7 +707,7 @@ public static int getDinheiro(String email) throws SQLException {
         
              //System.err.println("Got an exception!");
         
-             //System.err.println(e.getMessage());
+             System.err.println(e.getMessage());
         
         }
 finally
@@ -568,6 +716,197 @@ finally
    
 return dinheiro;
 }
+
+public static Morador getUtilizador(String email) throws SQLException {
+  
+  Connection c = Connect.connect();
+  Normal n = new Normal();
+  try {
+      String nome;
+      String pass;
+      String nrTelemovel;
+      float valorConta;
+      GregorianCalendar data = new GregorianCalendar();
+      
+    String que = "select nome,dataNascimento,password,valorConta,nrTelemovel from morador where email ='" +email+"'";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);     
+            
+     rs.next();
+     
+     nome = rs.getString("nome");
+     pass = rs.getString("password");
+     nrTelemovel = rs.getString("nrTelemovel");
+     valorConta = rs.getFloat("valorConta");
+     java.sql.Date dbSqlDate = rs.getDate("dataNascimento");
+     data.setTime(dbSqlDate);
+     
+     n=new Normal(nome, email, pass, valorConta, nrTelemovel, data);
+     
+     
+     
+     
+} 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+finally
+        { c.close();
+        }
+   
+
+    return n;
+  
+}
+
+public static Morador getAdmin(String email) throws SQLException {
+  
+  Connection c = Connect.connect();
+  Admin n = new Admin();
+  try {
+      String nome;
+      String pass;
+      String nrTelemovel;
+      float valorConta;
+      GregorianCalendar data = new GregorianCalendar();
+      
+    String que = "select nome,dataNascimento,password,valorConta,nrTelemovel from morador where email ='" +email+"'";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);     
+            
+     rs.next();
+     
+     nome = rs.getString("nome");
+     pass = rs.getString("password");
+     nrTelemovel = rs.getString("nrTelemovel");
+     valorConta = rs.getFloat("valorConta");
+     java.sql.Date dbSqlDate = rs.getDate("dataNascimento");
+     data.setTime(dbSqlDate);
+     
+     n=new Admin(nome, email, pass, valorConta, nrTelemovel, data);
+     
+     
+     
+     
+} 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+finally
+        { c.close();
+        }
+   
+
+    return n;
+  
+}
+
+
+
+
+public static String isAdmin () throws SQLException {
+
+    Connection c = Connect.connect();
+    String email = "";
+    try { 
+        
+        String query = "select admin from morador where admin is not null";
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);     
+            
+     rs.next();
+     int idAdmin = rs.getInt(1);
+     
+     query = "select email from morador where idUtilizador='"+idAdmin+"'";
+     rs = c.createStatement()
+                .executeQuery(query);  
+    
+    rs.next();
+    email=rs.getString(1);
+
+
+} 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+finally
+        { c.close();
+        }
+   
+return email;
+} 
+
+public static int estaEmCasa(String email) throws SQLException {
+
+      
+  Connection c = Connect.connect();
+  int resultado=0;
+   try {
+    String que = "select count(*) from morador where email ='" +email+"' and admin is null ";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);     
+            
+     rs.next();
+     resultado=rs.getInt(1);
+   
+} 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+finally
+        { c.close();
+        }
+   
+return resultado;  
+
+}
+
+public static float getSaldoGlobal() throws SQLException {
+
+    Connection c = Connect.connect();
+  float resultado=0;
+   try {
+    String que = "select sum(valorConta) from morador where  admin is not null ";
+              ResultSet rs = c.createStatement()
+                .executeQuery(que);     
+            
+     rs.next();
+     resultado=rs.getFloat(1);
+   
+} 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+finally
+        { c.close();
+        }
+   
+return resultado;  
+    
+    
+
+}
+
 
 
 

@@ -53,11 +53,23 @@ public class Pagamento {
 
     @Override
     public String toString() {
-        return "Pagamento : \n" + "email do morador : " + email 
+        return "\n Pagamento : \n" + "email do morador : " + email 
                 + "\n nome do morador : " + nome + 
-                "\n valor pago pelo morador :  " + valorPago 
-                +"\n valor a pagar pelo morador : " + valorApagar;
+                "\n valor pago  :  " + valorPago 
+                +"\n valor a pagar  : " + valorApagar;
     }
+    
+    public String imprimePagamento() {
+    
+         return "\n valor a pagar : " + valorApagar;
+        
+    }
+    
+    public String imprime() {
+        return  "\n valor pago  :  " + valorPago 
+               +"\n valor a pagar  : " + valorApagar;
+    }
+    
     
     @Override
     public boolean equals(Object obj) {

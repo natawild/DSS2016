@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.GregorianCalendar;
@@ -55,7 +56,7 @@ public class DividaDAO implements Map<String,List<Divida>> {
        
        preparedStmt.execute(); 
        } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();} 
         
@@ -65,23 +66,86 @@ public class DividaDAO implements Map<String,List<Divida>> {
     }
     
     
-    public static int pagarDivida(Divida d) throws SQLException {
+    public static int getIdDivida(int idDivida) throws SQLException {
+    
+         Connection c = Connect.connect();
+         int valor=0;
+       try {  
+        String query = "select count(*) from divida where idDivida ='"+idDivida+"'";
+        
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);
+        
+        rs.next();
+        valor=rs.getInt(1);
+      } catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     finally
+        { c.close();}
+    return valor;
+    }
+    
+    public static int pagaDivida(int idDivida) throws SQLException {
     
          Connection c = Connect.connect();
        try {  
-        String query = "delete from divida where idDivida ='"+d.getIdentificador()+"'" +"and divida.idUtilizador =("
-                + "select morador.idUtilizador from morador where email ='"+d.getEmail()+"')";
+        String query = "delete from divida where idDivida ='"+idDivida+"'";
         
         PreparedStatement preparedStmt = c.prepareStatement(query);
         
         preparedStmt.execute();
         
       } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();}
     return 0;
+        
     }
+    
+     public static float valorDivida(int idDivida) throws SQLException {
+    
+         Connection c = Connect.connect();
+         float valor =-1;
+       try {  
+        String query = "select valorDivida from divida where idDivida ='"+idDivida+"'";
+        
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);
+        
+        rs.next();
+        valor=rs.getFloat(1);
+        
+       
+        
+      } catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     finally
+        { c.close();}
+    return valor;
+        
+    }
+     
+     public static int dropDivida(int idDivida) throws SQLException {
+      Connection c = Connect.connect();
+       try {  
+        String query = "delete from divida where idDivida ='"+idDivida+"'";
+        
+        PreparedStatement preparedStmt = c.prepareStatement(query);
+        
+        preparedStmt.execute();
+        
+      } catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     finally
+        { c.close();}
+    return 0;
+     }
+    
+    
+    
+    
+    
     
     public static List<Divida> apresentarDividaUser(String email,String nome) throws SQLException {
     
@@ -111,7 +175,7 @@ public class DividaDAO implements Map<String,List<Divida>> {
         
         }
         } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();}
     return dividas;
@@ -143,15 +207,21 @@ public class DividaDAO implements Map<String,List<Divida>> {
             Divida a = new Divida(email, nome, valor, cal, idDivida);
             dividas.add(a);
             
-            System.out.println(a);
+           
         
         }
         } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();}
     return dividas;
-    } 
+    }
+    
+    
+    
+    
+    
+    
 
     @Override
     public int size() {

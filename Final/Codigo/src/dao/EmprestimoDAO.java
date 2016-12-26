@@ -60,7 +60,7 @@ public class EmprestimoDAO implements Map<String,List<Emprestimo>> {
        preparedStmt.execute();
        } catch (SQLException e) {
        
-           //System.err.println(e.getMessage());
+          System.err.println(e.getMessage());
        
        }
        finally {
@@ -131,7 +131,7 @@ public class EmprestimoDAO implements Map<String,List<Emprestimo>> {
        }
        
        } catch(SQLException e)
-       {     }
+       {   System.err.println(e.getMessage());  }
      finally
         { c.close();}
           
@@ -171,7 +171,7 @@ public class EmprestimoDAO implements Map<String,List<Emprestimo>> {
         }
        
       } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();}
       
@@ -213,7 +213,7 @@ public static List<Emprestimo> darEmprestimosAdmin () throws SQLException {
         }
        
       } catch(SQLException e)
-       {     }
+       {  System.err.println(e.getMessage());   }
      finally
         { c.close();}
        

@@ -5,7 +5,7 @@
  */
 package dss.gui;
 
-import dao.UtilizadorDAO;
+import dss.classes.Facade;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,20 +16,17 @@ import javax.swing.JOptionPane;
  * @author gil
  */
 public class Login extends javax.swing.JDialog {
-
-    /**
-     * Creates new form Login
-     * @param parent
-     * @param modal
-     */
+    private Facade f ;
+   
     
     public Login () {
     initComponents();
-        
+        f =new Facade(); 
     }
     public Login(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+         f =new Facade();
     }
 
     /**
@@ -144,7 +141,7 @@ public class Login extends javax.swing.JDialog {
         // TODO add your handling code here:
         
         String email = this.emailUser.getText();
-        String pw = String.valueOf(this.passwordUser.getPassword());;
+        String pw = String.valueOf(this.passwordUser.getPassword());
         
         try {
             if(email.equals("") | pw.equals("")) {
@@ -153,11 +150,33 @@ public class Login extends javax.swing.JDialog {
                 
             }
             else {
+                
             
-            if(UtilizadorDAO.login(email,pw) ==1) {
+            if(f.getLogin(email,pw) ==1) {
+                if(f.getEmailAdmin().equals(email)) {
+                    
+                    new JanelaAdmin(email).setVisible(true);
+                 this.dispose();
+                    
+                }
+                
+                else {
+                
+                if(f.getCasa(email)==0) {
+                    new InicioComCasa(email).setVisible(true);
+                    this.dispose();
+               
+                }
+                else {
+                
+                    new Inicio(email).setVisible(true);
+                    this.dispose();
+                
+                }
+                
             
-                new CriarConta().setVisible(true);
-                this.dispose();
+                } 
+                
             
             }
             else {
