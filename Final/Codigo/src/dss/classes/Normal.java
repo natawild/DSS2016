@@ -40,9 +40,11 @@ public class Normal extends Morador{
     
     public String imprimeMensagens() {
      StringBuilder s = new StringBuilder();
+     for(Mensagem m : this.mensagemAdmin) {
      
-        
-        
+         s.append(m.toString()).append("\n");
+     }
+     
     return s.toString();
     }
     

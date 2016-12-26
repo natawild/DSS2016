@@ -66,7 +66,7 @@ public class VerEmprestimo extends javax.swing.JDialog {
       if(emp.isEmpty()) {
       
            JOptionPane.showMessageDialog(null, "Não existe emprestimos na casa");
-          this.dividasA.setText("");
+          this.emprestimosA.setText("");
           
       }
       else {
@@ -545,7 +545,7 @@ public class VerEmprestimo extends javax.swing.JDialog {
             
         int idDivida = Integer.parseInt(this.valorIntroduzido.getText());
         
-        if(f.getValorDivida(idDivida)==0) {
+        if(f.getIdDivida(idDivida)==0) {
         
              JOptionPane.showMessageDialog(null, "Id invalido");
         
@@ -571,6 +571,7 @@ public class VerEmprestimo extends javax.swing.JDialog {
         
         
         }  
+        this.valorIntroduzido.setText("");
         this.label.setVisible(false);
       this.valorIntroduzido.setVisible(false);
         this.apagar.setVisible(false);
