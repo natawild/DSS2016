@@ -327,7 +327,9 @@ public class ContaExtraOrdinaria extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null, "Dados invalidos");
         
         }
-        
+        this.percentagem.setVisible(false);
+        this.valorPercentagem.setVisible(false);
+        this.ok.setVisible(false);
      this.valorPercentagem.setText("");
         
     }//GEN-LAST:event_okMouseClicked
@@ -346,9 +348,10 @@ public class ContaExtraOrdinaria extends javax.swing.JDialog {
              String []partes = this.utilizadoresApagar.getSelectedValue().split("-");
             String ks =partes[0].trim();
              dlm.addElement(ks);
-             this.percetagemTotal=percetagemTotal-this.percentagemApagar.get(partes[0]);
+             this.percetagemTotal=percetagemTotal-this.percentagemApagar.get(ks);
              
              this.pagamento.remove(ks);
+             this.percentagemApagar.remove(ks);
             
             model.remove(selectedIndex);
           
