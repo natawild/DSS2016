@@ -564,6 +564,37 @@ finally
     return 0;
 }
 
+public static int retiraConta(float dinheiro, String email) throws SQLException {
+
+    Connection c = Connect.connect();
+        PreparedStatement preparedStmt; 
+        
+        
+        try{
+            String update = "update morador set valorConta= valorConta - '"+dinheiro+"'" 
+                             +" where email = '" + email+ "'";
+            
+            preparedStmt=c.prepareStatement(update);
+                    preparedStmt.execute();
+            
+        } 
+        catch(SQLException e) {
+        
+             //System.err.println("Got an exception!");
+        
+             System.err.println(e.getMessage());
+        
+        }
+finally
+        { c.close();
+        }
+    return 0;
+}
+
+
+
+
+
 public static List<String> emailsUser() throws SQLException {
  
    List<String> emails = new ArrayList<>();

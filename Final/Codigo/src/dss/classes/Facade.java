@@ -46,6 +46,12 @@ public class Facade {
     
     }
     
+    public void retiraSaldo(float valor,String email) throws SQLException {
+    
+        UtilizadorDAO.retiraConta(valor, email);
+    }
+    
+    
     public int inserUtilizador(Morador u) throws SQLException {
     
     
