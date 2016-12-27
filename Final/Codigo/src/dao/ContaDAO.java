@@ -167,7 +167,7 @@ public class ContaDAO implements List<Conta>{
       PreparedStatement preparedStmt = null;
       
     try {
-      String query = "update conta set pago = true where idConta='"+idConta+"'";
+      String query = "update conta set pago = true , dataPagamento = date(now()) where idConta='"+idConta+"'";
         
         preparedStmt = c.prepareStatement(query); 
          preparedStmt.execute();

@@ -46,6 +46,10 @@ delete from divida;
 select *
 from conta;
 
+update conta
+set dataPagamento = date(now())
+where pago = true;
+
 INSERT INTO `dss`.`conta`
 (`idConta`,
 `nome`,

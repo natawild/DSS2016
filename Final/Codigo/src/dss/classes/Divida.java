@@ -94,7 +94,7 @@ public class Divida {
                 "\n Data  da divida : " +data.get(Calendar.YEAR) +
                 " - " +(data.get(Calendar.MONTH)+1) +
                 " - " +data.get(Calendar.DAY_OF_MONTH)+
-                "\n identificadar da divida : " + identificador ;
+                "\n identificador da divida : " + identificador ;
     }
 
   
