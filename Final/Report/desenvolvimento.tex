@@ -47,7 +47,7 @@ A aplicação a desenvolver deverá suportar o registo das despesas e a gestão 
 
 
 \section{Base de dados }
-A aplicação necessitará de uma implementação de uma base de dados para gerir os elementos que pertencem ao grupo assim como as despesas efetuadas pelos moradores. 
+A aplicação necessitará de uma implementação de uma base de dados para gerir os elementos que pertencem ao grupo assim como as despesas efetuadas pelos moradores. A modelação concetual consiste no processo de construção de um modelo de dados a partir de uma análise detalhada dos requisitos.  Este modelo é completamente independente de todas as considerações físicas, ou seja é independente dos detalhes de implementação. De seguida está aprsentado o esquema concetual relativo ao projeto.  
 
 
 \begin{figure}[htb!]
@@ -55,19 +55,26 @@ A aplicação necessitará de uma implementação de uma base de dados para geri
 	\caption{Modelo Concetual}  
 \end{figure}
 
+\newpage
+
+Terminada a modelação concetual, procedemos à fase de modelação lógica. Esta consiste na tradução do modelo concetual para o lógico capaz de representar os requisitos definidos, assim como a validação do mesmo. Este modelo está representado na figura abaixo: 
+
 \begin{figure}[htb!]
-	\includegraphics[scale=0.6]{imagens/bd/modelologico}  
+	\includegraphics[scale=0.7]{imagens/bd/modelologico}  
 	\caption{Modelo Lógico}  
 \end{figure}
 
-Para a realização deste projeto, construímos uma base de dados relacional em \textit{MySQL} para armazenar toda a informação necessária para colocar o SGD \footnote{Sistema de Gestão de Despesas} a correr. Para o programa aceder a essa informação, foram classes \textit{DAO}, que fornecem métodos de acesso à base de dados. Cada método visível para o exterior
-destas classe solicita sempre uma conecção à base de Dados, este pedido é feito à classe Connector, podendo este conetor estar configurado com Auto-Commit ou não dependendo do tipo de operações pretendidas.
-São também definidos métodos auxiliares alguns \textit{Private} e outros \textit{Protected} que executam as queries à base de dados, contêm \textit{PreparedStatements} por questões de segurança contra SQL \textit{injection}. A criação destes métodos deve-se à tentativa de minimizar as conecções simultâneas à Base de Dados.
+\newpage
+
+Para a realização deste projeto, construímos uma base de dados relacional em \textit{MySQL} para armazenar toda a informação necessária para colocar o SGD \footnote{Sistema de Gestão de Despesas} a correr. Para o programa aceder a essa informação, foram classes \textit{DAO} \footnote{Data Acess Object} , que fornecem métodos de acesso à base de dados. Cada método visível para o exterior
+destas classe solicita sempre uma conecção à base de Dados, este pedido é feito à classe \textit{Connector}, podendo este conetor estar configurado com Auto-Commit ou não dependendo do tipo de operações pretendidas.
+São também definidos métodos auxiliares alguns \textit{Private} e outros \textit{Protected} que executam as queries à base de dados, contêm \textit{PreparedStatements} por questões de segurança contra SQL \textit{injection}. A criação destes métodos deve-se à tentativa de minimizar as conceções simultâneas à Base de Dados.
+
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.47]{imagens/diagramaClasses/DiagramaClasseDAO}  
-	\caption{Diagrama de Classes }  
+	\includegraphics[scale=0.2]{imagens/diagramaClasses/DiagramaClasseDAO}  
+	\caption{Diagrama de Classes DAO  }  
 \end{figure}
 
 
@@ -105,7 +112,7 @@ modelo de domínio, mas nesse caso, com maior detalhe técnico relativos à ling
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.47]{imagens/diagramaClasses/DiagramaClasse}  
+	\includegraphics[scale=0.2]{imagens/diagramaClasses/DiagramaClasse}  
 	\caption{Diagrama de Classes }  
 \end{figure}
 
@@ -131,6 +138,10 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \newpage
 \subsubsection{Especificação: Gere Saldo Global }
 
+Esta interação pressupõe que o administrador  tenha o login previamente efetuado e desta forma, a visualização do saldo global ao Admin será simples e clara. É então desta forma que o Admin tem acesso ao valor que consta no saldo global, onde esse valor é simplesmente dado a conhecer pelo sistema. O saldo global a que nos referimos é o resultado do somatório de todas as contas correntes de cada morador do apartamento em questão. Este Use Case apenas dá a conhecer ao Admin esse valor.
+
+O use case em formato tabular do Gere saldo Global e o seu respectivo diagrama de sequência é o seguinte:
+
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/Especificacoes/geresaldoglobal}  
@@ -145,6 +156,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 
 \subsubsection{Especificação: Efetua Login }
+Cada morador tem que efetuar Login na aplicação, para tal, é necessário que o indivíduo tenha conta previamente criada. Como em qualquer aplicação, este passo é fundamental e não poderia deixar de o ser no nosso sistema. Para se efetuar o registo do login é solicitado pelo sistema o endereço de email do utilizador em questão para sua validação. Após introduzir o email o sistema requer também o preenchimento da respetiva password. Optamos por colocar um endereço de email ao invés de um username ou um número de telemóvel porque assim poderá existir a possibilidade de futuramente serem enviados para o email dos utilizadores da aplicação, notificações relativas às despesas e ou pagamentos.
 
 \begin{figure}[htb!]
 	\centering
@@ -164,6 +176,8 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \newpage
 
 \subsubsection{Especificação: Criar Conta }
+Esta interação é uma interação bastante vulgar no sentido em que em praticamente todas as aplicações o ato de “criar conta” é quase obrigatório.  No nosso sistema este passo é fundamental para os utilizadores poderem utilizar a nossa aplicação. Para um utilizador criar conta tem que mencionar determinados dados ao sistema e este tem aceitar estes mesmos dados. Esses dados são simples e optamos por apenas solicitar o nome, data de nascimento, e-mail, número de telemóvel e password.
+
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/Especificacoes/criarconta}  
@@ -176,8 +190,9 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Sequência: Criar Conta}  
 \end{figure}
 
-\newpage
+\newpage \clearpage
 \subsubsection{Especificação: Consulta Saldo dentro de casa }
+Este use case apenas é útil para a consulta do saldo dentro do apartamento, ou seja, existe a possibilidade de consultar o valor do saldo que consta no apartamento. Cada utilizador que tenta aceder a este saldo, tem que ter o login feito.
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/Especificacoes/consultasaldodentrodecasa}  
@@ -191,9 +206,8 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \end{figure}
 
 
-\newpage
-
 \subsubsection{Especificação: Deposita Dinheiro para a sua Conta }
+Esta especificação foi feita a pensar no depósito da conta corrente de cada morador/utilizador da aplicação, assim como,  a atualização da conta corrente. Basicamente, o sistema solicita que o utilizador adicione determinada quantia na conta corrente e após este procedimento ser efetuado com sucesso a conta corrente surge atualizada. Este processo requer que o utilizador tenha o login efetuado, pois só desta forma é possível aceder a estas especificações.  
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/Especificacoes/depositadinheiro}  
@@ -206,7 +220,6 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Sequência: Deposita Dinheiro na Conta}  
 \end{figure}
 
-\newpage
 
 \subsubsection{Especificação: Consulta Mensagens enviadas pelo Administrador }
 \begin{figure}[htb!]
@@ -221,6 +234,8 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Sequência: Consulta Mensagens}  
 \end{figure}
 
+\newpage
+
 \subsection{Subdiagrama Gerir Despesas}
 
 \begin{figure}[htb!]
@@ -230,6 +245,9 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \end{figure}
 
 \subsubsection{Especificação: Efetua pagamento da despesa}
+
+De forma a organizar a nossa aplicação apresentamos as despesas que estão por pagar por lista de onde são visualizadas as despesas que estão por pagar e assim fazendo um clique é possível aceder a uma determinada fatura seleccionada pelo utilizador.  A despesa em falta é automaticamente descontada ao saldo global do apartamento em causa. Deste modo, sabemos sempre se existem faturas por pagar e o saldo é atualizado no imediato. Claro está , que é necessário que o valor do saldo seja sempre igual ou superior aos valores indicados nas faturas.
+
 
 \begin{figure}[htb!]
 	\centering
@@ -253,13 +271,16 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 \newpage
 \subsubsection{Especificação: Inserir Despesa}
+
+Cabe ao administrador fazer as inserções das despesas no sistema. Para que cada inserção seja feita com sucesso têm que ser bem introduzidas e aceites pelo sistema, colocando a data, o nome e os valores de cada fatura válidos.
+É também tarefa do administrador decidir que percentagem cada morador registado tem que pagar de cada fatura/despesa.
+
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.8]{imagens/Especificacoes/inserirdespesas}  
 	\caption{Especificação do Use Case: Inserir Despesas}  
 \end{figure}
 
-\newpage
 
 \begin{figure}[htb!]
 	\centering
@@ -267,9 +288,11 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Sequência: Inserir Despesa}  
 \end{figure}
 
-\newpage
+\newpage \clearpage
 
 \subsubsection{Especificação: Apagar Despesa}
+
+O administrador tanto insere as despesas no sistema como as elimina. Temos apenas que ter em consideração que é condição necessária que o admin tenha o login efetuado e a partir daqui o sistema apresenta a listas das despesas por pagar o administrador apenas selecciona aquela que efetivamente pretende que seja eliminada.
 
 \begin{figure}[htb!]
 	\centering
@@ -292,9 +315,10 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \end{figure}
 
 
-\newpage
 
 \subsubsection{Especificação: Consultar despesas pagas }
+Esta é uma consulta feita pelo administrador. Fica possível a consulta de cada uma das despesas que já foram pagas. Esta interação apenas serve para consultar informação. O sistema apresenta todos os detalhes da fatura previamente seleccionada pelo admin. 
+Como o próprio nome do subdiagrama indica, trata-se de administrar contas. 
 
 \begin{figure}[htb!]
 	\centering
@@ -311,6 +335,8 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 \newpage
 \subsubsection{Especificação: Pagar Despesas }
+É nesta especificação que está descrito como é que todos os pagamentos da nossa aplicação são efetivamente pagos.
+Cada utilizador, previamente registado e com login feito selecciona a conta que pretende pagar e procede ao pagamento em questão. O sistema após validar este pagamento atualiza a informação e coloca-a visível. 
 
 \begin{figure}[htb!]
 	\centering
@@ -332,8 +358,28 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Iteração: Utilizador Paga Despesas}  
 \end{figure}
 
+\newpage \clearpage
+
+\subsubsection{Especificação: Consultar Empréstimos }
+
+Nesta especificação o utilizador tem a vantagem de aceder à lista de empréstimos, ou seja, consegue através da aplicação visualizar os valores que emprestou a outros moradores do apartamento, previamente registados na aplicação. 
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.7]{imagens/Especificacoes/consultaremprestimos}  
+	\caption{Especificação do Use Case: Consultar Empréstimos}  
+\end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/diagramaSeq/ConsultarListaEmprestimos}  
+	\caption{Diagrama de Sequência: Consulta lista de empréstimos}  
+\end{figure}
+
 \newpage
 \subsubsection{Especificação: Consultar Lista de Dívidas }
+Paralelamente ao que foi referido na especificação do use case de “consultar lista de emprestimos”, nesta secção é possível ter acesso à lista de dívidas. Por dívidas entende-se dinheiro que o morador deve à casa, neste caso a alguém que colocou o dinheiro por ele. 
+A consulta de dívidas permite que cada utilizador tenha acesso à lista de dívidas e valores por pagar, desta forma tem sempre as contas com os valores exatos em dívida sem ter que fazer cálculos e arredondamentos.
 
 \begin{figure}[htb!]
 	\centering
@@ -348,28 +394,11 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Sequência: Consulta lista de dividas}  
 \end{figure}
 
-\newpage
-
-
-\subsubsection{Especificação: Consultar Empréstimos }
-
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[scale=0.7]{imagens/Especificacoes/consultaremprestimos}  
-	\caption{Especificação do Use Case: Consultar Empréstimos}  
-\end{figure}
-
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[scale=0.5]{imagens/diagramaSeq/ConsultarListaEmprestimos}  
-	\caption{Diagrama de Sequência: Consulta lista de empréstimos}  
-\end{figure}
-
-
 
 \newpage
 
 \subsection{Subdiagrama Interação com os Utilizadores}
+A interação com os utilizadores da aplicação torna a experiência mais interessante e motivadora. 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/UseCase/InteracaoComOsUtilizadores}  
@@ -377,6 +406,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 \end{figure}
 
 \subsubsection{Especificação: Convida Utilizadores }
+É através do email que um utilizador previamente registado convida outros a pertencerem ao “grupo” e a começarem a participar nas despesas do apartamento. O novo membro é notificado e de imediato pode proceder ao seu registo e efetuar login. 
 
 \begin{figure}[htb!]
 	\centering
@@ -398,9 +428,10 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 
 
-\newpage
+\newpage \clearpage
 
 \subsubsection{Especificação: Envia Mensagens aos Utilizadores }
+O administrador da aplicação tem acesso à lista de utilizadores que estão aptos a receber mensagens. O mesmo escolhe a quem pretende enviar uma mensagem e envia. O sistema apenas confirma o envio. Este processo pode ser enviado aos utilizadores que o administrador quiser.
 
 \begin{figure}[htb!]
 	\centering
@@ -411,6 +442,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 
 
 \subsubsection{Especificação: Retirar do grupo }
+O administrador consegue remover da aplicação os membros que de uma forma ou de   outra já não pertencem ao grupo.  O sistema apresenta a lista dos moradores registados e apenas é seleccionado o membro a excluir. 
 
 \begin{figure}[htb!]
 	\centering
@@ -430,7 +462,7 @@ O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcion
 	\caption{Diagrama de Iteração: Administrador Remove do Grupo}  
 \end{figure}
 
-\newpage
+
 \chapter{Implementação e Instalação do Sistema}
 
 \section{Diagrama de Instalação}
