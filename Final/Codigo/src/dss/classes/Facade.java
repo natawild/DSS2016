@@ -370,6 +370,12 @@ public class Facade {
     
     }
     
+    public int getIdDividaUser(int idDivida,String email) throws SQLException {
+    
+        return DividaDAO.getIdDividaUser(idDivida, email);
+    
+    }
+    
     
     
      public  double round(double value, int places) {

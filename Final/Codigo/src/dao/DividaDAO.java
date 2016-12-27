@@ -85,6 +85,30 @@ public class DividaDAO implements Map<String,List<Divida>> {
     return valor;
     }
     
+    
+    public static int getIdDividaUser(int idDivida,String email) throws SQLException {
+    
+         Connection c = Connect.connect();
+         int valor=0;
+       try {  
+        String query = "select count(*) from divida as D inner join morador as M on D.idUtilizador=M.idUtilizador where idDivida ='"+idDivida+"' "
+                + " and email='"+email+"'";
+        
+        ResultSet rs = c.createStatement()
+                .executeQuery(query);
+        
+        rs.next();
+        valor=rs.getInt(1);
+      } catch(SQLException e)
+       {  System.err.println(e.getMessage());   }
+     finally
+        { c.close();}
+    return valor;
+    }
+    
+    
+    
+    
     public static int pagaDivida(int idDivida) throws SQLException {
     
          Connection c = Connect.connect();

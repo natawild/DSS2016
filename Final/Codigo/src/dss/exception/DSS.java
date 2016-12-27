@@ -79,7 +79,7 @@ public class DSS {
          
          EmprestimoDAO.dropEmprestimo(7);
          
-          
+          System.out.println(DividaDAO.getIdDividaUser(21,"andreia"));
                         
                         System.out.println(0.000000001==0.00000000100000000);
           //DividaDAO.dropDivida(round(valorDividaE,11));

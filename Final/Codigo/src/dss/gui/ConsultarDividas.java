@@ -340,7 +340,7 @@ public class ConsultarDividas extends javax.swing.JDialog {
         try {
         int id =Integer.parseInt(this.identificadorDivida.getText());
         
-        if(f.getIdDivida(id)==0) {
+        if(f.getIdDividaUser(id,emailUser)==0) {
            JOptionPane.showMessageDialog(null, "Id não existe");
            
             
