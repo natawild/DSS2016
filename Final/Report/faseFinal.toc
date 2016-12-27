@@ -16,10 +16,10 @@
 \contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Criar Conta }{12}
 \contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consulta Saldo dentro de casa }{15}
 \contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Deposita Dinheiro para a sua Conta }{15}
-\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consulta Mensagens enviadas pelo Administrador }{15}
-\contentsline {subsection}{\numberline {3.3.2}Subdiagrama Gerir Despesas}{16}
-\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Efetua pagamento da despesa}{16}
-\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Inserir Despesa}{17}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consulta Mensagens enviadas pelo Administrador }{16}
+\contentsline {subsection}{\numberline {3.3.2}Subdiagrama Gerir Despesas}{17}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Efetua pagamento da despesa}{17}
+\contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Inserir Despesa}{18}
 \contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Apagar Despesa}{21}
 \contentsline {subsection}{\numberline {3.3.3}Subdiagrama Administrar Contas}{22}
 \contentsline {subsubsection}{Especifica\IeC {\c c}\IeC {\~a}o: Consultar despesas pagas }{22}
@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {5.1.2}Criar Conta}{34}
 \contentsline {subsection}{\numberline {5.1.3}Convidar Utilizadores}{35}
 \contentsline {subsection}{\numberline {5.1.4}Remover Utilizadores}{35}
-\contentsline {subsection}{\numberline {5.1.5}Inserir Fatura}{35}
-\contentsline {subsection}{\numberline {5.1.6}Deposita Dinheiro}{35}
-\contentsline {section}{\numberline {5.2}Mockups}{36}
+\contentsline {subsection}{\numberline {5.1.5}Inserir Fatura}{36}
+\contentsline {subsection}{\numberline {5.1.6}Deposita Dinheiro}{36}
+\contentsline {section}{\numberline {5.2}Mockups}{37}
 \contentsline {chapter}{\numberline {6}Conclus\IeC {\~a}o}{41}
