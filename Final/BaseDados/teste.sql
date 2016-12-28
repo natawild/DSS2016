@@ -22,8 +22,8 @@ delete from emprestimo
 
 
 update morador
-set admin=1
-where idUtilizador =9;
+set admin=null
+where admin is not null and idUtilizador!=1;
 
 insert into mensagem values (idMensagem,'DSA','dfs',date(now()));
 insert into mensagemadmin values(7,9);
