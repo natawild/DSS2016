@@ -106,24 +106,44 @@ public class EditarDados extends javax.swing.JDialog {
         emailAlterado = new javax.swing.JTextField();
         confirmarEmail = new javax.swing.JButton();
         voltar = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 11, 108, 14);
+        getContentPane().add(nomeCampo);
+        nomeCampo.setBounds(10, 36, 160, 20);
 
         jLabel2.setText("Data de Nascimento");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 80, 108, 21);
 
         diaLabel.setText("Dia");
+        getContentPane().add(diaLabel);
+        diaLabel.setBounds(293, 90, 33, 14);
 
         mesLabel.setText("Mes");
+        getContentPane().add(mesLabel);
+        mesLabel.setBounds(380, 90, 29, 14);
 
         anoLabel.setText("Ano");
+        getContentPane().add(anoLabel);
+        anoLabel.setBounds(446, 90, 36, 14);
 
         ano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900", "1899", "1898", "1897", "1896", "1895", "1894", "1893", "1892", "1891 ", "1890", "1889", "1888", "1887", "1886", "1885", "1884", "1883", "1882", "1881 ", "1880", "1879", "1878", "1877", "1876", "1875", "1874", "1873", "1872", "1871 ", "1870", "1869", "1868", "1867", "1866", "1865", "1864", "1863", "1862", "1861 ", "1860", "1859", "1858", "1857", "1856", "1855", "1854", "1853", "1852", "1851 ", "1850", "1849", "1848", "1847", "1846", "1845", "1844", "1843", "1842", "1841 ", "1840", "1839", "1838", "1837", "1836", "1835", "1834", "1833", "1832", "1831 ", "1830", "1829", "1828", "1827", "1826", "1825", "1824", "1823", "1822", "1821 ", "1820", "1819", "1818", "1817", "1816" }));
+        getContentPane().add(ano);
+        ano.setBounds(446, 115, 67, 20);
 
         mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        getContentPane().add(mes);
+        mes.setBounds(380, 115, 50, 20);
 
         dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        getContentPane().add(dia);
+        dia.setBounds(293, 115, 58, 20);
 
         editarNome.setText("editar");
         editarNome.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -131,6 +151,8 @@ public class EditarDados extends javax.swing.JDialog {
                 editarNomeMouseClicked(evt);
             }
         });
+        getContentPane().add(editarNome);
+        editarNome.setBounds(190, 40, 80, 23);
 
         editarData.setText("editar");
         editarData.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,8 +160,18 @@ public class EditarDados extends javax.swing.JDialog {
                 editarDataMouseClicked(evt);
             }
         });
+        getContentPane().add(editarData);
+        editarData.setBounds(136, 118, 80, 23);
+        getContentPane().add(nomeAlterado);
+        nomeAlterado.setBounds(300, 40, 160, 20);
 
         jLabel3.setText("Número de telemovel");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, 174, 108, 22);
+        getContentPane().add(dataCampo);
+        dataCampo.setBounds(10, 123, 108, 20);
+        getContentPane().add(numeroCampo);
+        numeroCampo.setBounds(10, 210, 108, 20);
 
         editarNumero.setText("editar");
         editarNumero.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,6 +179,8 @@ public class EditarDados extends javax.swing.JDialog {
                 editarNumeroMouseClicked(evt);
             }
         });
+        getContentPane().add(editarNumero);
+        editarNumero.setBounds(140, 210, 80, 23);
 
         confirmarNome.setText("confirmar");
         confirmarNome.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,6 +188,8 @@ public class EditarDados extends javax.swing.JDialog {
                 confirmarNomeMouseClicked(evt);
             }
         });
+        getContentPane().add(confirmarNome);
+        confirmarNome.setBounds(481, 35, 90, 23);
 
         confirmarData.setText("confirmar");
         confirmarData.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,6 +197,8 @@ public class EditarDados extends javax.swing.JDialog {
                 confirmarDataMouseClicked(evt);
             }
         });
+        getContentPane().add(confirmarData);
+        confirmarData.setBounds(341, 153, 90, 23);
 
         confirmarNumero.setText("confirmar");
         confirmarNumero.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,8 +206,14 @@ public class EditarDados extends javax.swing.JDialog {
                 confirmarNumeroMouseClicked(evt);
             }
         });
+        getContentPane().add(confirmarNumero);
+        confirmarNumero.setBounds(468, 205, 90, 23);
+        getContentPane().add(numeroAlterado);
+        numeroAlterado.setBounds(293, 210, 160, 20);
 
         jLabel4.setText("Palavra Passe");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 248, 108, 26);
 
         editarPasse.setText("editar");
         editarPasse.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -177,6 +221,12 @@ public class EditarDados extends javax.swing.JDialog {
                 editarPasseMouseClicked(evt);
             }
         });
+        getContentPane().add(editarPasse);
+        editarPasse.setBounds(136, 295, 80, 23);
+        getContentPane().add(passeWordCampo);
+        passeWordCampo.setBounds(8, 296, 110, 20);
+        getContentPane().add(passeAlterada);
+        passeAlterada.setBounds(293, 295, 160, 20);
 
         confirmarPasse.setText("confirmar");
         confirmarPasse.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -184,8 +234,14 @@ public class EditarDados extends javax.swing.JDialog {
                 confirmarPasseMouseClicked(evt);
             }
         });
+        getContentPane().add(confirmarPasse);
+        confirmarPasse.setBounds(470, 290, 90, 23);
 
         jLabel5.setText("Email");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(10, 350, 108, 23);
+        getContentPane().add(emailCampo);
+        emailCampo.setBounds(10, 380, 108, 20);
 
         editarEmail.setText("editar");
         editarEmail.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -193,6 +249,10 @@ public class EditarDados extends javax.swing.JDialog {
                 editarEmailMouseClicked(evt);
             }
         });
+        getContentPane().add(editarEmail);
+        editarEmail.setBounds(136, 380, 80, 23);
+        getContentPane().add(emailAlterado);
+        emailAlterado.setBounds(293, 386, 160, 20);
 
         confirmarEmail.setText("confirmar");
         confirmarEmail.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -200,6 +260,8 @@ public class EditarDados extends javax.swing.JDialog {
                 confirmarEmailMouseClicked(evt);
             }
         });
+        getContentPane().add(confirmarEmail);
+        confirmarEmail.setBounds(481, 380, 90, 23);
 
         voltar.setText("voltar");
         voltar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -207,144 +269,13 @@ public class EditarDados extends javax.swing.JDialog {
                 voltarMouseClicked(evt);
             }
         });
+        getContentPane().add(voltar);
+        voltar.setBounds(10, 430, 83, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(voltar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(emailCampo)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(numeroCampo)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                            .addComponent(nomeCampo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dataCampo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passeWordCampo))
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(editarNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(editarData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(editarNumero, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(editarPasse)
-                            .addComponent(editarEmail))
-                        .addGap(62, 62, 62)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(passeAlterada)
-                                .addGap(41, 41, 41)
-                                .addComponent(confirmarPasse)
-                                .addGap(30, 30, 30))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(confirmarData)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(diaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(mesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addComponent(numeroAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(6, 6, 6)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(anoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ano, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(14, 14, 14)
-                                                .addComponent(confirmarNumero)))))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(nomeAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                                .addComponent(confirmarNome)
-                                .addGap(26, 26, 26))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(emailAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(confirmarEmail)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editarNome)
-                    .addComponent(nomeAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(confirmarNome))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(diaLabel)
-                            .addComponent(mesLabel)
-                            .addComponent(anoLabel)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dataCampo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(editarData)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(confirmarData)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numeroAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(confirmarNumero)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numeroCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editarNumero))))
-                .addGap(21, 21, 21)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passeWordCampo)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(editarPasse)
-                        .addComponent(passeAlterada, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(confirmarPasse)))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailCampo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(editarEmail)
-                        .addComponent(emailAlterado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(confirmarEmail)))
-                .addGap(63, 63, 63)
-                .addComponent(voltar)
-                .addContainerGap())
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/editar.png"))); // NOI18N
+        jLabel6.setText("jLabel6");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 590, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -686,6 +617,7 @@ public class EditarDados extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JComboBox<String> mes;
     private javax.swing.JLabel mesLabel;
     private javax.swing.JTextField nomeAlterado;
