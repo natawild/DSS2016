@@ -159,8 +159,8 @@ public class Conta {
                 + tipo +
                 "\n totalPago : " + 
                 totalPago + 
-                "\n numero de pessoas a pagar : "+ this.utilizadoresPagam+
-                "\n numero de pessoas que pagaram  : " +this.utilizadoresPagaram
+                "\n numero de pessoas que já pagaram: "+ this.utilizadoresPagam+
+                "\n numero de pessoas que pagam: " +this.utilizadoresPagaram
                 +"\n"+imprimeUtilizadores();
     }
     
@@ -178,7 +178,7 @@ public class Conta {
                 " - " +(dataPagamento.get(Calendar.MONTH)+1) +
                 " - " +dataPagamento.get(Calendar.DAY_OF_MONTH)+
                 
-                "\n número de pessoas que pagaram :"+ this.utilizadoresPagaram +
+                "\n número de pessoas que pagam:"+ this.utilizadoresPagaram +
                 "\n nome da factura : " + nome 
                 + "\n tipo da fatura : " 
                 + tipo +

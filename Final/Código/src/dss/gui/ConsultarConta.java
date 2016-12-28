@@ -318,7 +318,7 @@ public class ConsultarConta extends javax.swing.JDialog {
             else {
                 if(mensagemUser.isEmpty()) {
                 
-                     JOptionPane.showMessageDialog(null, "Nao tem mais conta a pagar");
+                     JOptionPane.showMessageDialog(null, "Nao tem contas a pagar");
                     
                 }
                 else {
@@ -378,7 +378,7 @@ public class ConsultarConta extends javax.swing.JDialog {
               
               if(valorContaPago ==verContaTotal && numeroPessoasApagar == numeroPessoasPagaram )
               {
-                 JOptionPane.showMessageDialog(null, "Conta ja foi paga");
+                 JOptionPane.showMessageDialog(null, "Conta já foi paga");
               }
               else {
                   valorContaPago = valorContaPago+valorInt;

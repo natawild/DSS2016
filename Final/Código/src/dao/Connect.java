@@ -15,7 +15,7 @@ import java.sql.*;
 public class Connect {
     
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "123456";
+    private static final String PASSWORD = "nata24fvr";
     private static final String URL = "localhost";
     private static final String SCHEMA = "dss";
     
