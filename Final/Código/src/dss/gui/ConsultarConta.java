@@ -275,6 +275,9 @@ public class ConsultarConta extends javax.swing.JDialog {
             
             }
             else {
+                
+                 if(i<0) {i=0;}
+                
                 if(mensagemUser.isEmpty()) {
                 
                      JOptionPane.showMessageDialog(null, "Nao tem mais contas");
@@ -316,6 +319,8 @@ public class ConsultarConta extends javax.swing.JDialog {
                 
             }
             else {
+                if(i>=mensagemUser.size()) {i=0;}
+                
                 if(mensagemUser.isEmpty()) {
                 
                      JOptionPane.showMessageDialog(null, "Nao tem contas a pagar");

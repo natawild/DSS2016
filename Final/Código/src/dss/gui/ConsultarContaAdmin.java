@@ -252,6 +252,7 @@ public class ConsultarContaAdmin extends javax.swing.JDialog {
             
             }
             else {
+                if(i<0) {i=0;}
                 if(mensagemUser.isEmpty()) {
                 
                      JOptionPane.showMessageDialog(null, "Nao tem mais contas");
@@ -300,6 +301,8 @@ public class ConsultarContaAdmin extends javax.swing.JDialog {
                 }
                 else {
                    
+                    if(i>=mensagemUser.size()) {i=0;}
+                    
                 Conta m = mensagemUser.get(i);
                    
                  Map<String,Pagamento> p = f.getPagamento( m.getIdentificador());

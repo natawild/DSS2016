@@ -214,6 +214,7 @@ public class VerContasPagasAdmin extends javax.swing.JDialog {
             
             }
             else {
+                if(i<0) {i=0;}
                 
                  if(mensagemUser .isEmpty()) {
                 
@@ -259,6 +260,8 @@ public class VerContasPagasAdmin extends javax.swing.JDialog {
                 
             }
             else {
+                
+                 if(i>=mensagemUser.size()) {i=0;}
                 
                  if(mensagemUser .isEmpty()) {
                 

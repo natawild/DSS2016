@@ -11,7 +11,7 @@ VALUES
 (idUtilizador,'gil','1994-1-10','gil','gil@email',10,'910322618',1),
 (idUtilizador,'celia','1992-12-24','celia','celia@email',10,'910322718',1),
 (idUtilizador,'daniel','1994-2-10','daniel','daniel@email',10,'910322619',1),
-(idUtilizador,'ricardo','1994-1-10','ricardo','ricardo@email',10,'910322628',null),
+(idUtilizador,'ricardo','1994-1-10','ricardo','ricardo@email',10,'910322628',1),
 (idUtilizador,'humberto','1992-1-10','humberto','humberto@email',10,'910332618',null),
 (idUtilizador,'marcia','1996-1-10','marcia','marcia@email',10,'911322618',null);
 
@@ -29,7 +29,58 @@ VALUES
 
 
 
+INSERT INTO `dss`.`conta`
+(`idConta`,
+`nome`,
+`nrPessoasPagaram`,
+`nrPessoasApagar`,
+`dataLimite`,
+`dataPagamento`,
+`totalConta`,
+`totalContaPago`,
+`pago`,
+`tipo`)
+VALUES
+(idConta,'Conta da água',4,4,'2016-10-11','2016-10-9',20,20,true,'Recorrente'),
+(idConta,'Conta da Televisão',1,1,'2016-9-11','2016-9-9',100,100,true,'Extraordinaria'),
+(idConta,'Conta da luz',4,4,'2016-08-10','2016-08-9',24,24,true,'Recorrente'),
+(idConta,'Conta do papél higienico',4,4,'2016-09-11','2016-09-10',2,2,true,'Recorrente'),
+(idConta,'Conta da luz',4,4,'2016-01-11','2016-01-9',30,30,true,'Recorrente'),
+(idConta,'Conta da caldeira',4,4,'2016-10-11','2016-10-9',10,10,true,'Extraordinaria'),
+(idConta,'Conta da água',3,4,'2016-10-11',null,10,10,false,'Recorrente'),
+(idConta,'Conta da água',4,4,'2016-10-11','2016-10-9',40,40,true,'Recorrente');
 
+
+
+INSERT INTO `dss`.`divida`
+(`idDivida`,
+`valorDivida`,
+`dataDivida`,
+`idUtilizador`)
+VALUES
+(idDivida,10,'2016-09-5',1),
+(idDivida,5,'2016-09-5',1),
+(idDivida,4,'2016-09-5',1),
+(idDivida,15,'2016-02-5',2),
+(idDivida,10,'2016-03-5',2),
+(idDivida,10,'2016-04-5',2),
+(idDivida,10,'2016-05-5',2),
+(idDivida,10,'2016-05-5',3);
+
+
+INSERT INTO `dss`.`emprestimo`
+(`idEmprestimo`,
+`valor`,
+`dataEmprestimo`,
+`idUtilizador`)
+VALUES
+(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-4',3);
 
 
 
