@@ -523,7 +523,7 @@ public class VerEmprestimo extends javax.swing.JDialog {
         this.valorIntroduzido.setVisible(true);
         this.apagar.setVisible(true);
          this.label.setVisible(true);
-        
+        carregou=false;
         
         
         

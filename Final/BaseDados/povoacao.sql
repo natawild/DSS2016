@@ -74,7 +74,7 @@ INSERT INTO `dss`.`emprestimo`
 `dataEmprestimo`,
 `idUtilizador`)
 VALUES
-(idEmprestimo,10,'2016-09-4',3),
+(idEmprestimo,10,'2016-09-10',1),
 (idEmprestimo,10,'2016-09-4',3),
 (idEmprestimo,10,'2016-09-4',3),
 (idEmprestimo,10,'2016-09-4',3),

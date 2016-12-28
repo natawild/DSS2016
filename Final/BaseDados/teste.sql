@@ -16,8 +16,8 @@ insert into morador value(idUtilizador,'dd','2016-01-2','dsadsa','sdsaa',10,'913
 insert into morador value(idUtilizador,'dd','2016-01-2','dsadsa','s',10,'913224',null);
 insert into morador value(idUtilizador,'andreia','2016-01-2','andreia','andreia',10,'8',1);
 
-delete from emprestimo
-        where valor=10
+delete from conta
+        where idConta=28
      limit 1;   
 
 
