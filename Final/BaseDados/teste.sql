@@ -23,7 +23,7 @@ delete from emprestimo
 
 update morador
 set admin=1
-where idUtilizador =6;
+where idUtilizador =9;
 
 insert into mensagem values (idMensagem,'DSA','dfs',date(now()));
 insert into mensagemadmin values(7,9);
@@ -34,7 +34,7 @@ insert into emprestimo values (idEmprestimo,10,'2016-02-2',1);
 insert into emprestimo values (idEmprestimo,10,'2016-03-2',1);
 insert into emprestimo values (idEmprestimo,10,'2016-04-2',1);
 
-insert into divida values (idDivida,10,'2016-12-2',6);
+insert into divida values (idDivida,10,'2016-12-2',4);
 
 select * from emprestimo order by dataEmprestimo ASC;
 
@@ -71,7 +71,7 @@ update pagamento
 set pagamento.valorPago=10
 where idConta=2 and idUtilizador=1;
 
-insert into divida values (idDivida,5,'2016-12-2',2);
+insert into divida values (idDivida,5,'2016-12-2',4);
 
 
 
