@@ -76,10 +76,10 @@ public class DSS {
          //System.out.println(ContaDAO.pagarConta(2));
          //System.out.println(MensagemDAO.put(m, ola));
          double valorDividaE=0.000000476843;
-         
-         EmprestimoDAO.dropEmprestimo(7);
-         
-          System.out.println(DividaDAO.getIdDividaUser(21,"andreia"));
+         //PagamentoDAO.pagarConta(4,"gil1",10);
+         //EmprestimoDAO.dropEmprestimo(7);
+         System.out.println(ContaDAO.contasPagasUser("gil1"));
+          //System.out.println(DividaDAO.getIdDividaUser(21,"andreia"));
                         
                         System.out.println(0.000000001==0.00000000100000000);
           //DividaDAO.dropDivida(round(valorDividaE,11));

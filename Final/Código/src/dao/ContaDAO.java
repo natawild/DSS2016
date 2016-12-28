@@ -325,7 +325,7 @@ public class ContaDAO implements List<Conta>{
            
            
            
-       Conta conta = new Conta(nomeConta, tipo,nrPessoasPagaram,totalConta,dataPagamento, dataLimite,idConta);
+       Conta conta = new Conta(nomeConta, tipo,totalConta,dataPagamento,nrPessoasPagaram,nrPessoasPagaram, dataLimite,idConta,totalConta);
        
        contasPagas.add(conta);
      }

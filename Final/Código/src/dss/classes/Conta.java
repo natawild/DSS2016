@@ -61,7 +61,23 @@ public class Conta {
         this.identificador=identificador;
     }
     
+     public Conta(String nome,String tipo,float totalFactura,GregorianCalendar data
+    ,int utiPagaram, int utiliPagam,GregorianCalendar dataLimite,int identificador,float totalFacturaPago){
+        
+        this.nome=nome;
+        this.tipo=tipo;
+        this.totalFactura=totalFactura;
+        this.pagam=new HashMap<>();
+        this.totalPago=totalFacturaPago;
+        this.dataPagamento= data;
+        this.utilizadoresPagaram=utiPagaram;
+        this.utilizadoresPagam = utiliPagam;
+        this.identificador=identificador;
+        this.dataLimite=dataLimite;
+    }
     
+     
+     
     
     
     public Conta (String nome, String tipo, int nrPessoasPagaram,float totalConta,
@@ -173,7 +189,7 @@ public class Conta {
                 totalFactura  + "\n \n"+
                 "\n Data do limite do pagamento  : " +dataLimite.get(Calendar.YEAR) +
                 " - " +(dataLimite.get(Calendar.MONTH)+1) +
-                " - : " +dataLimite.get(Calendar.DAY_OF_MONTH)+
+                " - " +dataLimite.get(Calendar.DAY_OF_MONTH)+
                 "\n Data  do pagamento : " +dataPagamento.get(Calendar.YEAR) +
                 " - " +(dataPagamento.get(Calendar.MONTH)+1) +
                 " - " +dataPagamento.get(Calendar.DAY_OF_MONTH)+
