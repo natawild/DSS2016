@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  27 DEC 2016 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  28 DEC 2016 20:24
 entering extended mode
 **faseFinal.tex
 (faseFinal.tex
@@ -1365,14 +1365,14 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
  [4
 
 ]
-<imagens/bd/modeloconcetual.png, id=33, 788.9475pt x 418.56375pt>
+<imagens/bd/modeloconcetual.png, id=33, 1063.975pt x 590.205pt>
 File: imagens/bd/modeloconcetual.png Graphic file (type png)
 
 <use imagens/bd/modeloconcetual.png>
 Package pdftex.def Info: imagens/bd/modeloconcetual.png used on input line 54.
-(pdftex.def)             Requested size: 473.37215pt x 251.14018pt.
+(pdftex.def)             Requested size: 638.38994pt x 354.12573pt.
 
-Overfull \hbox (18.12804pt too wide) in paragraph at lines 54--55
+Overfull \hbox (183.14583pt too wide) in paragraph at lines 54--55
 [][] 
  []
 
@@ -1967,8 +1967,260 @@ File: imagens/mockups/AdminpagarContas.png Graphic file (type png)
 Package pdftex.def Info: imagens/mockups/AdminpagarContas.png used on input lin
 e 612.
 (pdftex.def)             Requested size: 373.09674pt x 266.04597pt.
-) (conclusao.tex [40 <./imagens/mockups/loginadmin.png> <./imagens/mockups/Admi
-npagarContas.png>]
+ [40 <./imagens/mockups/loginadmin.png> <./imagens/mockups/AdminpagarContas.png
+>]
+<imagens/interface/inicial.png, id=215, 483.30562pt x 379.4175pt>
+File: imagens/interface/inicial.png Graphic file (type png)
+
+<use imagens/interface/inicial.png>
+Package pdftex.def Info: imagens/interface/inicial.png used on input line 622.
+(pdftex.def)             Requested size: 289.98561pt x 227.65225pt.
+
+<imagens/interface/criarconta.png, id=216, 389.95688pt x 390.70969pt>
+File: imagens/interface/criarconta.png Graphic file (type png)
+
+<use imagens/interface/criarconta.png>
+Package pdftex.def Info: imagens/interface/criarconta.png used on input line 62
+8.
+(pdftex.def)             Requested size: 233.97592pt x 234.42761pt.
+
+<imagens/interface/paginicialadmin.png, id=217, 396.7322pt x 317.68687pt>
+File: imagens/interface/paginicialadmin.png Graphic file (type png)
+
+<use imagens/interface/paginicialadmin.png>
+Package pdftex.def Info: imagens/interface/paginicialadmin.png used on input li
+ne 636.
+(pdftex.def)             Requested size: 238.04114pt x 190.61359pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagens/interface/botaoadmin.png, id=218, 666.23906pt x 444.15938pt>
+File: imagens/interface/botaoadmin.png Graphic file (type png)
+
+<use imagens/interface/botaoadmin.png>
+Package pdftex.def Info: imagens/interface/botaoadmin.png used on input line 64
+2.
+(pdftex.def)             Requested size: 399.74652pt x 266.49767pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/botaoadicionamorador.png, id=219, 790.45313pt x 412.54124pt>
+File: imagens/interface/botaoadicionamorador.png Graphic file (type png)
+<use imagens/interface/botaoadicionamorador.png>
+Package pdftex.def Info: imagens/interface/botaoadicionamorador.png used on inp
+ut line 648.
+(pdftex.def)             Requested size: 474.27553pt x 247.52666pt.
+
+Overfull \hbox (19.03142pt too wide) in paragraph at lines 648--649
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: imagens/interface/botaoadicionamorador.png Graphic file (type png)
+<use imagens/interface/botaoadicionamorador.png>
+Package pdftex.def Info: imagens/interface/botaoadicionamorador.png used on inp
+ut line 654.
+(pdftex.def)             Requested size: 474.27553pt x 247.52666pt.
+
+Overfull \hbox (19.03142pt too wide) in paragraph at lines 654--655
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/adminvercontaspagas.png, id=220, 770.12718pt x 412.54124pt>
+File: imagens/interface/adminvercontaspagas.png Graphic file (type png)
+
+<use imagens/interface/adminvercontaspagas.png>
+Package pdftex.def Info: imagens/interface/adminvercontaspagas.png used on inpu
+t line 660.
+(pdftex.def)             Requested size: 462.07986pt x 247.52666pt.
+
+Overfull \hbox (6.83575pt too wide) in paragraph at lines 660--661
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagens/interface/enviarmensagemadmin.png, id=221, 1035.87pt x 528.47438pt>
+File: imagens/interface/enviarmensagemadmin.png Graphic file (type png)
+
+<use imagens/interface/enviarmensagemadmin.png>
+Package pdftex.def Info: imagens/interface/enviarmensagemadmin.png used on inpu
+t line 666.
+(pdftex.def)             Requested size: 517.93373pt x 264.23654pt.
+
+Overfull \hbox (62.68962pt too wide) in paragraph at lines 666--667
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/verdividaseemprestimosadmin.png, id=222, 840.13875pt x 457.7
+1pt>
+File: imagens/interface/verdividaseemprestimosadmin.png Graphic file (type png)
+
+ <use imagens/interface/verdividaseemprestimosadmin.png>
+Package pdftex.def Info: imagens/interface/verdividaseemprestimosadmin.png used
+ on input line 672.
+(pdftex.def)             Requested size: 420.06834pt x 228.85445pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/adicionarcontaadmin.png, id=223, 763.35187pt x 431.36156pt>
+File: imagens/interface/adicionarcontaadmin.png Graphic file (type png)
+
+<use imagens/interface/adicionarcontaadmin.png>
+Package pdftex.def Info: imagens/interface/adicionarcontaadmin.png used on inpu
+t line 678.
+(pdftex.def)             Requested size: 381.675pt x 215.68025pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/vercontasporpagaradmin.png, id=224, 731.73375pt x 431.36156p
+t>
+File: imagens/interface/vercontasporpagaradmin.png Graphic file (type png)
+ <use imagens/interface/vercontasporpagaradmin.png>
+Package pdftex.def Info: imagens/interface/vercontasporpagaradmin.png used on i
+nput line 684.
+(pdftex.def)             Requested size: 365.86598pt x 215.68025pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/removerdogrupoadmin.png, id=225, 744.53156pt x 431.36156pt>
+File: imagens/interface/removerdogrupoadmin.png Graphic file (type png)
+
+<use imagens/interface/removerdogrupoadmin.png>
+Package pdftex.def Info: imagens/interface/removerdogrupoadmin.png used on inpu
+t line 690.
+(pdftex.def)             Requested size: 372.26486pt x 215.68025pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagens/interface/apagarcontasadmin.png, id=226, 674.52pt x 431.36156pt>
+File: imagens/interface/apagarcontasadmin.png Graphic file (type png)
+
+<use imagens/interface/apagarcontasadmin.png>
+Package pdftex.def Info: imagens/interface/apagarcontasadmin.png used on input 
+line 697.
+(pdftex.def)             Requested size: 337.25917pt x 215.68025pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagens/interface/moradorpaginicial.png, id=227, 412.54124pt x 347.79938pt>
+File: imagens/interface/moradorpaginicial.png Graphic file (type png)
+
+<use imagens/interface/moradorpaginicial.png>
+Package pdftex.def Info: imagens/interface/moradorpaginicial.png used on input 
+line 704.
+(pdftex.def)             Requested size: 247.52666pt x 208.68123pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagens/interface/vermensagensadmin.png, id=228, 697.10437pt x 431.36156pt>
+File: imagens/interface/vermensagensadmin.png Graphic file (type png)
+
+<use imagens/interface/vermensagensadmin.png>
+Package pdftex.def Info: imagens/interface/vermensagensadmin.png used on input 
+line 710.
+(pdftex.def)             Requested size: 418.26584pt x 258.81892pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/consultaremprestimos.png, id=229, 733.23938pt x 514.17094pt>
+File: imagens/interface/consultaremprestimos.png Graphic file (type png)
+<use imagens/interface/consultaremprestimos.png>
+Package pdftex.def Info: imagens/interface/consultaremprestimos.png used on inp
+ut line 716.
+(pdftex.def)             Requested size: 439.94702pt x 308.50494pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<imagens/interface/vercontaspagasmorador.png, id=230, 683.55376pt x 440.39531pt
+>
+File: imagens/interface/vercontaspagasmorador.png Graphic file (type png)
+ <use imagens/interface/vercontaspagasmorador.png>
+Package pdftex.def Info: imagens/interface/vercontaspagasmorador.png used on in
+put line 722.
+(pdftex.def)             Requested size: 410.13542pt x 264.23921pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagens/interface/editardadosmorador.png, id=231, 682.04813pt x 464.4853pt>
+File: imagens/interface/editardadosmorador.png Graphic file (type png)
+
+<use imagens/interface/editardadosmorador.png>
+Package pdftex.def Info: imagens/interface/editardadosmorador.png used on input
+ line 733.
+(pdftex.def)             Requested size: 409.23204pt x 278.69333pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41 <./imagens/interface/inicial.png> <./imagens/interface/criarconta.png>]
+[42 <./imagens/interface/paginicialadmin.png> <./imagens/interface/botaoadmin.p
+ng>] [43 <./imagens/interface/botaoadicionamorador.png>] [44 <./imagens/interfa
+ce/adminvercontaspagas.png> <./imagens/interface/enviarmensagemadmin.png>]
+[45 <./imagens/interface/verdividaseemprestimosadmin.png> <./imagens/interface/
+adicionarcontaadmin.png>] [46 <./imagens/interface/vercontasporpagaradmin.png> 
+<./imagens/interface/removerdogrupoadmin.png>] [47 <./imagens/interface/apagarc
+ontasadmin.png> <./imagens/interface/moradorpaginicial.png>] [48 <./imagens/int
+erface/vermensagensadmin.png> <./imagens/interface/consultaremprestimos.png>]
+[49 <./imagens/interface/vercontaspagasmorador.png> <./imagens/interface/editar
+dadosmorador.png>]
+<imagens/interface/consultardividasmorador.png, id=261, 682.04813pt x 464.4853p
+t>
+File: imagens/interface/consultardividasmorador.png Graphic file (type png)
+ <use imagens/interface/consultardividasmorador.png>
+Package pdftex.def Info: imagens/interface/consultardividasmorador.png used on 
+input line 741.
+(pdftex.def)             Requested size: 409.23204pt x 278.69333pt.
+ [50
+
+ <./imagens/interface/consultardividasmorador.png>]
+<imagens/interface/pagarcontamorador.png, id=265, 682.04813pt x 464.4853pt>
+File: imagens/interface/pagarcontamorador.png Graphic file (type png)
+
+<use imagens/interface/pagarcontamorador.png>
+Package pdftex.def Info: imagens/interface/pagarcontamorador.png used on input 
+line 749.
+(pdftex.def)             Requested size: 409.23204pt x 278.69333pt.
+
+<imagens/interface/atualizarsaldomorador.png, id=266, 622.57594pt x 444.15938pt
+>
+File: imagens/interface/atualizarsaldomorador.png Graphic file (type png)
+ <use imagens/interface/atualizarsaldomorador.png>
+Package pdftex.def Info: imagens/interface/atualizarsaldomorador.png used on in
+put line 755.
+(pdftex.def)             Requested size: 373.54845pt x 266.49767pt.
+) (conclusao.tex [51
+
+ <./imagens/interface/pagarcontamorador.png> <./imagens/interface/atualizarsald
+omorador.png>]
 Cap\'{\i }tulo 6.
 
 Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
@@ -1976,14 +2228,14 @@ Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
  pen-sar de como se-ria a nossa aplica[][]ao
  []
 
-) [41
+) [52
 
 ] (faseFinal.aux) ) 
 Here is how much of TeX's memory you used:
- 31714 strings out of 493698
- 748890 string characters out of 3144375
+ 31813 strings out of 493698
+ 752888 string characters out of 3144375
  866199 words of memory out of 3000000
- 34457 multiletter control sequences out of 15000+200000
+ 34537 multiletter control sequences out of 15000+200000
  35542 words of font info for 63 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,9n,83p,10415b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1993,9 +2245,9 @@ gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on faseFinal.pdf (42 pages, 3499859 bytes).
+Output written on faseFinal.pdf (53 pages, 7513360 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
+ 293 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 443 words of extra memory for PDF output out of 10000 (max. 10000000)
 
