@@ -38,17 +38,17 @@
 \contentsline {section}{\numberline {4.2}Diagrama de \textit {Package}}{36}
 \contentsline {section}{\numberline {4.3}Diagrama de Actividade}{37}
 \contentsline {subsection}{\numberline {4.3.1}Diagrama de Atividade: Funcionamento da Aplica\IeC {\c c}\IeC {\~a}o}{37}
-\contentsline {subsection}{\numberline {4.3.2}Criar Conta}{38}
+\contentsline {subsection}{\numberline {4.3.2}Adicionar Despesa/Fatura}{38}
 \contentsline {subsection}{\numberline {4.3.3}Pagar Conta}{39}
-\contentsline {subsection}{\numberline {4.3.4}Pagar Divida}{40}
-\contentsline {chapter}{\numberline {5}Interface do Sistema Gest\IeC {\~a}o de Despesas - SGD}{41}
-\contentsline {section}{\numberline {5.1}M\IeC {\'a}quinas de Estado}{41}
-\contentsline {subsection}{\numberline {5.1.1}Efetuar Login}{41}
-\contentsline {subsection}{\numberline {5.1.2}Criar Conta}{41}
-\contentsline {subsection}{\numberline {5.1.3}Convidar Utilizadores}{42}
-\contentsline {subsection}{\numberline {5.1.4}Remover Utilizadores}{42}
-\contentsline {subsection}{\numberline {5.1.5}Inserir Fatura}{43}
-\contentsline {subsection}{\numberline {5.1.6}Deposita Dinheiro}{43}
-\contentsline {section}{\numberline {5.2}Mockups}{44}
-\contentsline {section}{\numberline {5.3}Intera\IeC {\c c}\IeC {\~a}o com utilizador}{48}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~a}o}{58}
+\contentsline {subsection}{\numberline {4.3.4}Pagar Divida}{39}
+\contentsline {chapter}{\numberline {5}Interface do Sistema Gest\IeC {\~a}o de Despesas - SGD}{40}
+\contentsline {section}{\numberline {5.1}M\IeC {\'a}quinas de Estado}{40}
+\contentsline {subsection}{\numberline {5.1.1}Efetuar Login}{40}
+\contentsline {subsection}{\numberline {5.1.2}Criar Conta}{40}
+\contentsline {subsection}{\numberline {5.1.3}Convidar Utilizadores}{41}
+\contentsline {subsection}{\numberline {5.1.4}Remover Utilizadores}{41}
+\contentsline {subsection}{\numberline {5.1.5}Inserir Fatura}{42}
+\contentsline {subsection}{\numberline {5.1.6}Deposita Dinheiro}{42}
+\contentsline {section}{\numberline {5.2}Mockups}{43}
+\contentsline {section}{\numberline {5.3}Intera\IeC {\c c}\IeC {\~a}o com utilizador}{47}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~a}o}{57}

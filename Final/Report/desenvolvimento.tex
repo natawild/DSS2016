@@ -519,33 +519,42 @@ e a persistência de Dados é feita recorrendo às várias classes \textit{DAO} 
 \section{Diagrama de Actividade}
 \subsection{Diagrama de Atividade: Funcionamento da Aplicação}
 
+O objetivo do diagrama de atividades é mostrar o fluxo de atividades num único processo. O diagrama mostra como uma atividade depende de outras e torna a leitura do projeto mais simples e apelativa. Temos de seguida o diagrama de atividade que explica o funcionamento da nossa aplicação. Conseguimos claramente identificar com detalhe as funcionalidades do administrador da aplicação, assim como, do morador e do sistema. Fica evidente a ligação que todas estas componentes têm entre si. 
+
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.35]{imagens/diagActividade/FuncionamentoDaAplicacao}  
+	\includegraphics[scale=0.37]{imagens/diagActividade/FuncionamentoDaAplicacao}  
 	\caption{Diagrama de Atividade}  
 \end{figure}
 
 \newpage
 
-\subsection{Criar Conta}
+\subsection{Adicionar Despesa/Fatura}
+O diagrama que se segue diz respeito ao caso de uso “Inserir Despesa”. É precisamente neste diagrama que está explicado de que forma o administrador da aplicação introduz uma nova fatura no sistema. É da responsabilidade do administrador introduzir em sistema as novas faturas a pagar, definir que tipo de fatura é (recorrente ou extraordinária) ,  e ainda,  distribuir as percentagens que cada morador tem que pagar. Portanto, de forma bastante simples segue-se o diagrama que explicita cada um destes aspetos referidos.
+
+
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.25]{imagens/diagActividade/IntroducaoDeConta}  
+	\includegraphics[scale=0.24]{imagens/diagActividade/IntroducaoDeConta}  
 	\caption{Diagrama Atividade: Criar Conta}  
 \end{figure}
 
 \newpage
-
 \subsection{Pagar Conta}
+Perante um pagamento de um user considerado normal, o procedimento é bastante simples e está descrito na imagem que se segue. 
+O sistema apresenta ao utilizador as contas que têm que ser pagas e este, no imediato, seleciona uma conta para efetuar o devido pagamento. Todo este processo fica atualizado assim que há movimentação de valores.
+
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.3]{imagens/diagActividade/PagarContaUserNormal}  
 	\caption{Diagrama de Atividade: Pagar Conta}  
 \end{figure}
 
-\newpage
 
 \subsection{Pagar Divida}
+
+Como já referimos anteriormente neste relatório, cada morador fica encarregue de pagar as suas dívidas. É o sistema que apresenta ao utilizador a lista de dívidas e este apenas selecciona a dívida a pagar. Esta leitura está bastante simples e coerente no diagrama que apresentamos de seguida.
+
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.35]{imagens/diagActividade/PagarDivida}  

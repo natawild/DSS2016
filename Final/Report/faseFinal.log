@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 19:28
 entering extended mode
 **faseFinal.tex
 (faseFinal.tex
@@ -1876,9 +1876,14 @@ File: imagens/diagActividade/FuncionamentoDaAplicacao.jpg Graphic file (type jp
 g)
  <use imagens/diagActividade/FuncionamentoDaAplicacao.jpg>
 Package pdftex.def Info: imagens/diagActividade/FuncionamentoDaAplicacao.jpg us
-ed on input line 524.
-(pdftex.def)             Requested size: 448.28146pt x 430.71558pt.
- [37
+ed on input line 526.
+(pdftex.def)             Requested size: 473.88303pt x 455.31395pt.
+
+Overfull \hbox (18.63892pt too wide) in paragraph at lines 526--527
+ [][] 
+ []
+
+[37
 
  <./imagens/diagActividade/FuncionamentoDaAplicacao.jpg>]
 <imagens/diagActividade/IntroducaoDeConta.jpg, id=187, 2067.725pt x 1032.85875p
@@ -1886,10 +1891,10 @@ t>
 File: imagens/diagActividade/IntroducaoDeConta.jpg Graphic file (type jpg)
  <use imagens/diagActividade/IntroducaoDeConta.jpg>
 Package pdftex.def Info: imagens/diagActividade/IntroducaoDeConta.jpg used on i
-nput line 533.
-(pdftex.def)             Requested size: 516.93pt x 258.21405pt.
+nput line 538.
+(pdftex.def)             Requested size: 496.26414pt x 247.89116pt.
 
-Overfull \hbox (61.68588pt too wide) in paragraph at lines 533--534
+Overfull \hbox (41.02003pt too wide) in paragraph at lines 538--539
  [][] 
  []
 
@@ -1899,345 +1904,345 @@ Overfull \hbox (61.68588pt too wide) in paragraph at lines 533--534
 File: imagens/diagActividade/PagarContaUserNormal.jpg Graphic file (type jpg)
  <use imagens/diagActividade/PagarContaUserNormal.jpg>
 Package pdftex.def Info: imagens/diagActividade/PagarContaUserNormal.jpg used o
-n input line 542.
+n input line 549.
 (pdftex.def)             Requested size: 495.35445pt x 166.82454pt.
 
-Overfull \hbox (40.11034pt too wide) in paragraph at lines 542--543
+Overfull \hbox (40.11034pt too wide) in paragraph at lines 549--550
  [][] 
  []
 
-[39 <./imagens/diagActividade/PagarContaUserNormal.jpg>]
-<imagens/diagActividade/PagarDivida.jpg, id=195, 977.6525pt x 575.14874pt>
+<imagens/diagActividade/PagarDivida.jpg, id=192, 977.6525pt x 575.14874pt>
 File: imagens/diagActividade/PagarDivida.jpg Graphic file (type jpg)
 
 <use imagens/diagActividade/PagarDivida.jpg>
 Package pdftex.def Info: imagens/diagActividade/PagarDivida.jpg used on input l
-ine 551.
+ine 560.
 (pdftex.def)             Requested size: 342.1835pt x 201.30507pt.
- [40 <./imagens/diagActividade/PagarDivida.jpg>]
+ [39 <./imagens/diagActividade/PagarContaUserNormal.jpg> <./imagens/diagActivid
+ade/PagarDivida.jpg>]
 Cap\'{\i }tulo 5.
-<imagens/maqEstados/Login.jpg, id=199, 676.5275pt x 119.44624pt>
+<imagens/maqEstados/Login.jpg, id=196, 676.5275pt x 119.44624pt>
 File: imagens/maqEstados/Login.jpg Graphic file (type jpg)
 
 <use imagens/maqEstados/Login.jpg>
-Package pdftex.def Info: imagens/maqEstados/Login.jpg used on input line 562.
+Package pdftex.def Info: imagens/maqEstados/Login.jpg used on input line 571.
 (pdftex.def)             Requested size: 473.56601pt x 83.61179pt.
 
-Overfull \hbox (18.3219pt too wide) in paragraph at lines 562--563
+Overfull \hbox (18.3219pt too wide) in paragraph at lines 571--572
  [][] 
  []
 
-<imagens/maqEstados/"Criar Conta".jpg, id=200, 889.3225pt x 319.1925pt>
+<imagens/maqEstados/"Criar Conta".jpg, id=197, 889.3225pt x 319.1925pt>
 File: imagens/maqEstados/"Criar Conta".jpg Graphic file (type jpg)
 
 <use imagens/maqEstados/"Criar Conta".jpg>
 Package pdftex.def Info: imagens/maqEstados/"Criar Conta".jpg used on input lin
-e 570.
+e 579.
 (pdftex.def)             Requested size: 489.12888pt x 175.55641pt.
 
-Overfull \hbox (33.88477pt too wide) in paragraph at lines 570--571
+Overfull \hbox (33.88477pt too wide) in paragraph at lines 579--580
  [][] 
  []
 
-[41
+[40
 
  <./imagens/maqEstados/Login.jpg> <./imagens/maqEstados/Criar Conta.jpg>]
-<imagens/maqEstados/"Convidar Utilizadores".jpg, id=204, 1090.0725pt x 471.7625
+<imagens/maqEstados/"Convidar Utilizadores".jpg, id=201, 1090.0725pt x 471.7625
 pt>
 File: imagens/maqEstados/"Convidar Utilizadores".jpg Graphic file (type jpg)
  <use imagens/maqEstados/"Convidar Utilizadores".jpg>
 Package pdftex.def Info: imagens/maqEstados/"Convidar Utilizadores".jpg used on
- input line 579.
+ input line 588.
 (pdftex.def)             Requested size: 490.52809pt x 212.29115pt.
 
-Overfull \hbox (35.28398pt too wide) in paragraph at lines 579--580
+Overfull \hbox (35.28398pt too wide) in paragraph at lines 588--589
  [][] 
  []
 
 
-<imagens/maqEstados/"Remover Utilizadores".jpg, id=205, 824.07875pt x 250.9375p
+<imagens/maqEstados/"Remover Utilizadores".jpg, id=202, 824.07875pt x 250.9375p
 t>
 File: imagens/maqEstados/"Remover Utilizadores".jpg Graphic file (type jpg)
  <use imagens/maqEstados/"Remover Utilizadores".jpg>
 Package pdftex.def Info: imagens/maqEstados/"Remover Utilizadores".jpg used on 
-input line 586.
+input line 595.
 (pdftex.def)             Requested size: 370.83202pt x 112.92082pt.
- [42 <./imagens/maqEstados/Convidar Utilizadores.jpg> <./imagens/maqEstados/Rem
+ [41 <./imagens/maqEstados/Convidar Utilizadores.jpg> <./imagens/maqEstados/Rem
 over Utilizadores.jpg>]
-<imagens/maqEstados/"InserFactura".jpg, id=210, 1090.0725pt x 512.91624pt>
+<imagens/maqEstados/"InserFactura".jpg, id=206, 1090.0725pt x 512.91624pt>
 File: imagens/maqEstados/"InserFactura".jpg Graphic file (type jpg)
 
 <use imagens/maqEstados/"InserFactura".jpg>
 Package pdftex.def Info: imagens/maqEstados/"InserFactura".jpg used on input li
-ne 595.
+ne 604.
 (pdftex.def)             Requested size: 490.52809pt x 230.81018pt.
 
-Overfull \hbox (35.28398pt too wide) in paragraph at lines 595--596
+Overfull \hbox (35.28398pt too wide) in paragraph at lines 604--605
  [][] 
  []
 
-<imagens/maqEstados/"Deposita Dinheiro".jpg, id=211, 617.30624pt x 98.3675pt>
+<imagens/maqEstados/"Deposita Dinheiro".jpg, id=207, 617.30624pt x 98.3675pt>
 File: imagens/maqEstados/"Deposita Dinheiro".jpg Graphic file (type jpg)
 
 <use imagens/maqEstados/"Deposita Dinheiro".jpg>
 Package pdftex.def Info: imagens/maqEstados/"Deposita Dinheiro".jpg used on inp
-ut line 602.
+ut line 611.
 (pdftex.def)             Requested size: 277.78523pt x 44.26495pt.
- [43 <./imagens/maqEstados/InserFactura.jpg> <./imagens/maqEstados/Deposita Din
+ [42 <./imagens/maqEstados/InserFactura.jpg> <./imagens/maqEstados/Deposita Din
 heiro.jpg>]
-<imagens/mockups/CriarConta.png, id=215, 559.33969pt x 371.88937pt>
+<imagens/mockups/CriarConta.png, id=212, 559.33969pt x 371.88937pt>
 File: imagens/mockups/CriarConta.png Graphic file (type png)
 
 <use imagens/mockups/CriarConta.png>
-Package pdftex.def Info: imagens/mockups/CriarConta.png used on input line 614.
+Package pdftex.def Info: imagens/mockups/CriarConta.png used on input line 623.
 
 (pdftex.def)             Requested size: 279.66916pt x 185.94423pt.
 
-<imagens/mockups/MLogin.png, id=216, 562.35094pt x 320.69812pt>
+<imagens/mockups/MLogin.png, id=213, 562.35094pt x 320.69812pt>
 File: imagens/mockups/MLogin.png Graphic file (type png)
 
 <use imagens/mockups/MLogin.png>
-Package pdftex.def Info: imagens/mockups/MLogin.png used on input line 621.
+Package pdftex.def Info: imagens/mockups/MLogin.png used on input line 630.
 (pdftex.def)             Requested size: 281.17477pt x 160.34866pt.
- [44 <./imagens/mockups/CriarConta.png> <./imagens/mockups/MLogin.png>]
-<imagens/mockups/loginsemgrupos.png, id=222, 703.87968pt x 469.00218pt>
+ [43 <./imagens/mockups/CriarConta.png> <./imagens/mockups/MLogin.png>]
+<imagens/mockups/loginsemgrupos.png, id=219, 703.87968pt x 469.00218pt>
 File: imagens/mockups/loginsemgrupos.png Graphic file (type png)
 
 <use imagens/mockups/loginsemgrupos.png>
 Package pdftex.def Info: imagens/mockups/loginsemgrupos.png used on input line 
-629.
+638.
 (pdftex.def)             Requested size: 351.93898pt x 234.50052pt.
 
-<imagens/mockups/consultardados.png, id=223, 949.29657pt x 572.89032pt>
+<imagens/mockups/consultardados.png, id=220, 949.29657pt x 572.89032pt>
 File: imagens/mockups/consultardados.png Graphic file (type png)
 
 <use imagens/mockups/consultardados.png>
 Package pdftex.def Info: imagens/mockups/consultardados.png used on input line 
-639.
+648.
 (pdftex.def)             Requested size: 427.1795pt x 257.79826pt.
 
-<imagens/mockups/logUtilizador.png, id=224, 612.03656pt x 466.74374pt>
+<imagens/mockups/logUtilizador.png, id=221, 612.03656pt x 466.74374pt>
 File: imagens/mockups/logUtilizador.png Graphic file (type png)
 
 <use imagens/mockups/logUtilizador.png>
 Package pdftex.def Info: imagens/mockups/logUtilizador.png used on input line 6
-48.
+57.
 (pdftex.def)             Requested size: 306.01753pt x 233.37129pt.
- [45 <./imagens/mockups/loginsemgrupos.png> <./imagens/mockups/consultardados.p
+ [44 <./imagens/mockups/loginsemgrupos.png> <./imagens/mockups/consultardados.p
 ng>]
-<imagens/mockups/tarefasutilizador.png, id=230, 617.30624pt x 469.00218pt>
+<imagens/mockups/tarefasutilizador.png, id=227, 617.30624pt x 469.00218pt>
 File: imagens/mockups/tarefasutilizador.png Graphic file (type png)
 
 <use imagens/mockups/tarefasutilizador.png>
 Package pdftex.def Info: imagens/mockups/tarefasutilizador.png used on input li
-ne 654.
+ne 663.
 (pdftex.def)             Requested size: 308.65236pt x 234.50052pt.
- [46 <./imagens/mockups/logUtilizador.png> <./imagens/mockups/tarefasutilizador
+ [45 <./imagens/mockups/logUtilizador.png> <./imagens/mockups/tarefasutilizador
 .png>]
-<imagens/mockups/loginadmin.png, id=236, 660.21657pt x 355.3275pt>
+<imagens/mockups/loginadmin.png, id=233, 660.21657pt x 355.3275pt>
 File: imagens/mockups/loginadmin.png Graphic file (type png)
 
 <use imagens/mockups/loginadmin.png>
-Package pdftex.def Info: imagens/mockups/loginadmin.png used on input line 663.
+Package pdftex.def Info: imagens/mockups/loginadmin.png used on input line 672.
 
 (pdftex.def)             Requested size: 330.10747pt x 177.6633pt.
 
-<imagens/mockups/AdminpagarContas.png, id=237, 621.82312pt x 443.40656pt>
+<imagens/mockups/AdminpagarContas.png, id=234, 621.82312pt x 443.40656pt>
 File: imagens/mockups/AdminpagarContas.png Graphic file (type png)
 
 <use imagens/mockups/AdminpagarContas.png>
 Package pdftex.def Info: imagens/mockups/AdminpagarContas.png used on input lin
-e 670.
+e 679.
 (pdftex.def)             Requested size: 373.09674pt x 266.04597pt.
- [47 <./imagens/mockups/loginadmin.png> <./imagens/mockups/AdminpagarContas.png
+ [46 <./imagens/mockups/loginadmin.png> <./imagens/mockups/AdminpagarContas.png
 >]
-<imagens/interface/inicial.png, id=243, 483.30562pt x 379.4175pt>
+<imagens/interface/inicial.png, id=240, 483.30562pt x 379.4175pt>
 File: imagens/interface/inicial.png Graphic file (type png)
 
 <use imagens/interface/inicial.png>
-Package pdftex.def Info: imagens/interface/inicial.png used on input line 683.
+Package pdftex.def Info: imagens/interface/inicial.png used on input line 692.
 (pdftex.def)             Requested size: 289.98561pt x 227.65225pt.
 
-<imagens/interface/criarconta.png, id=244, 389.95688pt x 390.70969pt>
+<imagens/interface/criarconta.png, id=241, 389.95688pt x 390.70969pt>
 File: imagens/interface/criarconta.png Graphic file (type png)
 
 <use imagens/interface/criarconta.png>
-Package pdftex.def Info: imagens/interface/criarconta.png used on input line 69
-1.
+Package pdftex.def Info: imagens/interface/criarconta.png used on input line 70
+0.
 (pdftex.def)             Requested size: 233.97592pt x 234.42761pt.
- [48 <./imagens/interface/inicial.png> <./imagens/interface/criarconta.png>]
-<imagens/interface/paginicialadmin.png, id=249, 396.7322pt x 317.68687pt>
+ [47 <./imagens/interface/inicial.png> <./imagens/interface/criarconta.png>]
+<imagens/interface/paginicialadmin.png, id=245, 396.7322pt x 317.68687pt>
 File: imagens/interface/paginicialadmin.png Graphic file (type png)
 
 <use imagens/interface/paginicialadmin.png>
 Package pdftex.def Info: imagens/interface/paginicialadmin.png used on input li
-ne 702.
+ne 711.
 (pdftex.def)             Requested size: 238.04114pt x 190.61359pt.
 
-<imagens/interface/botaoadmin.png, id=250, 666.23906pt x 444.15938pt>
+<imagens/interface/botaoadmin.png, id=246, 666.23906pt x 444.15938pt>
 File: imagens/interface/botaoadmin.png Graphic file (type png)
 
 <use imagens/interface/botaoadmin.png>
-Package pdftex.def Info: imagens/interface/botaoadmin.png used on input line 70
-8.
+Package pdftex.def Info: imagens/interface/botaoadmin.png used on input line 71
+7.
 (pdftex.def)             Requested size: 399.74652pt x 266.49767pt.
- [49
+ [48
 
  <./imagens/interface/paginicialadmin.png> <./imagens/interface/botaoadmin.png>
 ]
-<imagens/interface/botaoadicionamorador.png, id=254, 790.45313pt x 412.54124pt>
+<imagens/interface/botaoadicionamorador.png, id=251, 790.45313pt x 412.54124pt>
 File: imagens/interface/botaoadicionamorador.png Graphic file (type png)
 <use imagens/interface/botaoadicionamorador.png>
 Package pdftex.def Info: imagens/interface/botaoadicionamorador.png used on inp
-ut line 718.
+ut line 727.
 (pdftex.def)             Requested size: 474.27553pt x 247.52666pt.
 
-Overfull \hbox (19.03142pt too wide) in paragraph at lines 718--719
+Overfull \hbox (19.03142pt too wide) in paragraph at lines 727--728
  [][] 
  []
 
 
-<imagens/interface/adminvercontaspagas.png, id=255, 770.12718pt x 412.54124pt>
+<imagens/interface/adminvercontaspagas.png, id=252, 770.12718pt x 412.54124pt>
 File: imagens/interface/adminvercontaspagas.png Graphic file (type png)
 
 <use imagens/interface/adminvercontaspagas.png>
 Package pdftex.def Info: imagens/interface/adminvercontaspagas.png used on inpu
-t line 726.
+t line 735.
 (pdftex.def)             Requested size: 462.07986pt x 247.52666pt.
 
-Overfull \hbox (6.83575pt too wide) in paragraph at lines 726--727
+Overfull \hbox (6.83575pt too wide) in paragraph at lines 735--736
  [][] 
  []
 
-[50 <./imagens/interface/botaoadicionamorador.png> <./imagens/interface/adminve
+[49 <./imagens/interface/botaoadicionamorador.png> <./imagens/interface/adminve
 rcontaspagas.png>]
-<imagens/interface/enviarmensagemadmin.png, id=259, 1035.87pt x 528.47438pt>
+<imagens/interface/enviarmensagemadmin.png, id=256, 1035.87pt x 528.47438pt>
 File: imagens/interface/enviarmensagemadmin.png Graphic file (type png)
 
 <use imagens/interface/enviarmensagemadmin.png>
 Package pdftex.def Info: imagens/interface/enviarmensagemadmin.png used on inpu
-t line 736.
+t line 745.
 (pdftex.def)             Requested size: 466.13719pt x 237.81126pt.
 
-Overfull \hbox (10.89308pt too wide) in paragraph at lines 736--737
+Overfull \hbox (10.89308pt too wide) in paragraph at lines 745--746
  [][] 
  []
 
 
-<imagens/interface/verdividaseemprestimosadmin.png, id=260, 840.13875pt x 457.7
+<imagens/interface/verdividaseemprestimosadmin.png, id=257, 840.13875pt x 457.7
 1pt>
 File: imagens/interface/verdividaseemprestimosadmin.png Graphic file (type png)
 
  <use imagens/interface/verdividaseemprestimosadmin.png>
 Package pdftex.def Info: imagens/interface/verdividaseemprestimosadmin.png used
- on input line 744.
+ on input line 753.
 (pdftex.def)             Requested size: 378.05894pt x 205.96759pt.
- [51
+ [50
 
  <./imagens/interface/enviarmensagemadmin.png> <./imagens/interface/verdividase
 emprestimosadmin.png>]
-<imagens/interface/adicionarcontaadmin.png, id=264, 763.35187pt x 431.36156pt>
+<imagens/interface/adicionarcontaadmin.png, id=261, 763.35187pt x 431.36156pt>
 File: imagens/interface/adicionarcontaadmin.png Graphic file (type png)
 
 <use imagens/interface/adicionarcontaadmin.png>
 Package pdftex.def Info: imagens/interface/adicionarcontaadmin.png used on inpu
-t line 754.
+t line 763.
 (pdftex.def)             Requested size: 381.675pt x 215.68025pt.
 
-<imagens/interface/vercontasporpagaradmin.png, id=265, 731.73375pt x 431.36156p
+<imagens/interface/vercontasporpagaradmin.png, id=262, 731.73375pt x 431.36156p
 t>
 File: imagens/interface/vercontasporpagaradmin.png Graphic file (type png)
  <use imagens/interface/vercontasporpagaradmin.png>
 Package pdftex.def Info: imagens/interface/vercontasporpagaradmin.png used on i
-nput line 762.
+nput line 771.
 (pdftex.def)             Requested size: 365.86598pt x 215.68025pt.
- [52 <./imagens/interface/adicionarcontaadmin.png> <./imagens/interface/vercont
+ [51 <./imagens/interface/adicionarcontaadmin.png> <./imagens/interface/vercont
 asporpagaradmin.png>]
-<imagens/interface/removerdogrupoadmin.png, id=269, 744.53156pt x 431.36156pt>
+<imagens/interface/removerdogrupoadmin.png, id=266, 744.53156pt x 431.36156pt>
 File: imagens/interface/removerdogrupoadmin.png Graphic file (type png)
 
 <use imagens/interface/removerdogrupoadmin.png>
 Package pdftex.def Info: imagens/interface/removerdogrupoadmin.png used on inpu
-t line 771.
+t line 780.
 (pdftex.def)             Requested size: 372.26486pt x 215.68025pt.
 
-<imagens/interface/apagarcontasadmin.png, id=270, 674.52pt x 431.36156pt>
+<imagens/interface/apagarcontasadmin.png, id=267, 674.52pt x 431.36156pt>
 File: imagens/interface/apagarcontasadmin.png Graphic file (type png)
 
 <use imagens/interface/apagarcontasadmin.png>
 Package pdftex.def Info: imagens/interface/apagarcontasadmin.png used on input 
-line 779.
+line 788.
 (pdftex.def)             Requested size: 337.25917pt x 215.68025pt.
- [53 <./imagens/interface/removerdogrupoadmin.png> <./imagens/interface/apagarc
+ [52 <./imagens/interface/removerdogrupoadmin.png> <./imagens/interface/apagarc
 ontasadmin.png>]
-<imagens/interface/moradorpaginicial.png, id=274, 412.54124pt x 347.79938pt>
+<imagens/interface/moradorpaginicial.png, id=271, 412.54124pt x 347.79938pt>
 File: imagens/interface/moradorpaginicial.png Graphic file (type png)
 
 <use imagens/interface/moradorpaginicial.png>
 Package pdftex.def Info: imagens/interface/moradorpaginicial.png used on input 
-line 790.
+line 799.
 (pdftex.def)             Requested size: 247.52666pt x 208.68123pt.
 
-<imagens/interface/vermensagensadmin.png, id=275, 697.10437pt x 431.36156pt>
+<imagens/interface/vermensagensadmin.png, id=272, 697.10437pt x 431.36156pt>
 File: imagens/interface/vermensagensadmin.png Graphic file (type png)
 
 <use imagens/interface/vermensagensadmin.png>
 Package pdftex.def Info: imagens/interface/vermensagensadmin.png used on input 
-line 798.
+line 807.
 (pdftex.def)             Requested size: 418.26584pt x 258.81892pt.
- [54 <./imagens/interface/moradorpaginicial.png> <./imagens/interface/vermensag
+ [53 <./imagens/interface/moradorpaginicial.png> <./imagens/interface/vermensag
 ensadmin.png>]
-<imagens/interface/consultaremprestimos.png, id=280, 733.23938pt x 514.17094pt>
+<imagens/interface/consultaremprestimos.png, id=276, 733.23938pt x 514.17094pt>
 File: imagens/interface/consultaremprestimos.png Graphic file (type png)
 <use imagens/interface/consultaremprestimos.png>
 Package pdftex.def Info: imagens/interface/consultaremprestimos.png used on inp
-ut line 808.
+ut line 817.
 (pdftex.def)             Requested size: 366.61879pt x 257.08484pt.
 
-<imagens/interface/vercontaspagasmorador.png, id=281, 683.55376pt x 440.39531pt
+<imagens/interface/vercontaspagasmorador.png, id=277, 683.55376pt x 440.39531pt
 >
 File: imagens/interface/vercontaspagasmorador.png Graphic file (type png)
  <use imagens/interface/vercontaspagasmorador.png>
 Package pdftex.def Info: imagens/interface/vercontaspagasmorador.png used on in
-put line 816.
+put line 825.
 (pdftex.def)             Requested size: 341.77605pt x 220.19711pt.
- [55 <./imagens/interface/consultaremprestimos.png> <./imagens/interface/vercon
+ [54 <./imagens/interface/consultaremprestimos.png> <./imagens/interface/vercon
 taspagasmorador.png>]
-<imagens/interface/editardadosmorador.png, id=285, 682.04813pt x 464.4853pt>
+<imagens/interface/editardadosmorador.png, id=282, 682.04813pt x 464.4853pt>
 File: imagens/interface/editardadosmorador.png Graphic file (type png)
 
 <use imagens/interface/editardadosmorador.png>
 Package pdftex.def Info: imagens/interface/editardadosmorador.png used on input
- line 827.
+ line 836.
 (pdftex.def)             Requested size: 375.12762pt x 255.46771pt.
 
-<imagens/interface/consultardividasmorador.png, id=286, 682.04813pt x 464.4853p
+<imagens/interface/consultardividasmorador.png, id=283, 682.04813pt x 464.4853p
 t>
 File: imagens/interface/consultardividasmorador.png Graphic file (type png)
  <use imagens/interface/consultardividasmorador.png>
 Package pdftex.def Info: imagens/interface/consultardividasmorador.png used on 
-input line 836.
+input line 845.
 (pdftex.def)             Requested size: 375.12762pt x 255.46771pt.
- [56
+ [55
 
  <./imagens/interface/editardadosmorador.png> <./imagens/interface/consultardiv
 idasmorador.png>]
-<imagens/interface/pagarcontamorador.png, id=290, 682.04813pt x 464.4853pt>
+<imagens/interface/pagarcontamorador.png, id=287, 682.04813pt x 464.4853pt>
 File: imagens/interface/pagarcontamorador.png Graphic file (type png)
 
 <use imagens/interface/pagarcontamorador.png>
 Package pdftex.def Info: imagens/interface/pagarcontamorador.png used on input 
-line 847.
+line 856.
 (pdftex.def)             Requested size: 341.02322pt x 232.24208pt.
 
-<imagens/interface/atualizarsaldomorador.png, id=291, 622.57594pt x 444.15938pt
+<imagens/interface/atualizarsaldomorador.png, id=288, 622.57594pt x 444.15938pt
 >
 File: imagens/interface/atualizarsaldomorador.png Graphic file (type png)
  <use imagens/interface/atualizarsaldomorador.png>
 Package pdftex.def Info: imagens/interface/atualizarsaldomorador.png used on in
-put line 855.
+put line 864.
 (pdftex.def)             Requested size: 311.2872pt x 222.07913pt.
-) (conclusao.tex [57
+) (conclusao.tex [56
 
  <./imagens/interface/pagarcontamorador.png> <./imagens/interface/atualizarsald
 omorador.png>]
@@ -2248,7 +2253,7 @@ Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
  pen-sar de como se-ria a nossa aplica[][]ao
  []
 
-) [58
+) [57
 
 ] (faseFinal.aux) ) 
 Here is how much of TeX's memory you used:
@@ -2265,9 +2270,9 @@ gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on faseFinal.pdf (59 pages, 8176860 bytes).
+Output written on faseFinal.pdf (58 pages, 8178335 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
+ 315 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  473 words of extra memory for PDF output out of 10000 (max. 10000000)
 
