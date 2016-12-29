@@ -159,12 +159,19 @@ O use case em formato tabular do Gere saldo Global e o seu respectivo diagrama d
 \end{figure}
 
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.4]{imagens/diagramaIt/GereSaldoGlobalIteracao}  
+	\caption{Diagrama de Iteração: Gere Saldo Global}  
+\end{figure}
+
+\newpage \clearpage
 \subsubsection{Especificação: Efetua Login }
 Cada morador tem que efetuar Login na aplicação, para tal, é necessário que o indivíduo tenha conta previamente criada. Como em qualquer aplicação, este passo é fundamental e não poderia deixar de o ser no nosso sistema. Para se efetuar o registo do login é solicitado pelo sistema o endereço de email do utilizador em questão para sua validação. Após introduzir o email o sistema requer também o preenchimento da respetiva password. Optamos por colocar um endereço de email ao invés de um username ou um número de telemóvel porque assim poderá existir a possibilidade de futuramente serem enviados para o email dos utilizadores da aplicação, notificações relativas às despesas e ou pagamentos.
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.6]{imagens/Especificacoes/efetualogin}  
+	\includegraphics[scale=0.5]{imagens/Especificacoes/efetualogin}  
 	\caption{Especificação do Use Case: Efetua Login  }  
 \end{figure}
 
@@ -492,6 +499,9 @@ Os dois grandes subsistemas da aplicação desenvolvida são o computador do uti
 
 \newpage
 
+
+\section{Diagrama de \textit{Package}}
+
 Os três principais pacotes definidos são \textit{Presentation}, que trata da apresentação gráfica, em \textit{Java Swing}; \textit{Business}, que contém toda a lógica de negócio; e \textit{Data}, responsável pela ligação à base de dados. A camada de apresentação comunica com a camada de lógica de negócio a partir da classe
 SGD (Sistema de Gestão de Despesas), que desempenha a função de \textit{Facade} .
 Não existe qualquer tipo de comunicação feita diretamente entre a camada de
@@ -500,11 +510,48 @@ e a persistência de Dados é feita recorrendo às várias classes \textit{DAO} 
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.35]{imagens/DiagramInstalacao/PackageDiagram}  
+	\includegraphics[scale=0.29]{imagens/DiagramInstalacao/PackageDiagram}  
 	\caption{Diagrama de Pacotes}  
 \end{figure}
 
+\newpage \clearpage
+
+\section{Diagrama de Actividade}
+\subsection{Diagrama de Atividade: Funcionamento da Aplicação}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.35]{imagens/diagActividade/FuncionamentoDaAplicacao}  
+	\caption{Diagrama de Atividade}  
+\end{figure}
+
 \newpage
+
+\subsection{Criar Conta}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.25]{imagens/diagActividade/IntroducaoDeConta}  
+	\caption{Diagrama Atividade: Criar Conta}  
+\end{figure}
+
+\newpage
+
+\subsection{Pagar Conta}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.3]{imagens/diagActividade/PagarContaUserNormal}  
+	\caption{Diagrama de Atividade: Pagar Conta}  
+\end{figure}
+
+\newpage
+
+\subsection{Pagar Divida}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.35]{imagens/diagActividade/PagarDivida}  
+	\caption{Diagrama de Atividade: Pagar divida}  
+\end{figure}
+
 
 \chapter{Interface do Sistema Gestão de Despesas - SGD}
 \section{Máquinas de Estado}
