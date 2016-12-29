@@ -16,7 +16,7 @@ insert into morador value(idUtilizador,'dd','2016-01-2','dsadsa','s',10,'913224'
 insert into morador value(idUtilizador,'andreia','2016-01-2','andreia','andreia',10,'8',1);
 
 delete from conta
-        where idConta=28
+        where idConta=25
      limit 1;   
 
 
@@ -25,7 +25,10 @@ set admin=null
 where admin is not null and idUtilizador!=1;
 
 insert into mensagem values (idMensagem,'DSA','dfs',date(now()));
-insert into mensagemadmin values(7,9);
+insert into mensagemadmin values(3,4);
+insert into mensagemadmin values(5,4);
+insert into mensagemadmin values(6,4);
+insert into mensagemadmin values(7,4);
 insert into mensagemadmin values(2,1);
 
 insert into emprestimo values (idEmprestimo,5,'2016-01-2',1);
@@ -46,6 +49,9 @@ delete from divida;
 
 select *
 from conta;
+
+delete from conta
+where idConta =4;
 
 update conta
 set dataPagamento = date(now())
