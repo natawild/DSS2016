@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 19:53
 entering extended mode
 **faseFinal.tex
 (faseFinal.tex
@@ -2257,10 +2257,10 @@ Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
 
 ] (faseFinal.aux) ) 
 Here is how much of TeX's memory you used:
- 31850 strings out of 493698
- 754332 string characters out of 3144375
+ 31853 strings out of 493698
+ 754380 string characters out of 3144375
  867199 words of memory out of 3000000
- 34566 multiletter control sequences out of 15000+200000
+ 34569 multiletter control sequences out of 15000+200000
  37171 words of font info for 65 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,9n,83p,10415b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2270,7 +2270,7 @@ gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on faseFinal.pdf (58 pages, 8178335 bytes).
+Output written on faseFinal.pdf (58 pages, 8179558 bytes).
 PDF statistics:
  315 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
