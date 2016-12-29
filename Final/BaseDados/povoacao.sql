@@ -48,7 +48,13 @@ VALUES
 (idConta,'Conta da luz',4,4,'2016-01-11','2016-01-9',30,30,true,'Recorrente'),
 (idConta,'Conta da caldeira',4,4,'2016-10-11','2016-10-9',10,10,true,'Extraordinaria'),
 (idConta,'Conta da água',3,4,'2016-10-11',null,10,10,false,'Recorrente'),
+(idConta,'Conta da água',0,1,'2016-10-13',null,10,0,false,'Extraordinaria'),
+(idConta,'Conta da água',0,4,'2016-10-12',null,10,0,false,'Recorrente')
 (idConta,'Conta da água',4,4,'2016-10-11','2016-10-9',40,40,true,'Recorrente');
+
+
+
+
 
 
 
@@ -58,14 +64,14 @@ INSERT INTO `dss`.`divida`
 `dataDivida`,
 `idUtilizador`)
 VALUES
-(idDivida,10,'2016-09-5',1),
-(idDivida,5,'2016-09-5',1),
-(idDivida,4,'2016-09-5',1),
-(idDivida,15,'2016-02-5',2),
-(idDivida,10,'2016-03-5',2),
-(idDivida,10,'2016-04-5',2),
-(idDivida,10,'2016-05-5',2),
-(idDivida,10,'2016-05-5',3);
+(idDivida,10,'2016-03-13',1),
+(idDivida,5,'2016-02-12',1),
+(idDivida,4,'2016-01-11',1),
+(idDivida,15,'2016-02-10',2),
+(idDivida,10,'2016-03-9',2),
+(idDivida,10,'2016-04-8',2),
+(idDivida,10,'2016-05-7',2),
+(idDivida,10,'2016-05-6',3);
 
 
 INSERT INTO `dss`.`emprestimo`
@@ -74,15 +80,49 @@ INSERT INTO `dss`.`emprestimo`
 `dataEmprestimo`,
 `idUtilizador`)
 VALUES
-(idEmprestimo,10,'2016-09-10',1),
-(idEmprestimo,10,'2016-09-4',3),
-(idEmprestimo,10,'2016-09-4',3),
-(idEmprestimo,10,'2016-09-4',3),
-(idEmprestimo,10,'2016-09-4',3),
-(idEmprestimo,10,'2016-09-4',3),
-(idEmprestimo,10,'2016-09-4',3);
+(idEmprestimo,10,'2016-03-14',2),
+(idEmprestimo,5,'2016-02-13',2),
+(idEmprestimo,4,'2016-01-12',2),
+(idEmprestimo,10,'2016-02-01',1),
+(idEmprestimo,10,'2016-03-10',1),
+(idEmprestimo,10,'2016-04-9',1),
+(idEmprestimo,10,'2016-05-6',1),
+(idEmprestimo,10,'2016-05-7',2);
 
 
 
 
+INSERT INTO `dss`.`mensagemadmin`
+(`idMensagem`,
+`idUtilizador`)
+VALUES
+(1,2),
+(1,3),
+(1,4),
+(3,4),
+(5,2),
+(2,2);
+
+
+
+INSERT INTO `dss`.`pagamento`
+(`idConta`,
+`idUtilizador`,
+`valorPago`,
+`valorApagar`)
+VALUES
+(1,1,5,5),
+(1,2,5,5),
+(1,3,5,5),
+(1,4,5,5),
+(8,1,-1,10),
+(2,1,1,100),
+(3,1,6,6),
+(3,2,6,6),
+(3,3,6,6),
+(3,4,6,6),
+(4,1,0.5,0.5),
+(4,2,0.5,0.5),
+(4,3,0.5,0.5),
+(4,4,0.5,0.5);
 

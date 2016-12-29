@@ -4,8 +4,7 @@ from  mensagemadmin;
 select *
 from  morador;
 
-select *
-from emprestimo;
+delete from emprestimo;
 
 select sum(valorConta) from morador where  admin is not null;
 
@@ -29,10 +28,12 @@ insert into mensagem values (idMensagem,'DSA','dfs',date(now()));
 insert into mensagemadmin values(7,9);
 insert into mensagemadmin values(2,1);
 
-insert into emprestimo values (idEmprestimo,5,'2016-01-2',2);
+insert into emprestimo values (idEmprestimo,5,'2016-01-2',1);
 insert into emprestimo values (idEmprestimo,10,'2016-02-2',1);
 insert into emprestimo values (idEmprestimo,10,'2016-03-2',1);
 insert into emprestimo values (idEmprestimo,10,'2016-04-2',1);
+insert into emprestimo values (idEmprestimo,10,'2016-05-2',1);
+insert into emprestimo values (idEmprestimo,10,'2016-06-2',1);
 
 insert into divida values (idDivida,10,'2016-12-2',4);
 
