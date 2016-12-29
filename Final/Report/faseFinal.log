@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 19:06
 entering extended mode
 **faseFinal.tex
 (faseFinal.tex
@@ -1348,24 +1348,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
 \tf@toc=\write6
  (intro.tex [2]
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-[3
-
-]) (desenvolvimento.tex [4]
-Cap\'{\i }tulo 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 11.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 14.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
- [5
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+ [3
 
-]
-<imagens/bd/modeloconcetual.png, id=36, 1063.975pt x 590.205pt>
+])
+(desenvolvimento.tex [4]
+Cap\'{\i }tulo 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+[5
+
+] <imagens/bd/modeloconcetual.png, id=36, 1063.975pt x 590.205pt>
 File: imagens/bd/modeloconcetual.png Graphic file (type png)
 
 <use imagens/bd/modeloconcetual.png>
@@ -2254,7 +2254,7 @@ Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
 Here is how much of TeX's memory you used:
  31850 strings out of 493698
  754332 string characters out of 3144375
- 866199 words of memory out of 3000000
+ 867199 words of memory out of 3000000
  34566 multiletter control sequences out of 15000+200000
  37171 words of font info for 65 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -2265,7 +2265,7 @@ gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on faseFinal.pdf (59 pages, 8176290 bytes).
+Output written on faseFinal.pdf (59 pages, 8176860 bytes).
 PDF statistics:
  318 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
