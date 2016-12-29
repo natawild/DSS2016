@@ -617,11 +617,16 @@ Após o administador efetuar o login é-lhe apresentada uma janela com as funcio
 
 \section{Interação com utilizador}
 
+Como implementação dos mockups, apresentamos de seguida cada uma das janelas por nós criadas de interação com o utilizador.
+Em primeiro lugar, apresentamos a janela inicial, onde o utilizador pode fazer login e/ou criar conta. 
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/interface/inicial}  
 	\caption{Página inicial do SGD }  
 \end{figure}
+
+Acedendo ao botão “criar conta” surge a seguinte janela. Aqui o utilizador cria a sua conta, após especificar cada campo corretamente.
 
 \begin{figure}[h!]
 	\centering
@@ -629,6 +634,9 @@ Após o administador efetuar o login é-lhe apresentada uma janela com as funcio
 	\caption{Janela de criação de conta}  
 \end{figure}
 
+\newpage \clearpage
+
+Quando o administrador da aplicação acede a “Administrar Casa”, surge de imediato a janela com as funcionalidades que apenas o administrador tem acesso, como por exemplo, “convidar utilizadores para a casa”, “ver contas por pagar” e “Remover do grupo”. Nesta janela existe ainda uma “caixa” onde consta o saldo global da casa. Este saldo, como já foi referido anteriormente, é o resultado do somatório de todas as contas correntes. 
 
 
 \begin{figure}[h!]
@@ -643,35 +651,45 @@ Após o administador efetuar o login é-lhe apresentada uma janela com as funcio
 	\caption{Página inicial do administrador com todas as funcionalidades}  
 \end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{imagens/interface/botaoadicionamorador}  
-	\caption{Janela para adicionar novos membros}  
-\end{figure}
+\newpage
+
+O administrador pode convidar utilizadores com conta previamente criada para “aceder ao grupo” do apartamento. A ideia é selecionar os membros com conta criada e adicioná-los ao mesmo grupo para partilhar despesas.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/interface/botaoadicionamorador}  
 	\caption{Janela para adicionar novos membros}  
 \end{figure}
+
+O administrador tem acesso à lista de contas que já foram pagas anteriormente pelos restantes moradores do apartamento. Aqui consegue visualizar os dados de cada fatura assim como os detalhes de cada pagamento feito por cada morador.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/interface/adminvercontaspagas}  
-	\caption{Janela para adicionar novos membros}  
+	\caption{Janela para visualizar as contas pagas}  
 \end{figure}
+
+\newpage \clearpage
+
+O administrador tem a funcionalidade de enviar mensagens aos outros utilizadores. Desta forma torna a comunicação mais interativa e consegue fazer uma espécie de lembrete para que não se esqueça de efetuar os seus pagamentos, liquidar dívidas, entre diversos tipos de mensagens. Para tal , basta seleccionar os membros a quem pretende enviar determinada mensagens e depois envia. Está claramente descrito na imagem que se segue. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5]{imagens/interface/enviarmensagemadmin}  
+	\includegraphics[scale=0.45]{imagens/interface/enviarmensagemadmin}  
 	\caption{Janela para enviar mensagens aos moradores}  
 \end{figure}
 
+A interface que se segue diz respeito às dívidas e empréstimos da casa. O administrador tem acesso a consultar todas as dívidas que eventuais moradores possam ter, assim como cada empréstimo feito entre moradores. Para além de consultar, o administrador da aplicação tem a capacidade para apagar determinada dívida e/ou empréstimo. 
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5]{imagens/interface/verdividaseemprestimosadmin}  
+	\includegraphics[scale=0.45]{imagens/interface/verdividaseemprestimosadmin}  
 	\caption{Janela para visualizar as dívidas e empréstimos}  
 \end{figure}
+
+\newpage
+
+Ainda dentro das funcionalidades possíveis do administrador, existe o botão “Adicionar Conta”. É da responsabilidade do administrador da aplicação colocar em sistema todas as contas que recepciona. Para colocar uma nova fatura em sistema, visível para todos os moradores é necessário colocar o nome da conta, o valor da mesma e a data limite de pagamento. Assim, surge a seguinte janela.
 
 \begin{figure}[h!]
 	\centering
@@ -679,11 +697,16 @@ Após o administador efetuar o login é-lhe apresentada uma janela com as funcio
 	\caption{Janela para adicionar fatura/despesa}  
 \end{figure}
 
+O administrador ao aceder a “Ver contas por pagar”, visualiza a lista de contas que estão por pagar e ainda consegue ter acesso aos detalhes de cada morador, isto é, consegue saber quem já pagou, quem falta pagar e que quantias tem cada um que pagar.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{imagens/interface/vercontasporpagaradmin}  
 	\caption{Janela para visualizar as contas por pagar}  
 \end{figure}
+
+\newpage
+O administrador pode remover utilizadores com conta previamente criada para “sair do grupo” do apartamento. A ideia é selecionar os membros com conta criada e de seguida removê-los. Desta forma esse membro ou membros deixa de ter acesso a aplicação e deixa automaticamente de poder partilhar despesas. 
 
 \begin{figure}[h!]
 	\centering
@@ -691,12 +714,17 @@ Após o administador efetuar o login é-lhe apresentada uma janela com as funcio
 	\caption{Janela para remover utilizadores do sistema}  
 \end{figure}
 
+É da competência do administrador apagar as contas/faturas do sistema. O administrador escolhe o identificador do Pagamento que efetivamente pretende eliminar e apaga. É bastante simples, pois , após visualizar a lista de contas, basta saber o id a eliminar. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{imagens/interface/apagarcontasadmin}  
 	\caption{Janela para remover utilizadores do sistema}  
 \end{figure}
+
+\newpage
+Cada utilizador, sendo um morador do apartamento após fazer login surge-lhe a janela com todas as suas funcionalidades.
+Aqui tem acesso a todas as suas funções, como por exemplo, “ver mensagens do admin”, “ver contas pagas”, “consultar dívidas”,  entre outras. Ainda nesta janela consta no canto inferior esquerdo o valor da conta corrente do morador em questão. Estas funcionalidades são comuns tanto ao utilizador normal como ao administrador, quando este entra como “Eu como Morador”. 
 
 
 \begin{figure}[h!]
@@ -705,54 +733,68 @@ Após o administador efetuar o login é-lhe apresentada uma janela com as funcio
 	\caption{Página inicial do morador}  
 \end{figure}
 
+
+Cada utilizador pode a qualquer momento receber uma mensagem de texto enviada do administrador. Selecionando este botão surgem as mensagens recebidas. A imagem que se segue mostra exatamente uma mensagem que o administrador enviou a um morador.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{imagens/interface/vermensagensadmin}  
 	\caption{Janela ver mensagens do administrador}  
 \end{figure}
 
+\newpage
+
+Nesta janela cada morador tem acesso à lista de valores que emprestou ao apartamento, ou seja, à lista de empréstimos que foi por ele efetuada. Cada empréstimo é identificado por um e-mail, nome, valor e uma data de empréstimo. 
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{imagens/interface/consultaremprestimos}  
+	\includegraphics[scale=0.5]{imagens/interface/consultaremprestimos}  
 	\caption{Janela para consultar os emprestimos que fez à casa}  
 \end{figure}
 
+Nesta janela é apresentada a lista de contas por cada morador já pagas. Nesta janela surge detalhadamente o valor total da fatura, a percentagem que cada morador tem efetivamente que pagar e o valor que foi pago até ao momento. 
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{imagens/interface/vercontaspagasmorador}  
-	\caption{Janela para consultar os emprestimos que fez à casa}  
+	\includegraphics[scale=0.5]{imagens/interface/vercontaspagasmorador}  
+	\caption{Janela para consultar a lista das contas já pagas}  
 \end{figure}
 
+ \newpage \clearpage
 
-
-ver contas pagas, falta por, porque estava mal 
+Cada utilizador tem a facilidade de poder editar os seus dados. Pode alterar o seu e mail, número de telemóvel, entre outros dados que possam estar mal introduzidos. 
 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{imagens/interface/editardadosmorador}  
+	\includegraphics[scale=0.55]{imagens/interface/editardadosmorador}  
 	\caption{Janela para editar dados pessoais}  
 \end{figure}
 
-\clearpage
+
+Nesta janela cada morador tem acesso à lista de valores das suas dívidas relativas ao apartamento, isto é, o valor que cada morador fica em dívida para com o apartamento. Cada dívida é é identificada por um e mail, um nome, um valor e uma data da dívida.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{imagens/interface/consultardividasmorador}  
+	\includegraphics[scale=0.55]{imagens/interface/consultardividasmorador}  
 	\caption{Janela para consultar dividas}  
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{imagens/interface/pagarcontamorador}  
-	\caption{Janela para efetuar pagamento de despesa}  
-\end{figure}
+Para fazer o pagamento de determinada fatura, o morador acede a “pagar conta”, onde tem acesso às listas de todas as contas que o administrador previamente colocou em sistema, assim como, os detalhes de cada uma delas.  Desta forma, apenas seleciona através do identificador da fatura a conta a pagar e o valor que pretende pagar.
+
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{imagens/interface/atualizarsaldomorador}  
+	\includegraphics[scale=0.5]{imagens/interface/pagarcontamorador}  
+	\caption{Janela para efetuar pagamento de despesa}  
+\end{figure}
+
+Esta janela é útil para cada morador efetuar uma atualização do valor da sua conta corrente. Sempre que o morador apresentar um valor insuficiente para o pagamento de determinada fatura é aqui que deve fazer o seu “carregamento” de saldo. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{imagens/interface/atualizarsaldomorador}  
 	\caption{Janela para atualizar conta corrente}  
 \end{figure}
 

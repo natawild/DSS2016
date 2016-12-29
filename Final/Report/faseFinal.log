@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  28 DEC 2016 20:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.4)  29 DEC 2016 14:03
 entering extended mode
 **faseFinal.tex
 (faseFinal.tex
@@ -1973,251 +1973,189 @@ e 612.
 File: imagens/interface/inicial.png Graphic file (type png)
 
 <use imagens/interface/inicial.png>
-Package pdftex.def Info: imagens/interface/inicial.png used on input line 622.
+Package pdftex.def Info: imagens/interface/inicial.png used on input line 625.
 (pdftex.def)             Requested size: 289.98561pt x 227.65225pt.
 
 <imagens/interface/criarconta.png, id=216, 389.95688pt x 390.70969pt>
 File: imagens/interface/criarconta.png Graphic file (type png)
 
 <use imagens/interface/criarconta.png>
-Package pdftex.def Info: imagens/interface/criarconta.png used on input line 62
-8.
+Package pdftex.def Info: imagens/interface/criarconta.png used on input line 63
+3.
 (pdftex.def)             Requested size: 233.97592pt x 234.42761pt.
-
-<imagens/interface/paginicialadmin.png, id=217, 396.7322pt x 317.68687pt>
+ [41 <./imagens/interface/inicial.png> <./imagens/interface/criarconta.png>]
+<imagens/interface/paginicialadmin.png, id=220, 396.7322pt x 317.68687pt>
 File: imagens/interface/paginicialadmin.png Graphic file (type png)
 
 <use imagens/interface/paginicialadmin.png>
 Package pdftex.def Info: imagens/interface/paginicialadmin.png used on input li
-ne 636.
+ne 644.
 (pdftex.def)             Requested size: 238.04114pt x 190.61359pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagens/interface/botaoadmin.png, id=218, 666.23906pt x 444.15938pt>
+<imagens/interface/botaoadmin.png, id=221, 666.23906pt x 444.15938pt>
 File: imagens/interface/botaoadmin.png Graphic file (type png)
 
 <use imagens/interface/botaoadmin.png>
-Package pdftex.def Info: imagens/interface/botaoadmin.png used on input line 64
-2.
+Package pdftex.def Info: imagens/interface/botaoadmin.png used on input line 65
+0.
 (pdftex.def)             Requested size: 399.74652pt x 266.49767pt.
+ [42
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/botaoadicionamorador.png, id=219, 790.45313pt x 412.54124pt>
+ <./imagens/interface/paginicialadmin.png> <./imagens/interface/botaoadmin.png>
+]
+<imagens/interface/botaoadicionamorador.png, id=226, 790.45313pt x 412.54124pt>
 File: imagens/interface/botaoadicionamorador.png Graphic file (type png)
 <use imagens/interface/botaoadicionamorador.png>
 Package pdftex.def Info: imagens/interface/botaoadicionamorador.png used on inp
-ut line 648.
+ut line 660.
 (pdftex.def)             Requested size: 474.27553pt x 247.52666pt.
 
-Overfull \hbox (19.03142pt too wide) in paragraph at lines 648--649
+Overfull \hbox (19.03142pt too wide) in paragraph at lines 660--661
  [][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: imagens/interface/botaoadicionamorador.png Graphic file (type png)
-<use imagens/interface/botaoadicionamorador.png>
-Package pdftex.def Info: imagens/interface/botaoadicionamorador.png used on inp
-ut line 654.
-(pdftex.def)             Requested size: 474.27553pt x 247.52666pt.
-
-Overfull \hbox (19.03142pt too wide) in paragraph at lines 654--655
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/adminvercontaspagas.png, id=220, 770.12718pt x 412.54124pt>
+<imagens/interface/adminvercontaspagas.png, id=227, 770.12718pt x 412.54124pt>
 File: imagens/interface/adminvercontaspagas.png Graphic file (type png)
 
 <use imagens/interface/adminvercontaspagas.png>
 Package pdftex.def Info: imagens/interface/adminvercontaspagas.png used on inpu
-t line 660.
+t line 668.
 (pdftex.def)             Requested size: 462.07986pt x 247.52666pt.
 
-Overfull \hbox (6.83575pt too wide) in paragraph at lines 660--661
+Overfull \hbox (6.83575pt too wide) in paragraph at lines 668--669
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagens/interface/enviarmensagemadmin.png, id=221, 1035.87pt x 528.47438pt>
+[43 <./imagens/interface/botaoadicionamorador.png> <./imagens/interface/adminve
+rcontaspagas.png>]
+<imagens/interface/enviarmensagemadmin.png, id=231, 1035.87pt x 528.47438pt>
 File: imagens/interface/enviarmensagemadmin.png Graphic file (type png)
 
 <use imagens/interface/enviarmensagemadmin.png>
 Package pdftex.def Info: imagens/interface/enviarmensagemadmin.png used on inpu
-t line 666.
-(pdftex.def)             Requested size: 517.93373pt x 264.23654pt.
+t line 678.
+(pdftex.def)             Requested size: 466.13719pt x 237.81126pt.
 
-Overfull \hbox (62.68962pt too wide) in paragraph at lines 666--667
+Overfull \hbox (10.89308pt too wide) in paragraph at lines 678--679
  [][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/verdividaseemprestimosadmin.png, id=222, 840.13875pt x 457.7
+<imagens/interface/verdividaseemprestimosadmin.png, id=232, 840.13875pt x 457.7
 1pt>
 File: imagens/interface/verdividaseemprestimosadmin.png Graphic file (type png)
 
  <use imagens/interface/verdividaseemprestimosadmin.png>
 Package pdftex.def Info: imagens/interface/verdividaseemprestimosadmin.png used
- on input line 672.
-(pdftex.def)             Requested size: 420.06834pt x 228.85445pt.
+ on input line 686.
+(pdftex.def)             Requested size: 378.05894pt x 205.96759pt.
+ [44
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/adicionarcontaadmin.png, id=223, 763.35187pt x 431.36156pt>
+ <./imagens/interface/enviarmensagemadmin.png> <./imagens/interface/verdividase
+emprestimosadmin.png>]
+<imagens/interface/adicionarcontaadmin.png, id=236, 763.35187pt x 431.36156pt>
 File: imagens/interface/adicionarcontaadmin.png Graphic file (type png)
 
 <use imagens/interface/adicionarcontaadmin.png>
 Package pdftex.def Info: imagens/interface/adicionarcontaadmin.png used on inpu
-t line 678.
+t line 696.
 (pdftex.def)             Requested size: 381.675pt x 215.68025pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/vercontasporpagaradmin.png, id=224, 731.73375pt x 431.36156p
+<imagens/interface/vercontasporpagaradmin.png, id=237, 731.73375pt x 431.36156p
 t>
 File: imagens/interface/vercontasporpagaradmin.png Graphic file (type png)
  <use imagens/interface/vercontasporpagaradmin.png>
 Package pdftex.def Info: imagens/interface/vercontasporpagaradmin.png used on i
-nput line 684.
+nput line 704.
 (pdftex.def)             Requested size: 365.86598pt x 215.68025pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/removerdogrupoadmin.png, id=225, 744.53156pt x 431.36156pt>
+ [45 <./imagens/interface/adicionarcontaadmin.png> <./imagens/interface/vercont
+asporpagaradmin.png>]
+<imagens/interface/removerdogrupoadmin.png, id=241, 744.53156pt x 431.36156pt>
 File: imagens/interface/removerdogrupoadmin.png Graphic file (type png)
 
 <use imagens/interface/removerdogrupoadmin.png>
 Package pdftex.def Info: imagens/interface/removerdogrupoadmin.png used on inpu
-t line 690.
+t line 713.
 (pdftex.def)             Requested size: 372.26486pt x 215.68025pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagens/interface/apagarcontasadmin.png, id=226, 674.52pt x 431.36156pt>
+<imagens/interface/apagarcontasadmin.png, id=242, 674.52pt x 431.36156pt>
 File: imagens/interface/apagarcontasadmin.png Graphic file (type png)
 
 <use imagens/interface/apagarcontasadmin.png>
 Package pdftex.def Info: imagens/interface/apagarcontasadmin.png used on input 
-line 697.
+line 721.
 (pdftex.def)             Requested size: 337.25917pt x 215.68025pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagens/interface/moradorpaginicial.png, id=227, 412.54124pt x 347.79938pt>
+ [46 <./imagens/interface/removerdogrupoadmin.png> <./imagens/interface/apagarc
+ontasadmin.png>]
+<imagens/interface/moradorpaginicial.png, id=246, 412.54124pt x 347.79938pt>
 File: imagens/interface/moradorpaginicial.png Graphic file (type png)
 
 <use imagens/interface/moradorpaginicial.png>
 Package pdftex.def Info: imagens/interface/moradorpaginicial.png used on input 
-line 704.
+line 732.
 (pdftex.def)             Requested size: 247.52666pt x 208.68123pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagens/interface/vermensagensadmin.png, id=228, 697.10437pt x 431.36156pt>
+<imagens/interface/vermensagensadmin.png, id=247, 697.10437pt x 431.36156pt>
 File: imagens/interface/vermensagensadmin.png Graphic file (type png)
 
 <use imagens/interface/vermensagensadmin.png>
 Package pdftex.def Info: imagens/interface/vermensagensadmin.png used on input 
-line 710.
+line 740.
 (pdftex.def)             Requested size: 418.26584pt x 258.81892pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/consultaremprestimos.png, id=229, 733.23938pt x 514.17094pt>
+ [47 <./imagens/interface/moradorpaginicial.png> <./imagens/interface/vermensag
+ensadmin.png>]
+<imagens/interface/consultaremprestimos.png, id=251, 733.23938pt x 514.17094pt>
 File: imagens/interface/consultaremprestimos.png Graphic file (type png)
 <use imagens/interface/consultaremprestimos.png>
 Package pdftex.def Info: imagens/interface/consultaremprestimos.png used on inp
-ut line 716.
-(pdftex.def)             Requested size: 439.94702pt x 308.50494pt.
+ut line 750.
+(pdftex.def)             Requested size: 366.61879pt x 257.08484pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<imagens/interface/vercontaspagasmorador.png, id=230, 683.55376pt x 440.39531pt
+<imagens/interface/vercontaspagasmorador.png, id=252, 683.55376pt x 440.39531pt
 >
 File: imagens/interface/vercontaspagasmorador.png Graphic file (type png)
  <use imagens/interface/vercontaspagasmorador.png>
 Package pdftex.def Info: imagens/interface/vercontaspagasmorador.png used on in
-put line 722.
-(pdftex.def)             Requested size: 410.13542pt x 264.23921pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagens/interface/editardadosmorador.png, id=231, 682.04813pt x 464.4853pt>
+put line 758.
+(pdftex.def)             Requested size: 341.77605pt x 220.19711pt.
+ [48 <./imagens/interface/consultaremprestimos.png> <./imagens/interface/vercon
+taspagasmorador.png>]
+<imagens/interface/editardadosmorador.png, id=257, 682.04813pt x 464.4853pt>
 File: imagens/interface/editardadosmorador.png Graphic file (type png)
 
 <use imagens/interface/editardadosmorador.png>
 Package pdftex.def Info: imagens/interface/editardadosmorador.png used on input
- line 733.
-(pdftex.def)             Requested size: 409.23204pt x 278.69333pt.
+ line 769.
+(pdftex.def)             Requested size: 375.12762pt x 255.46771pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[41 <./imagens/interface/inicial.png> <./imagens/interface/criarconta.png>]
-[42 <./imagens/interface/paginicialadmin.png> <./imagens/interface/botaoadmin.p
-ng>] [43 <./imagens/interface/botaoadicionamorador.png>] [44 <./imagens/interfa
-ce/adminvercontaspagas.png> <./imagens/interface/enviarmensagemadmin.png>]
-[45 <./imagens/interface/verdividaseemprestimosadmin.png> <./imagens/interface/
-adicionarcontaadmin.png>] [46 <./imagens/interface/vercontasporpagaradmin.png> 
-<./imagens/interface/removerdogrupoadmin.png>] [47 <./imagens/interface/apagarc
-ontasadmin.png> <./imagens/interface/moradorpaginicial.png>] [48 <./imagens/int
-erface/vermensagensadmin.png> <./imagens/interface/consultaremprestimos.png>]
-[49 <./imagens/interface/vercontaspagasmorador.png> <./imagens/interface/editar
-dadosmorador.png>]
-<imagens/interface/consultardividasmorador.png, id=261, 682.04813pt x 464.4853p
+<imagens/interface/consultardividasmorador.png, id=258, 682.04813pt x 464.4853p
 t>
 File: imagens/interface/consultardividasmorador.png Graphic file (type png)
  <use imagens/interface/consultardividasmorador.png>
 Package pdftex.def Info: imagens/interface/consultardividasmorador.png used on 
-input line 741.
-(pdftex.def)             Requested size: 409.23204pt x 278.69333pt.
- [50
+input line 778.
+(pdftex.def)             Requested size: 375.12762pt x 255.46771pt.
+ [49
 
- <./imagens/interface/consultardividasmorador.png>]
-<imagens/interface/pagarcontamorador.png, id=265, 682.04813pt x 464.4853pt>
+ <./imagens/interface/editardadosmorador.png> <./imagens/interface/consultardiv
+idasmorador.png>]
+<imagens/interface/pagarcontamorador.png, id=262, 682.04813pt x 464.4853pt>
 File: imagens/interface/pagarcontamorador.png Graphic file (type png)
 
 <use imagens/interface/pagarcontamorador.png>
 Package pdftex.def Info: imagens/interface/pagarcontamorador.png used on input 
-line 749.
-(pdftex.def)             Requested size: 409.23204pt x 278.69333pt.
+line 789.
+(pdftex.def)             Requested size: 341.02322pt x 232.24208pt.
 
-<imagens/interface/atualizarsaldomorador.png, id=266, 622.57594pt x 444.15938pt
+<imagens/interface/atualizarsaldomorador.png, id=263, 622.57594pt x 444.15938pt
 >
 File: imagens/interface/atualizarsaldomorador.png Graphic file (type png)
  <use imagens/interface/atualizarsaldomorador.png>
 Package pdftex.def Info: imagens/interface/atualizarsaldomorador.png used on in
-put line 755.
-(pdftex.def)             Requested size: 373.54845pt x 266.49767pt.
-) (conclusao.tex [51
+put line 797.
+(pdftex.def)             Requested size: 311.2872pt x 222.07913pt.
+) (conclusao.tex [50
 
  <./imagens/interface/pagarcontamorador.png> <./imagens/interface/atualizarsald
 omorador.png>]
@@ -2228,7 +2166,7 @@ Overfull \hbox (3.00426pt too wide) in paragraph at lines 5--6
  pen-sar de como se-ria a nossa aplica[][]ao
  []
 
-) [52
+) [51
 
 ] (faseFinal.aux) ) 
 Here is how much of TeX's memory you used:
@@ -2245,9 +2183,9 @@ gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on faseFinal.pdf (53 pages, 7513360 bytes).
+Output written on faseFinal.pdf (52 pages, 7518473 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
+ 290 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  443 words of extra memory for PDF output out of 10000 (max. 10000000)
 

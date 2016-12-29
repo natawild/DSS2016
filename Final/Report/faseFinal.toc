@@ -42,4 +42,4 @@
 \contentsline {subsection}{\numberline {5.1.6}Deposita Dinheiro}{36}
 \contentsline {section}{\numberline {5.2}Mockups}{37}
 \contentsline {section}{\numberline {5.3}Intera\IeC {\c c}\IeC {\~a}o com utilizador}{41}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~a}o}{52}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~a}o}{51}
