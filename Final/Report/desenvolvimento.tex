@@ -46,16 +46,19 @@ A aplicação a desenvolver deverá suportar o registo das despesas e a gestão 
 \end{itemize}
 
 
-\section{Base de dados }
+\section{Base de dados}
+\subsection{Modelo concetual}
 A aplicação necessitará de uma implementação de uma base de dados para gerir os elementos que pertencem ao grupo assim como as despesas efetuadas pelos moradores. A modelação concetual consiste no processo de construção de um modelo de dados a partir de uma análise detalhada dos requisitos.  Este modelo é completamente independente de todas as considerações físicas, ou seja é independente dos detalhes de implementação. De seguida está aprsentado o esquema concetual relativo ao projeto.  
 
 
 \begin{figure}[htb!]
-	\includegraphics[scale=0.6]{imagens/bd/modeloconcetual}  
+	\includegraphics[scale=0.5]{imagens/bd/modeloconcetual}  
 	\caption{Modelo Concetual}  
 \end{figure}
 
 \newpage
+
+\subsection{Modelo Lógico}
 
 Terminada a modelação concetual, procedemos à fase de modelação lógica. Esta consiste na tradução do modelo concetual para o lógico capaz de representar os requisitos definidos, assim como a validação do mesmo. Este modelo está representado na figura abaixo: 
 
@@ -65,10 +68,11 @@ Terminada a modelação concetual, procedemos à fase de modelação lógica. Es
 \end{figure}
 
 \newpage
+\subsection{Diagrama de Classes DAO}
 
 Para a realização deste projeto, construímos uma base de dados relacional em \textit{MySQL} para armazenar toda a informação necessária para colocar o SGD \footnote{Sistema de Gestão de Despesas} a correr. Para o programa aceder a essa informação, foram classes \textit{DAO} \footnote{Data Acess Object} , que fornecem métodos de acesso à base de dados. Cada método visível para o exterior
 destas classe solicita sempre uma conecção à base de Dados, este pedido é feito à classe \textit{Connector}, podendo este conetor estar configurado com Auto-Commit ou não dependendo do tipo de operações pretendidas.
-São também definidos métodos auxiliares alguns \textit{Private} e outros \textit{Protected} que executam as queries à base de dados, contêm \textit{PreparedStatements} por questões de segurança contra SQL \textit{injection}. A criação destes métodos deve-se à tentativa de minimizar as conceções simultâneas à Base de Dados.
+São também definidos métodos auxiliares alguns \textit{Private} e outros \textit{Protected} que executam as queries à base de dados, contêm \textit{PreparedStatements} por questões de segurança contra \textit{SQL injection}. A criação destes métodos deve-se à tentativa de minimizar as coneções simultâneas à Base de Dados.  
 
 
 \begin{figure}[htb!]
@@ -83,7 +87,7 @@ São também definidos métodos auxiliares alguns \textit{Private} e outros \tex
 \section{Modelo de Dominio }
 Todo e qualquer projeto possui um domínio específico. O modelo de domínio deve capturar os seguintes pontos: as entidades, os relacionamentos entre as entidades e o vocabulário de domínio do problema. Para além disso também deve ser uma visão estática do problema onde é possível representar as regras de negócio invariantes no tempo. Ou seja, o modelo de domínio é a base para a análise de requisitos.
 
-No que diz respeito à aplicação, como é dito na introdução, queremos desenvolver uma aplicação capaz de suportar o registo das despesas e a gestão do seu pagamento por parte dos moradores registados.
+No que diz respeito à aplicação, como é dito na introdução, queremos desenvolver uma aplicação capaz de suportar o registo das despesas e a gestão do seu pagamento por parte dos moradores registados. Assim sendo com base nos requisitos iniciais construimos o modelo de dominio do Sistema de Gestão de Despesas (CGD). 
 
 
 \begin{figure}[htb!]
@@ -105,10 +109,8 @@ O administrador administra o saldo global da casa/apartamento.
 
 \section{Diagrama de Classes}
 A metodologia de implementação das boas práticas do UML no desenvolvimento de qualquer
-projecto, especialmente em projectos de media e pequena escala, para possíveis implementações de ideias da camada de negócio e de esquemas conceptuais, que podem ser validados e discutidos pelo grupo de desenvolvimento e analisados sem que seja necessário perder tempo com testes e builds.
-No caso especifico do diagrama de classes aquilo que concluímos é que permite de uma forma simples e transparente partilhar e discutir como irá ser, ou pelos menos como se pretende que seja, os esquemas
-conceptuais do modelo de domínio e esqueleto do nossa implementação, ou seja, das estrutura básica das classes. O modelo abaixo apresentado é portanto uma tradução daquilo que pretendíamos com o
-modelo de domínio, mas nesse caso, com maior detalhe técnico relativos à linguagem de programação escolhida, i.e. o Java. Temos portanto o seguinte diagrama de classes:
+projecto, especialmente em projetos de media e pequena escala, para possíveis implementações de ideias da camada de negócio e de esquemas concetuais, que podem ser validados e discutidos pelo grupo de desenvolvimento e analisados sem que seja necessário perder tempo com testes e \textit{builds}.
+No caso especifico do diagrama de classes aquilo que concluímos é que permite de uma forma simples e transparente partilhar e discutir como irá ser, ou pelos menos como se pretende que seja, os esquemas concetuais do modelo de domínio e esqueleto da implementação, ou seja, das estrutura básica das classes. O modelo abaixo apresentado é portanto uma tradução daquilo que se pretendia com o modelo de domínio, mas nesse caso, com maior detalhe técnico relativos à linguagem de programação escolhida, i.e. o Java. Temos portanto o seguinte diagrama de classes:
 
 \begin{figure}[htb!]
 	\centering
@@ -120,13 +122,15 @@ modelo de domínio, mas nesse caso, com maior detalhe técnico relativos à ling
 \newpage
 
 \section{Modelo de Use Case}
-A segunda parte da análise de requisitos corresponde à definição dos use cases, com o objetivo de os aplicar nesta primeira fase deste trabalho prático. Nos use cases, queremos primeiramente, identificar os atores, que serão quem interagirá com o sistema.
-Posterior à identificação dos atores, passamos então à identificação dos use cases, isto é, o que se pretende do sistema. No último ponto da visão orientada aos use cases, procedemos à identificação das classes de suporte à realização dos mesmo, que corresponde à especificação da funcionalidade a ser implementada.
-Neste sentido, quando definimos um use case, para além de ser uma espécie de documentação, temos de ter em conta que se trata de uma unidade coerente de funcionalidade, um serviço. Define também um comportamento do sistema, sem revelar a estrutura interna, divulgando desta forma, a comunicação entre os atores e o sistema.
-O conjunto de todos os use cases acaba por definir pela íntegra, toda a funcionalidade do sistema que decorre na sua essência, do diálogo entre o sistema e os atores, e a responsabilidade de resposta funcional do sistema.
+A segunda parte da análise de requisitos corresponde à definição dos \textit{use cases}, com o objetivo de os aplicar numa primeira fase do projeto. Primeiramente é necessário identificar os atores, que serão quem interagirá com o sistema.
+Posterior à identificação dos atores, passamos então à identificação dos \textit{use cases}, isto é, o que se pretende do sistema, que corresponde à especificação da funcionalidade a ser implementada.
+Neste sentido, quando definimos um \textit{use case}, para além de ser uma espécie de documentação, temos de ter em conta que se trata de uma unidade coerente de funcionalidade, um serviço. Define também um comportamento do sistema, sem revelar a estrutura interna, divulgando desta forma, a comunicação entre os atores e o sistema.
+O conjunto de todos os \textit{use cases} acaba por definir pela íntegra, toda a funcionalidade do sistema que decorre na sua essência, do diálogo entre o sistema e os atores, e a responsabilidade de resposta funcional do sistema.
 
 
 \subsection{Diagrama de Use Case}
+
+Neste modelo de \textit{Use Case} o apelo visual permite literalmente desenhar o processo de execução do negócio e visualizar a responsabilidade de cada participante, quando entra em cena, qual a sua interação e a sequência em que o seu trabalho precisa ser realizado em relação às responsabilidades e tarefas dos restantes integrantes do processo. Neste projeto existem os atores "Admin" e "Morador" estes que desempenharam tarefas no sistema.  Um caso de uso representa uma unidade discreta da interação entre um utilizador e o sistema. Um caso de uso é uma unidade de um trabalho significante. Por exemplo: o "Efetuar login", "Criar conta", "gerir despesas", "Administrar Contas", "Consultar Mensagens" "Depositar dinheiro para a sua conta", entre outros, são todos casos de uso. Cada caso de uso tem uma descrição, esta que descreve a funcionalidade que irá ser construída no sistema proposto. 
 
 
 \begin{figure}[htb!]
@@ -173,7 +177,7 @@ Cada morador tem que efetuar Login na aplicação, para tal, é necessário que 
 
 
 
-\newpage
+\newpage \clearpage
 
 \subsubsection{Especificação: Criar Conta }
 Esta interação é uma interação bastante vulgar no sentido em que em praticamente todas as aplicações o ato de “criar conta” é quase obrigatório.  No nosso sistema este passo é fundamental para os utilizadores poderem utilizar a nossa aplicação. Para um utilizador criar conta tem que mencionar determinados dados ao sistema e este tem aceitar estes mesmos dados. Esses dados são simples e optamos por apenas solicitar o nome, data de nascimento, e-mail, número de telemóvel e password.
@@ -273,7 +277,8 @@ De forma a organizar a nossa aplicação apresentamos as despesas que estão por
 \end{figure}
 
 
-\newpage
+\newpage \clearpage 
+
 \subsubsection{Especificação: Inserir Despesa}
 
 Cabe ao administrador fazer as inserções das despesas no sistema. Para que cada inserção seja feita com sucesso têm que ser bem introduzidas e aceites pelo sistema, colocando a data, o nome e os valores de cada fatura válidos.
@@ -281,7 +286,7 @@ Cabe ao administrador fazer as inserções das despesas no sistema. Para que cad
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.8]{imagens/Especificacoes/inserirdespesas}  
+	\includegraphics[scale=0.7]{imagens/Especificacoes/inserirdespesas}  
 	\caption{Especificação do Use Case: Inserir Despesas}  
 \end{figure}
 
@@ -290,6 +295,12 @@ Cabe ao administrador fazer as inserções das despesas no sistema. Para que cad
 	\centering
 	\includegraphics[scale=0.5]{imagens/DiagramaSeq/InserirDespesa}  
 	\caption{Diagrama de Sequência: Inserir Despesa}  
+\end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.299999]{imagens/diagramaIt/AdminCriaContaApagar}  
+	\caption{Diagrama de Iteração: Inserir Despesa}  
 \end{figure}
 
 \newpage \clearpage
@@ -351,7 +362,7 @@ Cada utilizador, previamente registado e com login feito selecciona a conta que 
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[scale=0.5]{imagens/DiagramaSeq/PagarDespesa}  
+	\includegraphics[scale=0.6]{imagens/DiagramaSeq/PagarDespesa}  
 	\caption{Diagrama de Sequência: Utilizador paga despesa}  
 \end{figure}
 
@@ -482,7 +493,7 @@ Os dois grandes subsistemas da aplicação desenvolvida são o computador do uti
 \newpage
 
 Os três principais pacotes definidos são \textit{Presentation}, que trata da apresentação gráfica, em \textit{Java Swing}; \textit{Business}, que contém toda a lógica de negócio; e \textit{Data}, responsável pela ligação à base de dados. A camada de apresentação comunica com a camada de lógica de negócio a partir da classe
-SGD (Sistema de Gestão de Despesas), que desempenha a função de facade.
+SGD (Sistema de Gestão de Despesas), que desempenha a função de \textit{Facade} .
 Não existe qualquer tipo de comunicação feita diretamente entre a camada de
 apresentação e a camada de dados. A comunicação entre o package \textit{Business}
 e a persistência de Dados é feita recorrendo às várias classes \textit{DAO} implementadas no \textit{Package Data}, que comunicam com a base de dados \textit{MySQL}.
