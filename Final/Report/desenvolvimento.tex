@@ -48,7 +48,7 @@ A aplicação a desenvolver deverá suportar o registo das despesas e a gestão 
 
 \section{Base de dados}
 \subsection{Modelo concetual}
-A aplicação necessitará de uma implementação de uma base de dados para gerir os elementos que pertencem ao grupo assim como as despesas efetuadas pelos moradores. A modelação concetual consiste no processo de construção de um modelo de dados a partir de uma análise detalhada dos requisitos.  Este modelo é completamente independente de todas as considerações físicas, ou seja é independente dos detalhes de implementação. De seguida está aprsentado o esquema concetual relativo ao projeto.  
+A aplicação necessitará de uma implementação de uma base de dados para gerir os elementos que pertencem ao grupo assim como as despesas efetuadas pelos moradores. A modelação concetual consiste no processo de construção de um modelo de dados a partir de uma análise detalhada dos requisitos.  Este modelo é completamente independente de todas as considerações físicas, ou seja é independente dos detalhes de implementação. De seguida está apresentado o esquema concetual relativo ao projeto.  
 
 
 \begin{figure}[htb!]
@@ -71,7 +71,7 @@ Terminada a modelação concetual, procedemos à fase de modelação lógica. Es
 \subsection{Diagrama de Classes DAO}
 
 Para a realização deste projeto, construímos uma base de dados relacional em \textit{MySQL} para armazenar toda a informação necessária para colocar o SGD \footnote{Sistema de Gestão de Despesas} a correr. Para o programa aceder a essa informação, foram classes \textit{DAO} \footnote{Data Acess Object} , que fornecem métodos de acesso à base de dados. Cada método visível para o exterior
-destas classe solicita sempre uma conecção à base de Dados, este pedido é feito à classe \textit{Connector}, podendo este conetor estar configurado com Auto-Commit ou não dependendo do tipo de operações pretendidas.
+desta classe solicita sempre uma conecção à base de Dados, este pedido é feito à classe \textit{Connector}, podendo este conetor estar configurado com Auto-Commit ou não dependendo do tipo de operações pretendidas.
 São também definidos métodos auxiliares alguns \textit{Private} e outros \textit{Protected} que executam as queries à base de dados, contêm \textit{PreparedStatements} por questões de segurança contra \textit{SQL injection}. A criação destes métodos deve-se à tentativa de minimizar as coneções simultâneas à Base de Dados.  
 
 
@@ -87,7 +87,7 @@ São também definidos métodos auxiliares alguns \textit{Private} e outros \tex
 \section{Modelo de Dominio }
 Todo e qualquer projeto possui um domínio específico. O modelo de domínio deve capturar os seguintes pontos: as entidades, os relacionamentos entre as entidades e o vocabulário de domínio do problema. Para além disso também deve ser uma visão estática do problema onde é possível representar as regras de negócio invariantes no tempo. Ou seja, o modelo de domínio é a base para a análise de requisitos.
 
-No que diz respeito à aplicação, como é dito na introdução, queremos desenvolver uma aplicação capaz de suportar o registo das despesas e a gestão do seu pagamento por parte dos moradores registados. Assim sendo com base nos requisitos iniciais construimos o modelo de dominio do Sistema de Gestão de Despesas (CGD). 
+No que diz respeito à aplicação, como é dito na introdução, queremos desenvolver uma aplicação capaz de suportar o registo das despesas e a gestão do seu pagamento por parte dos moradores registados. Assim sendo com base nos requisitos iniciais construimos o modelo de dominio do Sistema de Gestão de Despesas (SGD). 
 
 
 \begin{figure}[htb!]
@@ -187,7 +187,7 @@ Cada morador tem que efetuar Login na aplicação, para tal, é necessário que 
 \newpage \clearpage
 
 \subsubsection{Especificação: Criar Conta }
-Esta interação é uma interação bastante vulgar no sentido em que em praticamente todas as aplicações o ato de “criar conta” é quase obrigatório.  No nosso sistema este passo é fundamental para os utilizadores poderem utilizar a nossa aplicação. Para um utilizador criar conta tem que mencionar determinados dados ao sistema e este tem aceitar estes mesmos dados. Esses dados são simples e optamos por apenas solicitar o nome, data de nascimento, e-mail, número de telemóvel e password.
+Esta interação é uma interação bastante vulgar no sentido em que praticamente todas as aplicações o ato de “criar conta” é quase obrigatório.  No nosso sistema este passo é fundamental para os utilizadores poderem utilizar a nossa aplicação. Para um utilizador criar conta tem que mencionar determinados dados ao sistema e este tem aceitar estes mesmos dados. Esses dados são simples e optamos por apenas solicitar o nome, data de nascimento, e-mail, número de telemóvel e password.
 
 \begin{figure}[htb!]
 	\centering
@@ -384,7 +384,7 @@ Cada utilizador, previamente registado e com login feito selecciona a conta que 
 
 \subsubsection{Especificação: Consultar Empréstimos }
 
-Nesta especificação o utilizador tem a vantagem de aceder à lista de empréstimos, ou seja, consegue através da aplicação visualizar os valores que emprestou a outros moradores do apartamento, previamente registados na aplicação. 
+Nesta especificação o utilizador tem a vantagem de aceder à lista de empréstimos, ou seja, consegue através da aplicação visualizar os valores que emprestou à casa para efetuar o pagmento de conta/despesa de outros moradores do apartamento previamente registados na aplicação, embora o morador que emprestou não tenha conhecimento a quem emprestou. 
 
 \begin{figure}[htb!]
 	\centering
@@ -738,7 +738,7 @@ O administrador tem acesso à lista de contas que já foram pagas anteriormente 
 
 \newpage \clearpage
 
-O administrador tem a funcionalidade de enviar mensagens aos outros utilizadores. Desta forma torna a comunicação mais interativa e consegue fazer uma espécie de lembrete para que não se esqueça de efetuar os seus pagamentos, liquidar dívidas, entre diversos tipos de mensagens. Para tal , basta seleccionar os membros a quem pretende enviar determinada mensagens e depois envia. Está claramente descrito na imagem que se segue. 
+O administrador tem a funcionalidade de enviar mensagens aos outros utilizadores. Desta forma torna a comunicação mais interativa e consegue fazer uma espécie de lembrete para que não se esqueça de efetuar os seus pagamentos, liquidar dívidas, entre diversos tipos de mensagens. Para tal , basta seleccionar os membros a quem pretende enviar determinada mensagem e depois envia. Está claramente descrito na imagem que se segue. 
 
 \begin{figure}[h!]
 	\centering
@@ -746,7 +746,7 @@ O administrador tem a funcionalidade de enviar mensagens aos outros utilizadores
 	\caption{Janela para enviar mensagens aos moradores}  
 \end{figure}
 
-A interface que se segue diz respeito às dívidas e empréstimos da casa. O administrador tem acesso a consultar todas as dívidas que eventuais moradores possam ter, assim como cada empréstimo feito entre moradores. Para além de consultar, o administrador da aplicação tem a capacidade para apagar determinada dívida e/ou empréstimo. 
+A interface que se segue diz respeito às dívidas e empréstimos da casa. O administrador tem acesso a consultar todas as dívidas que eventuais moradores possam ter, assim como cada empréstimo feito à casa para pagar montantes em falta de outros inquilinos. Para além de consultar, o administrador da aplicação tem a capacidade para apagar determinada dívida e/ou empréstimo. 
 
 \begin{figure}[h!]
 	\centering
