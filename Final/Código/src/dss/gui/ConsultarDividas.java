@@ -346,25 +346,34 @@ public class ConsultarDividas extends javax.swing.JDialog {
         else {
              
              float valorInt = Float.parseFloat(this.valorDivida.getText());
-             float valor =f.getValorDivida(id);
-             float valorConta = f.getDinheiro(emailUser);
-             if(valor ==valorInt && valorConta>=valorInt) {
+             
+             if(valorInt<0) {
+               JOptionPane.showMessageDialog(null, "Valor introduzido invalido");
+                 
+             }
+             
+             else {
+             
+                 float valor =f.getValorDivida(id);
+             
+                 float valorConta = f.getDinheiro(emailUser);
+                 if(valor ==valorInt && valorConta>=valorInt) {
                f.pagarDivida(id);
                f.pagarEmprestimo(valor);
                f.retiraSaldo(valor, emailUser);
                i=0;
                this.mensagem.setText("");
                JOptionPane.showMessageDialog(null, "Divida paga");
+             }  
                  
-                 
-             }
+             
              else {
              
                   JOptionPane.showMessageDialog(null, "Valor introduzido incorrecto");
                   
                  
              }
-            
+             }
         
         }
         

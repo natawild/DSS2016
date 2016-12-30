@@ -375,6 +375,13 @@ public class ConsultarConta extends javax.swing.JDialog {
         else {
             
              float valorInt = Float.parseFloat(this.valorDivida.getText());
+             
+             if(valorInt<0) {
+             
+                 JOptionPane.showMessageDialog(null, "Introduza outro valor");
+             
+             }
+             else {
               float contaUser =f.getDinheiro(emailUser);
               float valorContaPago=f.getValorPago(id);
               float verContaTotal =f.valorConta(id);
@@ -501,6 +508,7 @@ public class ConsultarConta extends javax.swing.JDialog {
         
         }
               else  JOptionPane.showMessageDialog(null, "Nao possui dinheiro na conta");
+        }
         }
         }
         

@@ -11,7 +11,7 @@ import dss.gui.Login;
  *
  * @author gil
  */
-public class SGC {
+public class SGD {
 
     /**
      * @param args the command line arguments
