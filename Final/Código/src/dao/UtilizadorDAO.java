@@ -319,10 +319,11 @@ public class UtilizadorDAO implements Map<String,Morador>{
      }
      
      
-     public static int removeUserCasa(String a) throws SQLException {
+      public static int removeUserCasa(String a) throws SQLException {
      
         Connection c = Connect.connect();
         PreparedStatement preparedStmt =null; 
+        PreparedStatement preparedStmt1 =null; 
         int nr;
         int resultado =0;
         ResultSet rs=null;
@@ -330,7 +331,7 @@ public class UtilizadorDAO implements Map<String,Morador>{
         ResultSet rs2=null;
         try {
         
-       
+       c.setAutoCommit(false);
         
             String dividas = "select count(*) from divida AS D INNER JOIN morador AS M "
                     + " on D.idUtilizador = M.idUtilizador where M.email ='"+a+"'";
@@ -366,11 +367,16 @@ public class UtilizadorDAO implements Map<String,Morador>{
                   nr=rs2.getInt(1);
                   
                   if(nr==0) {
-                      
+                      String apagarMensagens = "delete MA.* from mensagemadmin as MA INNER JOIN morador AS M on"
+                              + "  M.idUtilizador=MA.idUtilizador "
+                              + " where M.email = '"+a+"'";
                       dividas = "update morador set admin =null where email = '" +a+"'";
-                      
+                     
+                      preparedStmt1=c.prepareStatement(apagarMensagens);
+                      preparedStmt1.execute();
                     preparedStmt=c.prepareStatement(dividas);
                     preparedStmt.execute();
+                    c.commit();
                   
                   }
                       
@@ -382,16 +388,25 @@ public class UtilizadorDAO implements Map<String,Morador>{
               }
               
               else resultado = -1;
+        
+        
         }
         
          catch(SQLException e) {
-         
+               
              //System.err.println("Got an exception!");
         
              System.err.println(e.getMessage());
-            
+            if (c != null) {
+            try {
+                //System.err.println("Transaction is being rolled back");
+                c.rollback();
+                
+            } catch(SQLException excep) {
+                //System.err.println(excep.getMessage());
+            }
              
-         
+            }
          }
         finally
         { 
@@ -399,8 +414,10 @@ public class UtilizadorDAO implements Map<String,Morador>{
             if(rs2!=null) {rs2.close();}
             if(rs1!=null) {rs1.close();}
             if(preparedStmt!=null) {preparedStmt.close();}
-            
-            
+            if (preparedStmt1 != null) {
+            preparedStmt1.close();
+        }
+            c.setAutoCommit(true);
             c.close();
         }
      
